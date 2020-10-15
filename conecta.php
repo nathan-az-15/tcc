@@ -4,7 +4,7 @@
 	</HEAD>
 	<BODY>
 		<?php
-			function conectar()
+			function conectar()//conecta com o bd
 			{
 			$hostdb = 'localhost'; //servidor mysql, pode ser o nome (localhost) OU O ENDEREÇO IP (127.0.0.1) 
 			$userdb = 'root';      //usuário do mysql que terá o acesso
