@@ -1,0 +1,823 @@
+/*******************************************************
+	
+	CSS - Página - V1
+
+--------------------------------------------------------
+
+	Todos os direitos reservados.
+	Desenvolvido por Rodrigo Lima Nogueira Santos. 
+																					
+*******************************************************/
+
+
+/*******************************************************
+	CSS - Html|Body - V2
+*******************************************************/
+
+* {
+	box-sizing: border-box;
+	float: left;
+	font-family: 'Google Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/*******************************************************
+	CSS - Link - V3
+*******************************************************/
+
+a {		
+	color: none;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+
+a:link {
+	color: none;
+	text-decoration: none;
+	border: none;
+}
+
+a:active {
+	color: none;
+	text-decoration: none;
+	border: none;
+}
+
+a:visited {
+	color: none;
+	text-decoration: none;
+	border: none;
+}
+
+a:hover {
+	color: none;
+	text-decoration: none;
+	border: none;
+}
+
+a:focus {
+	color: none;
+	text-decoration: none;
+	border: none;
+}
+
+/*******************************************************
+	CSS - Input - V1
+*******************************************************/
+
+input:focus {
+	outline: none;
+}
+
+/*******************************************************
+	CSS - Imagem - V1
+*******************************************************/
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+/*******************************************************
+	CSS - Texto - V2
+*******************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #202124;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*******************************************************
+	Geral
+*******************************************************/
+
+/* Welcome */
+
+#SubWelcome {
+	position: relative;
+	height: 100vh;
+}
+
+/* Sobre */
+
+/*******************************************************
+	Header
+*******************************************************/
+
+nav {
+	height: 75px;
+	padding: 0 var(--margin250);
+}
+
+nav h1 {
+	margin: 18px 0;
+}
+
+nav h1 a {
+	color: var(--CorTexto1);
+	font-size: 31px;
+}
+
+nav ul {
+	float: right;
+	margin: 0;
+	padding: 25px 0 17px;
+	list-style: none;
+}
+
+nav ul a {
+	margin-right: 25px;
+}
+
+	nav ul a:last-child {
+		margin-right: 0;
+	}
+
+nav ul a li {
+	font-size: 20px;
+	margin: 0;
+	padding-bottom: 5px;
+	border-bottom: 3px solid none;
+	text-decoration: none;
+}
+
+/* Welcome */
+
+#welcome nav ul a li {
+	color: var(--CorTexto2);
+}
+
+	#welcome .NavActive {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+	#welcome nav ul a li:hover {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+#jogo nav ul a li {
+	color: var(--CorTexto2);
+}
+
+	#jogo .NavActive {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+	#jogo nav ul a li:hover {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+/* Ranking */
+
+#ranking nav ul a li {
+	color: var(--CorTexto2);
+}
+
+	#ranking .NavActive {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+	#ranking nav ul a li:hover {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+/* Sobre */
+
+#sobre header {
+	position: fixed;
+	top: 0;
+	background-color: var(--CorTema);
+}
+
+#sobre nav ul a li {
+	color: #DCDCDC;
+}
+
+	#sobre .NavActive {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+	#sobre nav ul a li:hover {
+		color: var(--CorTexto1);
+		border-bottom: 3px solid var(--CorTexto1);
+	}
+
+/*******************************************************
+	Main
+*******************************************************/
+
+main .SubMain .btn {
+	border: 1px solid var(--CorTexto1);
+	border-radius: 10px;
+}
+
+main .SubMain .btn a {
+	color: var(--CorTexto1);
+	font-size: 24px;
+	padding: 10px;
+	border-radius: inherit;
+}
+
+/* Welcome */
+
+#welcome main {
+	height: calc(100% - 155px);
+}
+
+#welcome main .SubMain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: var(--CorTexto1);
+	padding: 80px 30%;
+}
+
+/* Jogo */
+
+#jogo, #SubJogo {
+	width: 100%;
+	height: 100vh;
+}
+
+#SubJogo {
+	position: relative;
+}
+
+#inicial, #quiz {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	transition: 1.2s;
+}
+
+	/* Inicial */
+
+	#inicial {
+		left: 0;
+	}
+
+	#inicial main .SubMain {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: calc(100vh - 75px);
+		color: var(--CorTexto1);
+		padding: 80px 30%;
+	}
+
+	/* Quiz */
+
+	#quiz {
+		right: -100%;
+	}
+
+		/* Cronômetro */
+		
+		#cronometro {
+			z-index: 100;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#SubCronometro {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding: 25px 0;
+		}
+
+		#TempoCronometro {
+			display: inherit;
+			justify-content: inherit;
+			width: 250px;
+			color: var(--CorTexto1);
+			font-size: 30px;
+			padding: 10px;
+			border: 1px solid var(--CorTexto1);
+			border-radius: 10px;
+		}
+
+	#quiz main {
+		position: relative;
+		height: 100vh;
+	}
+
+	.q {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+		padding: 140px 300px 100px;
+		transition: 1s;
+	}
+
+	#q1 {
+		position: relative;
+		right: 0;
+	}
+
+	#jogo .q .enunciado {
+		width: 100%;
+		color: var(--CorTexto1);
+		font-size: 22px;
+		text-align: justify;
+		margin: 0;
+		margin-bottom: 25px;
+	}
+
+	.qPerguntasGroup {
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.qPerguntasGroup li {
+		width: 100%;
+		color: var(--CorTexto1);
+		font-size: 16px;
+		margin-bottom: 10px;
+		padding: 20px;
+		border-radius: 20px;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+		.qPerguntasGroup li:last-child {
+			margin-bottom: 0;
+		}
+
+		.qPerguntasGroup li:hover {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		.qPerguntasGroup .AC {
+			background-color: #34A853;;
+		}
+
+		.qPerguntasGroup .AE {
+			background-color: #EA4335;
+		}
+
+	.qPerguntasGroup li span {
+		margin-right: 10px;
+	}
+
+	.qPerguntasGroup li .alternativas {
+		width: calc(100% - 60px);
+		margin: 0;
+	}
+
+	#quiz .btn {
+		color: var(--CorTexto1);
+		font-size: 24px;
+		padding: 10px;
+		border: 1px solid var(--CorTexto1);
+		border-radius: 10px;
+		cursor: pointer;
+	}
+
+/* Resultado */
+
+#resultado main {
+	height: 100vh;
+}
+
+#resultado main .SubMain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	padding: 80px 250px;
+}
+
+#resultado main .SubMain table thead, #resultado main .SubMain table tbody {
+	width: 100%;
+}
+
+	#resultado .td1 {
+		width: 50%;
+	}
+
+	#resultado .td2 {
+		width: 50%;
+	}
+
+#FormJogador {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 60px;
+	padding: 0 100px;
+}
+
+#FormJogador h2 {
+	width: 632px;
+	color: var(--CorTexto1);
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#FormJogador form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#FormJogador form input[type = "text"] {
+	width: 632px;
+	color: var(--CorTexto1);
+	font-size: 20px;
+	margin: 0;
+	padding: 5px 0;
+	border: 0;
+	background-color: transparent;
+	border-bottom: 2px solid var(--CorTexto1);
+}
+
+#FormJogador form div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+#FormJogador form div input[type = "submit"]{
+	color: var(--CorTexto1);
+	font-size: 20px;
+	padding: 10px;
+	background-color: transparent;
+	border: 1px solid var(--CorTexto1);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* Ranking */
+
+#ranking, #SubRanking {
+	min-height: 100vh;
+}
+
+#ranking main .SubMain {
+	color: var(--CorTexto1);
+	padding: 50px var(--margin250);
+}
+
+#ranking main .SubMain h1 {
+	width: 100%;
+	color: var(--CorTexto1);
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+	#ranking tbody .TrDados:nth-child(1) {
+		color: gold;
+	}
+
+	#ranking tbody .TrDados:nth-child(2) {
+		color: silver;
+	}
+
+	#ranking tbody .TrDados:nth-child(3) {
+		color: brown;
+	}
+
+#TrError {
+	color: var(--CorTexto1);
+	font-size: 20px;
+}
+
+#TrError td {
+	width: 100%;
+	text-align: center;
+}
+
+	/* td */
+
+	#ranking .td1 {
+		width: 10%;
+	}
+
+	#ranking .td2 {
+		width: 50%;
+	}
+
+	#ranking .td3 {
+		width: 20%;
+	}
+
+	#ranking .td4 {
+		width: 20%;
+	}
+
+/* Sobre */
+
+#sobre main {
+	margin-top: 75px;
+	background-color: #FFFFFF;
+}
+
+#sobre main .SubMain {
+	color: var(--CorTexto1);
+	padding: 50px var(--margin250);
+}
+
+#sobre main .SubMain section {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+	#sobre main .SubMain section:last-child {
+		margin: 0;
+	}
+
+#sobre main .SubMain section h1 {
+	width: 100%;
+	font-size: 40px;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #202124;
+}
+
+#sobre main .SubMain section h2 {
+	width: 100%;
+	font-size: 34px;
+	margin-bottom: 16px;
+}
+
+#sobre main .SubMain section h3 {
+	width: 100%;
+	font-size: 28px;
+	margin-bottom: 12px;
+}
+
+#sobre main .SubMain section p {
+	width: 100%;
+	color: #3A4A55;
+	font-size: 22px;
+	text-align: justify;
+	margin: 0;
+	margin-bottom: 7px;
+}
+
+	#sobre main .SubMain section p:last-of-type {
+		margin: 0;
+	}
+
+#sobre main .SubMain section ul {
+	color: #3A4A55;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 18px;
+	padding: 0;
+	list-style-position: inside
+}
+
+	#sobre main .SubMain section ul:last-child {
+		margin: 0;
+	}
+
+#sobre main .SubMain section li {
+	width: 100%;
+}
+
+/*******************************************************
+	Footer
+*******************************************************/
+
+.SubFooter {
+	padding: 30px var(--margin250);
+}
+
+.SubFooter ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+footer .SubFooter ul li {
+	text-decoration: none;
+}
+
+/* Welcome */
+
+#welcome footer {
+	position: absolute;
+	bottom: 0;
+	height: 80px;
+}
+
+#welcome footer .SubFooter ul li {
+	width: 100%;
+	color: var(--CorTexto2);
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	margin-right: 10px;
+}
+
+	#welcome footer .SubFooter ul li:last-child	{
+		margin-right: 0;
+	}
+
+/* Sobre */
+
+#sobre  footer {
+	background-color: rgba(0, 0, 139, 70%);
+}
+
+#sobre footer .SubFooter ul li {
+	color: var(--CorTexto1);
+	font-size: 16px;
+	margin: 0;
+	margin-right: 14px;
+}
+
+	#sobre footer .SubFooter ul li:last-child {
+		margin: 0;
+	}
+
+/*******************************************************
+	Outros
+*******************************************************/
+
+/* Animação */
+
+@keyframes ColorChange1 {
+	0% {background-color: #FE2712;}
+	10% {background-color: #FB9902;}
+	20% {background-color: #FABC02;}
+	30% {background-color: #FEFE33;}
+	40% {background-color: #66B032;}
+	50% {background-color: #0392CE;}
+	60% {background-color: #0247FE;}
+	70% {background-color: #3D01A4;}
+	80% {background-color: #8601AF;}
+	90% {background-color: #A7194B;}
+	100% {background-color: #FE2712;}
+}
+
+@keyframes ColorChange2 {
+	0% {background-color: #FE2712;}
+	25% {background-color: #FEFE33;}
+	50% {background-color: #66B032;}
+	75% {background-color: #0247FE;}
+	100% {background-color: #FE2712;}
+}
+
+@keyframes ColorChange3 {
+	0% {background-color: #0034FF;}
+	5% {background-color: #1900FF;}
+	10% {background-color: #6600FF;}
+	15% {background-color: #B200FF;}
+	20% {background-color: #FF00FF;}
+	25% {background-color: #FF00B3;}
+	30% {background-color: #FF0067;}
+	35% {background-color: #FF001A;}
+	40% {background-color: #FF3300;}
+	45% {background-color: #FF7F00;}
+	50% {background-color: #FFCB00;}
+	55% {background-color: #E6FF00;}
+	60% {background-color: #99FF00;}
+	65% {background-color: #4DFF00;}
+	70% {background-color: #00FF00;}
+	75% {background-color: #00FF4C;}
+	80% {background-color: #00FF99;}
+	85% {background-color: #00FFE5;}
+	90% {background-color: #00CCFF;}
+	95% {background-color: #0080FF;}
+	100% {background-color: #0034FF;}
+}
+
+/*******************************************************
+	Padrões
+*******************************************************/
+
+/* 100% */
+header, nav, main, .SubMain, footer, .SubFooter, .SubFooter ul {
+	width: 100%;
+}
+
+#welcome, #SubWelcome, #jogo, #SubJogo, #resultado, #SubResultado, 
+#ranking, #SubRanking, #sobre, #SubSobre {
+	width: 100%;
+}
+
+
+/* Animation */
+#welcome, #jogo, #resultado, #ranking {
+	animation: ColorChange3 40S;
+	animation-iteration-count: infinite;
+}
+
+#SubWelcome, #SubJogo, #SubResultado, #SubRanking {
+	background-color: rgba(0, 0, 0, 70%);
+}
+
+
+/* Main H1 */
+#welcome main .SubMain h1, #jogo main .SubMain h1, #resultado main .SubMain h1 {
+	color: var(--CorTexto1);
+	font-size: 50px;
+	margin-bottom: 30px; 
+}
+
+/* Main P */
+#welcome main .SubMain p, #jogo main .SubMain p {
+	color: #DCDCDC;
+	font-size: 22px;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+
+/* Table */
+
+#ranking main .SubMain table {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#ranking main .SubMain table thead, #ranking main .SubMain table tbody {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.TrTitulo {	
+	color: var(--CorTexto1);
+	font-size: 24px;
+}
+
+.TrDados {
+	color: var(--CorTexto1);
+	font-size: 20px;
+}
+
+#resultado main .SubMain table tr, #ranking main .SubMain table tr {
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--CorTexto2);
+}
+
+#resultado main .SubMain table tr td, #ranking main .SubMain table tr td {	
+	margin: 0;
+	padding: 0 10px;
+}
+
+
+	/*******************************************************
+		CSS - Variáveis
+	*******************************************************/
+
+	:root {
+		--CorTema: #00008B;
+		--CorTexto1: #FFFFFF;
+		--CorTexto2: #C0C0C0;
+		--margin250: 250px;
+	}

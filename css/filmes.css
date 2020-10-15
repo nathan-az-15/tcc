@@ -1,0 +1,26 @@
+body {
+    background: #F1F1F1;
+    color: #555;
+    font-family: Arial, sans-serif;
+  }
+  
+  .corpo {
+    width: 960px;
+    margin: auto;
+  }
+  
+  .conteudo {
+    display: table;
+  }
+  
+  .imagem {
+    display: table-cell;
+    float: left;
+  }
+  
+  .texto {
+    display: table-cell;
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+  }

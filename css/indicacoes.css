@@ -1,0 +1,249 @@
+/* DOCUMENTÁRIOS */
+
+
+.post-slider {
+  position: relative;
+}
+
+.post-slider .next{
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider .prev{
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider .post-wrapper{
+  width: 75%;
+  height: 320px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post{
+  width: 300px;
+  height: 315px;
+  margin: 0px 10px;
+  display: inline-block;
+  background: lightgrey;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1 rem;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.post-slider .post-wrapper .post .post-info{
+  height: 75px;
+  padding: 0px 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-wrapper a:hover{
+  color: lightseagreen;
+}
+
+
+
+
+/* 1 - SERIES */
+
+
+.post-slider1 {
+  position: relative;
+}
+
+.post-slider1 .next1{
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider1 .prev1{
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider1 .post-wrapper1{
+  width: 75%;
+  height: 320px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+
+.post-slider1 .post-wrapper1 .post1{
+  width: 300px;
+  height: 315px;
+  margin: 0px 10px;
+  display: inline-block;
+  background: lightgrey;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1 rem;
+}
+
+.post-slider1 .post-wrapper1 .post1 .slider-image1{
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.post-slider1 .post-wrapper1 .post1 .post-info1{
+  height: 75px;
+  padding: 0px 5px;
+}
+
+.page-wrapper1 a:hover{
+  color: lightseagreen;
+}
+
+
+
+
+/* 2 - FILMES */
+
+
+.post-slider2 {
+  position: relative;
+}
+
+.post-slider2 .next2{
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider2 .prev2{
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider2 .post-wrapper2{
+  width: 75%;
+  height: 320px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+
+.post-slider2 .post-wrapper2 .post2{
+  width: 300px;
+  height: 315px;
+  margin: 0px 10px;
+  display: inline-block;
+  background: lightgrey;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1 rem;
+}
+
+.post-slider2 .post-wrapper2 .post2 .slider-image2{
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.post-slider2 .post-wrapper2 .post2 .post-info2{
+  height: 75px;
+  padding: 0px 5px;
+}
+
+.page-wrapper2 a:hover{
+  color: lightseagreen;
+}
+
+
+
+
+/* 3 - LIVROS */
+
+
+.post-slider3 {
+  position: relative;
+}
+
+.post-slider3 .next3{
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider3 .prev3{
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  font-size: 2em;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-slider3 .post-wrapper3{
+  width: 75%;
+  height: 320px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+
+.post-slider3 .post-wrapper3 .post3{
+  width: 300px;
+  height: 315px;
+  margin: 0px 10px;
+  display: inline-block;
+  background: lightgrey;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1 rem;
+}
+
+.post-slider3 .post-wrapper3 .post3 .slider-image3{
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.post-slider3 .post-wrapper3 .post3 .post-info3{
+  height: 75px;
+  padding: 0px 5px;
+}
+
+.page-wrapper3 a:hover{
+  color: lightseagreen;
+}
