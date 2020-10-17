@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family:'Open Sans', sans-serif;
+}
+.imagem{
+  max-width: 256px;
+  width: 256px;
+  transition: all 1s ease;
+}
+.imagem:hover{
+  max-width:307px;
+  width: 307px;
+  transition: all 0.5s ease;
+}
+.conteudo{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color:gray;
+}
+.content{
+	background-color:white;
+	border-radius: 15px;
+	width: 960px;
+	height: 65%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.content::before{
+	content: "";
+	position: absolute;
+	background-color:#000000;
+    width: 40%;
+	height: 100%;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	
+	
+	
+	left: 0%;
+}
+.titulo{
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.title-primary{
+	color: #fff;
+}
+.title-second{
+	color: black;
+}
+.descricao{
+	font-size: 14 px;
+	font-weight: 300;
+	color: #fff;
+	line-height: 30px;
+}
+.btn{
+	border-radius: 15px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 10px;
+	padding: 10px 50px;
+	cursor: pointer;
+	font-weight: bold;
+	width: 150px;
+	align-self: center;
+	border-width: 0;
+	margin-top: 1rem;
+}
+.btn-primary{
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+.btn-primary:hover{
+	background-color: #fff;
+	color: black;
+	transition: background-color .5s;
+}
+.btn-second{
+	background-color: black;
+	border: 1px solid black;
+	transition: background-color .5s;
+}
+.btn-second:hover{
+	background-color: #fff;
+	border: 1px solid black;
+	color: black;
+}
+.first-content{
+	display: flex;	
+}  
+.first-content .second-column{
+	z-index: 12;
+}
+.first-column{
+	text-align: center;
+	width: 40%;
+	z-index: 2;
+	color:white;
+}
+.second-column{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.form{
+	display: flex;
+	flex-direction: column;/*/ posiciona um embaixo do outro /*/
+	width: 50%;
+}
+.form input{
+	height: 40px;
+	border: none;
+	background-color: #d1d1d1;
+	margin: 2px;
+	width: 100%;
+}
+.label-input{
+background-color: #d1d1d1;
+display: flex;
+align-items: center; 
+margin: 4px;
+}
+.icon-modify{
+	color:black;
+	padding: 0px 5px;
+}
+.second-content{
+	position: absolute;
+	display: flex;
+}
+.second-content .first-column{
+	order: 2;
+	z-index: -1;
+}
+.second-content .second-column{
+	order: 1;
+	z-index: -1;
+}
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column{
+	z-index: -1;
+}
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column{
+	z-index: 11;
+}
+
+.sign-in-js .content::before{
+	left: 60%; 
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column{
+	z-index: -1;
+}
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column{
+	z-index: 11;
+}
+

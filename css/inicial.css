@@ -1,57 +1,74 @@
+@font-face {
+  font-family: "title";
+  src: url("league-gothic.otf");
+}
+
+@font-face {
+  font-family: "corpo";
+  src: url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
+}
+
 body{
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(182, 182, 182);
+  background-color:#F1F0F0;
 }
 
 header{
-  z-index: 1;
-  position: fixed;
-  background: #22242A;
-  padding: 20px;
-  width: calc(100% - 0%);
-  top: 0;
-  height: 30px;
-}
+  font: arial;
+  letter-spacing: 1px; 
+	z-index: 1;
+	position: fixed;
+	background: #2b314e;
+	padding: 24px;
+	width: calc(100% - 0%);
+	top: 0;
+	height: 50px;
+  }
 
 .esquerda h3{
   color: #fff;
   margin: 0;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
 }
 
 .esquerda span{
-  color: #19B3D3;
+  color: #1F363D;
 }
 
 .sair{
-  padding: 5px;
-  background: #19B3D3;
+  font: 85% arial;
+  letter-spacing: 0.5px;
+  padding: 10px 50px;
   text-decoration: none;
   float: right;
-  margin-top: -30px;
-  margin-right: 40px;
-  border-radius: 2px;
-  font-size: 15px;
-  font-weight: 600;
+  margin-top: -5px;
+  margin-right: 45px;
+  border-radius: 11px;
+  font-weight: 200;
   color: #fff;
   transition: 0.5s;
   transition-property: background;
+  border: 1px solid #fff;
+  
 }
 
 .sair:hover{
-  background: #0B87A6;
+  background-color: #ABBBC4;
+  color:#181a16;
+  border: 1px solid#ABBBC4;
+ 
 }
 
 .menu{
   z-index: 1;
   top: 0;
-  background: #2f323a;
-  margin-top: 70px;
-  padding-top: 30px;
+  background: #333A5C;
+  margin-top: 4.5%;
+  padding-top: 3%;
   position: fixed;
   left: 0;
   width: 250px;
@@ -59,28 +76,42 @@ header{
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
+  border: 5px #000;
+}
+
+
+.menu .profile_info .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
 }
 
 .menu h4{
-  color: #ccc;
+  color: #f5f5f5;
   margin-top: 0;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .menu a{
   color: #fff;
   display: block;
-  width: 100%;
-  line-height: 60px;
+  line-height: 55px;
   text-decoration: none;
   padding-left: 40px;
   box-sizing: border-box;
-  transition: 0.5s;
-  transition-property: background;
 }
 
 .menu a:hover{
-  background: #19B3D3;
+  background-color: #ABBBC4;
+  border: 1px solid  #ABBBC4;
+  border-radius: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 26px;
+  /*margin-top: 2px;
+  margin-bottom: 2px;*/
 }
 
 .menu i{
@@ -92,7 +123,8 @@ label #menu_btn{
   color: #fff;
   position: fixed;
   cursor: pointer;
-  left: 400px;
+  left: 25px;
+  top: 18px;
   font-size: 20px;
   margin: 5px 0;
   transition: 0.5s;
@@ -100,7 +132,7 @@ label #menu_btn{
 }
 
 label #menu_btn:hover{
-  color: #19B3D3;
+  color: #ABBBC4;
 }
 
 #check:checked ~ .menu{
@@ -144,11 +176,19 @@ label #menu_btn:hover{
 
 .conteudo .card p{
   background: #fff;
-  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 10px;
+  
   font-size: 14px;
   opacity: 0.8;
 }
+
+
+
+
 
 /* Responsive CSS */
 
@@ -234,3 +274,4 @@ label #menu_btn:hover{
     display: block;
   }*/
 /*}
+
