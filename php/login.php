@@ -4,16 +4,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width-device-width, initial-scale-1.0"/>
 <title>Login</title>
-<link href="css/bootstrap.css" rel="stylesheet"/>
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="bootstrap-grid.min.css" rel="stylesheet"/>
-<link href="bootstrap-grid.css" rel="stylesheet"/>
-<link href="bootstrap.bundle.js" rel="stylesheet"/>
-<link href="bootstrap.bundle.min.js" rel="stylesheet"/>
-<link href="bootstrap.js" rel="stylesheet"/>
-<link href="bootstrap.min.js" rel="stylesheet"/>
-<link href="jquery-3.5.0.min.js" rel="stylesheet"/>
-<link rel="stylesheet" href="css/login.css">
+<link href="../css/bootstrap.css" rel="stylesheet"/>
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/bootstrap-grid.min.css" rel="stylesheet"/>
+<link href="../css/bootstrap-grid.css" rel="stylesheet"/>
+<link href="../js/bootstrap.bundle.js" rel="stylesheet"/>
+<link href="../js/bootstrap.bundle.min.js" rel="stylesheet"/>
+<link href="../js/bootstrap.js" rel="stylesheet"/>
+<link href="../js/bootstrap.min.js" rel="stylesheet"/>
+<link href="../js/jquery-3.5.0.min.js" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/login.css">
 <script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
 </head>
 
@@ -116,7 +116,7 @@ $inup = 'sign-in-js';
 	    </div>
 	</div>
 </div>
-<script src="js/app.js"></script>	
+<script src="../js/app.js"></script>	
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 <?php
@@ -20,7 +20,7 @@ if ($cont<=0){
         .href='login.php';</script>";
         die();
       }else{
-	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/conta.php' />";;
+	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/TCC/arrumar/inicio.html' />";;
 	  }
 ?>
 </body>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Reforço Escolar Online | R.E.O</title>
-    <link rel="stylesheet" href="css/inicial.css">
-	<link rel="stylesheet" href="css/conta.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+	<link rel="stylesheet" href="../css/conta.css">
 	
 	
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
 
       <header>
 	 
-      <a href="inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="img/logo3.png"> </a>
+      <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
       <label for="check">
         <i class="fas fa-align-justify" id="menu_btn"></i>
       </label>
@@ -50,12 +50,12 @@
       <center>
       <h4>MENU</h4>
       </center>
-      <a href="#"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
       <a href="#"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
       <a href="#"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
       <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="#"><i class="fas fa-film"></i><span>Indicações</span></a>
-      <a href="#"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+      <a href="../indicacoes.html"><i class="fas fa-film"></i><span>Indicações</span></a>
+      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
 
@@ -64,6 +64,7 @@
 <?php
 include'conecta.php';
 session_start();
+echo "<meta charset='utf-8'>";
 $email=$_SESSION['email_usuario'];
 $conexao=mysqli_connect('localhost', 'root', 'usbw', 'bd_reo_tcc') or die("erro de conexão");
 $consulta="SELECT * FROM usuario WHERE email_usuario = '$email'";

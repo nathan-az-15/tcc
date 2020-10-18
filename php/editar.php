@@ -12,6 +12,6 @@ $base=mysqli_connect('localhost', 'root','usbw','bd_reo_tcc') or die ("erro de c
 $regra="UPDATE usuario SET nome_usuario='$Nome', data_nasc='$Data_nasc', escolaridade='$Escolaridade', email_usuario='$Email', senha_usuario='$Senha', serie_ano='$Serie_ano'WHERE email_usuario='$Email'";
 
 $res=mysqli_query($base,$regra) or die ("deu errado");
-	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/conta.php' />";
+	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/TCC/arrumar/php/conta.php' />";
 
 ?>

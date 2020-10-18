@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css/login.css">
 	<title>Cadastro de Questões</title>
 	<script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
 		<script>
@@ -21,8 +21,24 @@
 	</script>
 </head>
 <body>
-
+<?php
+$query = "SELECT * FROM conteudos";
+include 'conecta.php';
+?>
+<center>
+<input type="button" value="Administrador" onClick="location. href='includeadministrador.php'">
+<input type="button" value="Conteúdos" onClick="location. href='includeconteudos.php'">
+<input type="button" value="Questões" onClick="location. href='includequestoes.php'">
+<input type="button" value="Matérias" onClick="location. href='includematerias.php'">
+<input type="button" value="Indicações" onClick="location. href='includeindicacoes.php'">
+<br><br><br>
 <form method="POST" class="form" action="includequestoes1.php" enctype="multipart/form-data">
+		
+		<select name="conteudo_q" required>
+		<?php while($mostrar = mysql_fetch_array($query)) { ?>
+		<option value="<?php echo $mostrar['ID_cont'] ?>"><?php echo $mostrar['texto'] ?></option>
+		<?php } ?>
+		</select>
 		
 		Selecione uma imagem para acompanhar o enunciado (se possuir)
 		<input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
@@ -79,6 +95,6 @@
 </form>
 
 
-
+</center>
 </body>
 </html>

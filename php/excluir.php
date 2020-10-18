@@ -9,5 +9,5 @@ $apagar="DELETE FROM usuario WHERE email_usuario='$email'";
 $res=mysqli_query($base,$apagar);
 
 echo '<script language="Javascript"> alert("Usuário excluído com sucesso!") </script> <br>';
-echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/login.php' />";
+echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/TCC/arrumar/php/login.php' />";
 ?>

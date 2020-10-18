@@ -1,12 +1,13 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css/login.css">
 	</head>
 <body>
 <?php
 include 'conecta.php';
 
+$conteudo=$_POST["conteudo_q"];
 $enunciado=$_POST["enunciado_q"];
 $alta=$_POST["alta_q"];
 $altb=$_POST["altb_q"];
@@ -25,7 +26,7 @@ move_uploaded_file($arquivo_tmp, $destino);
 $imagem = $_FILES['imagem_q']['name'];
 
 $sql = "INSERT INTO questoes VALUES";
-$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao')";
+$sql .= "($conteudo, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', DEFAULT, DEFAULT)";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
