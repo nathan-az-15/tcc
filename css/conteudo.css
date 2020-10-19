@@ -165,7 +165,7 @@ label #menu_btn:hover{
   color: #000;
   margin-top: 12%;
   font-size: 25px;
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 #check:checked ~ .nome{
