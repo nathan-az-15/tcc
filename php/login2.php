@@ -20,7 +20,7 @@ if ($cont<=0){
         .href='login.php';</script>";
         die();
       }else{
-	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/TCC/arrumar/inicio.html' />";;
+	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/inicio.html' />";
 	  }
 ?>
 </body>
