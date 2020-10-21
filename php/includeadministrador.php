@@ -32,7 +32,7 @@
 
 		<label class="label-input" for="">
 		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="nome_a" maxlength="100" placeholder="Digite o nome do administrador" required>
+        <input type="text" name="nome_a" maxlength="100" placeholder="Digite owbqduiqbfuifhwufhweufheeiwuh nome do administrador" required>
 		</label>
 		
 		<label class="label-input" for="">
