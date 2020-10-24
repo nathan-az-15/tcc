@@ -216,11 +216,83 @@ label #menu_btn:hover{
   opacity: 0.8;
 }
 
-.container{
+.container1{
   position: relative;
   display: block;
   background: #000;
   background: url('../imagens/conteudos/teste.png');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container2{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/teste.png');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container3{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/matematica.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container4{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/portugues.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container5{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/teste.png');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container6{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/teste.png');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container7{
+  position: relative;
+  display: block;
+  background: #000;
+  /*background: url('../imagens/conteudos/teste.png');*/
   background-size: cover;
   margin: 120px auto;
   border-radius: 32px;
