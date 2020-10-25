@@ -20,7 +20,7 @@ if ($cont<=0){
         .href='login.php';</script>";
         die();
       }else{
-	echo "<meta http-equiv='refresh' content='0;url=http://localhost:8080/inicio.html' />";
+	echo "<meta http-equiv='refresh' content='0;url=http://127.0.0.1/edsa-TCC_github/inicio.html' />";
 	  }
 ?>
 </body>
