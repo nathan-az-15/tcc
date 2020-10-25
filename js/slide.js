@@ -4,7 +4,7 @@ var bgNumber = 1;
 
 function slide(n){
     var allBgs = 4;
-    document.getElementById('imageBg').style.backgroundImage = "url('imagens/inicial/"+n+".jpg')";
+    document.getElementById('imageBg').style.backgroundImage = "url('../imagens/inicial/"+n+".jpg')";
     botoes(n, allBgs);
     bgNumber=n;
 }
