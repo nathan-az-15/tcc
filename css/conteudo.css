@@ -221,7 +221,7 @@ label #menu_btn:hover{
   display: block;
   background: #000;
   background: url('../imagens/conteudos/matematica.jpg');
-  background-size: cover;
+  background-size: 430px 210px;
   margin: 120px auto;
   border-radius: 32px;
   transform: scale(1);
