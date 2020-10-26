@@ -13,7 +13,7 @@ $autor=$_POST["autor_i"];
 $descricao=$_POST["descricao_i"];
 
 $sql = "INSERT INTO indicacoes VALUES";
-$sql .= "(DEFAULT, '$plataforma', '$titulo', '$autor', '$descricao', 'cod_mat', 'cod_adm')";
+$sql .= "(DEFAULT, '$plataforma', '$titulo', '$autor', '$descricao', '1', '1')";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
