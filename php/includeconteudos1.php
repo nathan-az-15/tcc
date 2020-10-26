@@ -10,7 +10,7 @@ include 'conecta.php';
 $texto=$_POST["texto_c"];
 $assunto=$_POST["assunto_c"];
 
-$destino = 'imgconteudo/' . $_FILES['imagem_c']['name'];
+$destino = '../imagens/imgconteudo/' . $_FILES['imagem_c']['name'];
  
 $arquivo_tmp = $_FILES['imagem_c']['tmp_name'];
 
