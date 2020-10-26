@@ -216,11 +216,83 @@ label #menu_btn:hover{
   opacity: 0.8;
 }
 
-.container{
+.container1{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/teste.png');
+  background: url('../imagens/conteudos/matematica.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container2{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/portugues.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container3{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/biologia.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container4{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/fisica.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container5{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/quimica.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container6{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/geografia.jpg');
+  background-size: cover;
+  margin: 120px auto;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container7{
+  position: relative;
+  display: block;
+  background: #000;
+  background: url('../imagens/conteudos/historia.jpg');
   background-size: cover;
   margin: 120px auto;
   border-radius: 32px;
@@ -243,11 +315,59 @@ label #menu_btn:hover{
   box-sizing: border-box;
 }
 
-.container:hover .hoverdiv, .container:active .hoverdiv{
+.container1:hover .hoverdiv, .container1:active .hoverdiv{
   opacity: 1;
 }
 
-.container:hover{
+.container1:hover{
+  transform: scale(1.03);
+}
+
+.container2:hover .hoverdiv, .container2:active .hoverdiv{
+  opacity: 1;
+}
+
+.container2:hover{
+  transform: scale(1.03);
+}
+
+.container3:hover .hoverdiv, .container3:active .hoverdiv{
+  opacity: 1;
+}
+
+.container3:hover{
+  transform: scale(1.03);
+}
+
+.container4:hover .hoverdiv, .container4:active .hoverdiv{
+  opacity: 1;
+}
+
+.container4:hover{
+  transform: scale(1.03);
+}
+
+.container5:hover .hoverdiv, .container5:active .hoverdiv{
+  opacity: 1;
+}
+
+.container5:hover{
+  transform: scale(1.03);
+}
+
+.container6:hover .hoverdiv, .container6:active .hoverdiv{
+  opacity: 1;
+}
+
+.container6:hover{
+  transform: scale(1.03);
+}
+
+.container7:hover .hoverdiv, .container7:active .hoverdiv{
+  opacity: 1;
+}
+
+.container7:hover{
   transform: scale(1.03);
 }
 

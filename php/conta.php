@@ -66,7 +66,7 @@ include'conecta.php';
 session_start();
 echo "<meta charset='utf-8'>";
 $email=$_SESSION['email_usuario'];
-$conexao=mysqli_connect('localhost', 'root', 'usbw', 'bd_reo_tcc') or die("erro de conexão");
+$conexao = mysqli_connect('127.0.0.1','root','','bd_reo_tcc') or die("erro de conexão");
 $consulta="SELECT * FROM usuario WHERE email_usuario = '$email'";
 $res = mysqli_query($conexao, $consulta);  //Executa o comando SQL, no caso para pegar todos os dados e retornar o valor da consulta em uma variavel ($res)  
 

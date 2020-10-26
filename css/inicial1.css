@@ -67,25 +67,25 @@ height: 100%;
 color: #fff;
 }
 #slides .slide_1{
-background-image: url(imagens/inicial/1.jpg);
+background-image: url(../imagens/inicial/1.jpg);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: center;
 }
 #slides .slide_2{
-background-image: url(imagens/inicial/2.jpg);
+background-image: url(../imagens/inicial/2.jpg);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: center;
 }
 #slides .slide_3{
-  background-image: url(imagens/inicial/3.jpg);
+  background-image: url(../imagens/inicial/3.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 #slides .slide_4{
-  background-image: url(imagens/inicial/4.jpg);
+  background-image: url(../imagens/inicial/4.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
