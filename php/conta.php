@@ -22,7 +22,7 @@
         <i class="fas fa-align-justify" id="menu_btn"></i>
       </label>
       <div class="direita">
-        <a href="#" class="sair">Sair</a>
+        <a href="sair.php" class="sair">Sair</a>
       </div>
 	  
       </header>
