@@ -33,16 +33,6 @@ echo "<div name='div_mostrar_indicacoes'>";
 echo "". $mostrar['plataforma'] ."";
 
 
-
-
-
-
-
-
-
-
-
-
 echo "</div>";
 }
 
