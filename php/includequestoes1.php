@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="style.css">
 	</head>
 <body>
 <?php
@@ -17,7 +17,7 @@ $alte=$_POST["alte_q"];
 $altcorreta=$_POST["altcorreta"];
 $explicacao=$_POST["explicacao_q"];
 
-$destino = '../imagens/imgquestao/' . $_FILES['imagem_q']['name'];
+$destino = 'imagens/questões/' . $_FILES['imagem_q']['name'];
  
 $arquivo_tmp = $_FILES['imagem_q']['tmp_name'];
 
@@ -25,8 +25,8 @@ move_uploaded_file($arquivo_tmp, $destino);
 
 $imagem = $_FILES['imagem_q']['name'];
 
-$sql = "INSERT INTO questoes VALUES";//imagem e alternativa E não é obrigatoria
-$sql .= "(DEFAULT,'$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', $conteudo, 1)";
+$sql = "INSERT INTO questoes VALUES";
+$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', 1, 1)";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";

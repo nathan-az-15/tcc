@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Cadastro de Conteúdos</title>
 	<script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
 		<script>
@@ -38,10 +38,19 @@
 		<i class="fas fa-user icon-modify"></i>
         <input type="text" name="texto_c" placeholder="Digite o texto do conteúdo" required>
 		</label>
+		<br>
+		Escolha o ano do conteúdo
+		<br><br>
+		<input type="radio" name="ano_c" value="1" required>
+		Primeiro Ano
+		<input type="radio" name="ano_c" value="2">
+		Segundo Ano
+		<input type="radio" name="ano_c" value="3">
+		Terceiro Ano
 
 		<label class="label-input" for="">
 		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="assunto_c" maxlength="70" placeholder="Digite o assusto do conteúdo" required>
+        <input type="text" name="assunto_c" maxlength="70" placeholder="Digite o assunto do conteúdo" required>
 		</label>
 
 		<input type="submit" class="btn btn-second" value="Cadastrar Conteúdo">

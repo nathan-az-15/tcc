@@ -1,11 +1,11 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="style.css">
 	</head>
 <body>
 <?php
-include 'conecta.php';
+include 'php/conecta.php';
 
 $nome=$_POST["nome_a"];
 $email=$_POST["email_a"];

@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Cadastro de Administrador</title>
 	<script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
 		<script>
