@@ -20,7 +20,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'poppins', sans-serif;
     background-color:#F1F0F0;
   }
 
@@ -185,6 +184,7 @@
     height: 100vh;
     transition: 0.5s;
     display: inline-block;
+    font-family: 'poppins', sans-serif;
   }
 
   #check:checked ~ .conteudo{
@@ -208,6 +208,7 @@
     margin-top: -5%;
     margin-bottom: 25px;
     z-index: 0;
+    font-family: 'poppins', sans-serif;
   }
 
   .container .card{
