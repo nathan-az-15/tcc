@@ -226,11 +226,12 @@ background: #444;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
-.negrito{
+/*.negrito{
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
+  /*font-weight: bold;
+}*/
+
 @font-face {
   font-family: 'garamond';
   src: url('../fontes/cormorantgaramond-regular-webfont.woff2') format('woff2'),
