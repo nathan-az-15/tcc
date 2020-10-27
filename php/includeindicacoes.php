@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Cadastro de Indicações</title>
 	<script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
 		<script>
@@ -30,10 +30,18 @@
 <br><br><br>
 <form method="POST" class="form" action="includeindicacoes1.php" enctype="multipart/form-data">
 
-		<label class="label-input" for="">
-		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="plataforma_i" maxlength="70" placeholder="Digite a plataforma da indicação" required>
-		</label>
+		<input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif">
+		<img class="imagem" id="output_image"/>
+		<br>
+		Escolha a plataforma da indicação<br><br>
+		<input type="radio" name="plataforma_i" value="Documentario" required>
+		Documentário
+		<input type="radio" name="plataforma_i" value="Filme">
+		Filme
+		<input type="radio" name="plataforma_i" value="Serie">
+		Série
+		<input type="radio" name="plataforma_i" value="Livro">
+		Livro
 
 		<label class="label-input" for="">
 		<i class="fas fa-user icon-modify"></i>

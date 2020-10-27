@@ -47,11 +47,10 @@
         <h4>MENU</h4>
       </center>
       <a href="inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="conteudos.html
-      "><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
+      <a href="conteudos.html"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
       <a href="#"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
       <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="indicacoes.html"><i class="fas fa-film"></i><span>Indicações</span></a>
+      <a href="php/indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
       <a href="php/conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
@@ -61,7 +60,7 @@
       <!-- DOCUMENTÁRIOS -->
 
 <?php
-include 'conecta.php';
+include 'php/conecta.php';
 
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Documentario%'";
 $con = mysqli_query($conexao, $consulta);
@@ -77,11 +76,11 @@ $con = mysqli_query($conexao, $consulta);
             echo "<div class='post-wrapper'>";
 			while($mostrar = mysqli_fetch_array($con)) {
               echo "<div class='post'>";
-                echo "<img src='imagens/indicacoes/". $mostrar['imagem_indicacao'] ."' alt='' class='slider-image'>";
+                echo "<img src='imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
                 echo "<div class='post-info'>";
                   echo "<h3>". $mostrar['titulo'] ."</h3>";
 				  echo "<form method='POST' action='exibir_indicacoes.php'>";
-				  echo "<input type='hidden' name='id' value='". $mostrar['titulo'] ."'>";
+				  echo "<input type='hidden' name='id' value='". $mostrar['ID_ind'] ."'>";
 				  echo "<input type='submit' name='sub' value='Ver Indicação'>";
 				  echo "</form>";
                 echo "</div>";
@@ -94,7 +93,7 @@ $con = mysqli_query($conexao, $consulta);
 <br>
 	<!-- 1 - SERIES -->
   <?php
-include 'conecta.php';
+include 'php/conecta.php';
 
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Serie%'";
 $con = mysqli_query($conexao, $consulta);
@@ -110,11 +109,11 @@ $con = mysqli_query($conexao, $consulta);
             echo "<div class='post-wrapper'>";
 			while($mostrar = mysqli_fetch_array($con)) {
               echo "<div class='post'>";
-                echo "<img src='imagens/indicacoes/". $mostrar['imagem_indicacao'] ."' alt='' class='slider-image'>";
+                echo "<img src='imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
                 echo "<div class='post-info'>";
                   echo "<h3>". $mostrar['titulo'] ."</h3>";
 				  echo "<form method='POST' action='exibir_indicacoes.php'>";
-				  echo "<input type='hidden' name='id' value='". $mostrar['titulo'] ."'>";
+				  echo "<input type='hidden' name='id' value='". $mostrar['ID_ind'] ."'>";
 				  echo "<input type='submit' name='sub' value='Ver Indicação'>";
 				  echo "</form>";
                 echo "</div>";
@@ -127,7 +126,7 @@ $con = mysqli_query($conexao, $consulta);
   <!-- 2 - FILMES -->
 
 <?php
-include 'conecta.php';
+include 'php/conecta.php';
 
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Filme%'";
 $con = mysqli_query($conexao, $consulta);
@@ -143,11 +142,11 @@ $con = mysqli_query($conexao, $consulta);
             echo "<div class='post-wrapper'>";
 			while($mostrar = mysqli_fetch_array($con)) {
               echo "<div class='post'>";
-                echo "<img src='imagens/indicacoes/". $mostrar['imagem_indicacao'] ."' alt='' class='slider-image'>";
+                echo "<img src='imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
                 echo "<div class='post-info'>";
                   echo "<h3>". $mostrar['titulo'] ."</h3>";
 				  echo "<form method='POST' action='exibir_indicacoes.php'>";
-				  echo "<input type='hidden' name='id' value='". $mostrar['titulo'] ."'>";
+				  echo "<input type='hidden' name='id' value='". $mostrar['ID_ind'] ."'>";
 				  echo "<input type='submit' name='sub' value='Ver Indicação'>";
 				  echo "</form>";
                 echo "</div>";
@@ -160,7 +159,7 @@ $con = mysqli_query($conexao, $consulta);
       <!-- 3 - LIVROS -->
 
       <?php
-include 'conecta.php';
+include 'php/conecta.php';
 
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Livro%'";
 $con = mysqli_query($conexao, $consulta);
@@ -176,11 +175,11 @@ $con = mysqli_query($conexao, $consulta);
             echo "<div class='post-wrapper'>";
 			while($mostrar = mysqli_fetch_array($con)) {
               echo "<div class='post'>";
-                echo "<img src='imagens/indicacoes/". $mostrar['imagem_indicacao'] ."' alt='' class='slider-image'>";
+                echo "<img src='imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
                 echo "<div class='post-info'>";
                   echo "<h3>". $mostrar['titulo'] ."</h3>";
 				  echo "<form method='POST' action='exibir_indicacoes.php'>";
-				  echo "<input type='hidden' name='id' value='". $mostrar['titulo'] ."'>";
+				  echo "<input type='hidden' name='id' value='". $mostrar['ID_ind'] ."'>";
 				  echo "<input type='submit' name='sub' value='Ver Indicação'>";
 				  echo "</form>";
                 echo "</div>";
