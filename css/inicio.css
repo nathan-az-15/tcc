@@ -78,6 +78,7 @@ header{
   transition-property: left;
   overflow-y: auto;
   border: 5px #000;
+  font-weight: normal;
 }
 
 
