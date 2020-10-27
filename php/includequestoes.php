@@ -77,8 +77,8 @@
       <form method="POST" class="form" action="includequestoes1.php" enctype="multipart/form-data">
           
           <select name="conteudo_q" required>
-          <?php while($mostrar = mysql_fetch_array($query)) { ?>
-          <option value="<?php echo $mostrar['ID_cont'] ?>"><?php echo $mostrar['texto'] ?></option>
+          <?php while($mostrar = mysqli_fetch_array($query)) { ?>
+          <option value="<?php echo $mostrar['ID_cont'] ?>"><?php echo $mostrar['assunto'] ?></option>
           <?php } ?>
           </select><br>
           
