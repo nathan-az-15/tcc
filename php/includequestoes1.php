@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/style.css">
 	</head>
 <body>
 <?php
@@ -17,7 +17,7 @@ $alte=$_POST["alte_q"];
 $altcorreta=$_POST["altcorreta"];
 $explicacao=$_POST["explicacao_q"];
 
-$destino = 'imgquestao/' . $_FILES['imagem_q']['name'];
+$destino = '../imagens/imgquestao/' . $_FILES['imagem_q']['name'];
  
 $arquivo_tmp = $_FILES['imagem_q']['tmp_name'];
 
