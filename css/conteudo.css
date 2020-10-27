@@ -220,84 +220,91 @@ label #menu_btn:hover{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/matematica.jpg');
-  background-size: 430px 210px;
+  background: url('../imagens/conteudos/matematica.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container2{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/portugues.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/portugues.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container3{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/biologia.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/biologia.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container4{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/fisica.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/fisica.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container5{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/quimica.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/quimica.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container6{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/geografia.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/geografia.png');
+  background-size: 308px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .container7{
   position: relative;
   display: block;
   background: #000;
-  background: url('../imagens/conteudos/historia.jpg');
-  background-size: cover;
+  background: url('../imagens/conteudos/historia.png');
+  background-size: 315px 220px;
   margin: 120px auto;
-  border-radius: 32px;
+  border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
 }
 
 .hoverdiv{
@@ -309,10 +316,11 @@ label #menu_btn:hover{
   background:rgba(0, 0, 0, 0.5);
   color: #fff;
   opacity: 0;
-  border-radius: 32px;
+  border-radius: 20px;
   transition: all 0.3s ease-in-out;
   transition-delay: 0.3s;
   box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
 }
 
 .container1:hover .hoverdiv, .container1:active .hoverdiv{
