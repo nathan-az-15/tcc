@@ -25,8 +25,8 @@ move_uploaded_file($arquivo_tmp, $destino);
 
 $imagem = $_FILES['imagem_q']['name'];
 
-$sql = "INSERT INTO questoes VALUES";
-$sql .= "($conteudo, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', DEFAULT, DEFAULT)";
+$sql = "INSERT INTO questoes VALUES";//imagem e alternativa E não é obrigatoria
+$sql .= "(DEFAULT,'$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', $conteudo, 1)";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";

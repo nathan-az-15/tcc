@@ -66,8 +66,14 @@
   <div class="conteudo">
 
       <?php
-      $query = "SELECT * FROM conteudos";
-      include 'conecta.php';
+        $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
+        $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
+
+        $ano = $_POST["ano"];
+        $materia = $_POST["materia"];
+
+        $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
+        $cod = mysqli_query($conn,$sql);
       ?>
       <input type="button" value="Conteúdos" onClick="location. href='includeconteudos.php'">
       <input type="button" value="Questões" onClick="location. href='includequestoes.php'">
@@ -76,12 +82,13 @@
 
       <form method="POST" class="form" action="includequestoes1.php" enctype="multipart/form-data">
           
+          Selecione o assunto da questão:
           <select name="conteudo_q" required>
-          <?php while($mostrar = mysqli_fetch_array($query)) { ?>
-          <option value="<?php echo $mostrar['ID_cont'] ?>"><?php echo $mostrar['assunto'] ?></option>
+          <?php while ($mostrar = mysqli_fetch_object($cod)) { ?>
+          <option value="<?php echo $mostrar->ID_cont; ?>"><?php echo $mostrar->assunto; ?></option>
           <?php } ?>
-          </select><br>
-          
+          </select><br><br>
+
           Selecione uma imagem para acompanhar o enunciado (se possuir)
           <input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
           <img class="imagem" id="output_image"/><br><br>
