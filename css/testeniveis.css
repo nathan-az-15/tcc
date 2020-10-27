@@ -298,13 +298,13 @@
   }
 
   .container .card .face.face2 .content a{
-    margin: 15px 0 0;
+    margin: 13px 0 0;
     display: inline-block;
     font-size: 13.5px;
     text-decoration: none;
     font-weight: 600;
     color: #333;
-    padding: 5px;
+    padding: 6px;
     border: 1px solid #333;
     border-radius: 8px;
   }
