@@ -1,0 +1,317 @@
+  @font-face {
+    font-family: "title";
+    src: url("../fontes/league-gothic.otf");
+  }
+
+  @font-face {
+    font-family: "corpo";
+    src: url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
+  }
+
+  @font-face {
+    font-family: "poppins";
+    src: url("../fontes/Poppins-Regular.ttf");
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins', sans-serif;
+    background-color:#F1F0F0;
+  }
+
+  header{
+    font: arial;
+    letter-spacing: 1px; 
+    z-index: 9;
+    position: fixed;
+    background: #2b314e;
+    padding: 16px;
+    width: calc(100% - 0%);
+    top: 0;
+    height: 30px;
+    }
+
+  .esquerda h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .esquerda span{
+    color: #1F363D;
+  }
+
+  .sair{
+    font: 85% arial;
+    letter-spacing: 0.5px;
+    padding: 10px 50px;
+    text-decoration: none;
+    float: right;
+    margin-top: -5px;
+    margin-right: 45px;
+    border-radius: 11px;
+    font-weight: 200;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+    border: 1px solid #fff;
+    
+  }
+
+  .sair:hover{
+    background-color: #ABBBC4;
+    color:#181a16;
+    border: 1px solid#ABBBC4;
+  
+  }
+
+  .menu{
+    z-index: 1;
+    top: 0;
+    background: #333A5C;
+    margin-top: 4.5%;
+    padding-top: 3%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+    border: 5px #000;
+  }
+
+
+  .menu .profile_info .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+
+  .menu h4{
+    color: #f5f5f5;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .menu a{
+    color: #fff;
+    display: block;
+    line-height: 55px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .menu a:hover{
+    background-color: #ABBBC4;
+    border: 1px solid  #ABBBC4;
+    border-radius: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 26px;
+    /*margin-top: 2px;
+    margin-bottom: 2px;*/
+  }
+
+  .menu i{
+    padding-right: 10px;
+  }
+
+  label #menu_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 25px;
+    top: 18px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+  }
+
+  label #menu_btn:hover{
+    color: #ABBBC4;
+  }
+
+  #check:checked ~ .menu{
+    left: -185px;
+  }
+
+  #check:checked ~ .menu a span{
+    display: none;
+  }
+
+  #check:checked ~ .menu a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+
+  .nome
+  {
+    margin-left: 9%;
+    transition: 0.5s;
+    width: (100% - 250px);
+  }
+
+  .nome p{
+    color: #000;
+    margin-top: 12%;
+    font-size: 25px;
+    font-family: 'poppins', sans-serif;
+  }
+
+  #check:checked ~ .nome{
+    margin-left: 12%;
+    margin-top: -1%;
+  }
+
+  .conteudo{
+    width: (100% - 250px);
+    margin-top: 0%;
+    padding: 20px;
+    margin-left: 10%;
+    height: 100vh;
+    transition: 0.5s;
+    display: inline-block;
+  }
+
+  #check:checked ~ .conteudo{
+    margin-left: 8%;
+  }
+
+  #check:checked ~ .menu .profile_info{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+
+  .container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-left: 5%;
+    margin-top: -5%;
+    margin-bottom: 25px;
+    z-index: 0;
+  }
+
+  .container .card{
+    position: relative;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+
+  .container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    font-family: 'poppins', sans-serif;
+    
+  }
+
+  .container .card .face.face1{
+    position: relative;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border-radius: 20px;
+    
+  }
+
+  .container .card .face.face1 .content h3{
+    color: #333;
+  }
+
+  .container .card:hover .face.face1{
+    background: #ABBBC4;
+    transform: translateY(0);
+    border-radius: 20px 20px 0 0;
+    margin-top: 25%;
+  }
+
+  .container .card .face.face1 .content{
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+
+  .container .card:hover .face.face1 .content{
+    opacity: 0.7;
+    padding-bottom: 7.5%;
+  }
+
+  .container .card:hover .face.face1 .content img{
+    max-width: 100px;
+  }
+
+  .container .card:hover .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+
+  }
+
+  .container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px #F1F0F0;
+    transform: translateY(-100px);
+    width: 300px;
+    height: 95px;
+    border-radius: 20px;
+  } 
+
+  .container .card:hover .face.face2{
+    transform: translateY(0);
+    border-radius: 0 0 20px 20px;
+  }
+
+  .container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    font-size: 13.5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  .container .card .face.face2 .content a:hover{
+    background: #ABBBC4;
+    color: #fff;
+    border-color: #ABBBC4;
+    border-radius: 8px;
+  }
+
