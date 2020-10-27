@@ -24,7 +24,8 @@ header{
 	padding: 16px;
 	width: calc(100% - 0%);
 	top: 0;
-	height: 30px;
+  height: 30px;
+  text-decoration: none;
   }
 
 .esquerda h3{
@@ -92,6 +93,8 @@ header{
   margin-top: 0;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  text-decoration: none;
+
 }
 
 .menu a{
@@ -101,6 +104,7 @@ header{
   text-decoration: none;
   padding-left: 40px;
   box-sizing: border-box;
+  font-weight: normal;
 }
 
 .menu a:hover{
