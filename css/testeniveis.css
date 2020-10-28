@@ -172,11 +172,6 @@
     font-family: 'poppins', sans-serif;
   }
 
-  #check:checked ~ .nome{
-    margin-left: 12%;
-    margin-top: -1%;
-  }
-
   .conteudo{
     width: (100% - 250px);
     margin-top: 0%;
@@ -189,7 +184,11 @@
   }
 
   #check:checked ~ .conteudo{
-    margin-left: 8%;
+    margin-left: -3%;
+  }
+
+  #check:checked ~ .conteudo .nome{
+    margin-left: 1%;
   }
 
   #check:checked ~ .menu .profile_info{
