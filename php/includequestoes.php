@@ -66,10 +66,11 @@
   <div class="conteudo">
 
       <?php
+      session_start();
 	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
-	 		$ano = 1;//$_POST["ano"];//sessão
-            $materia = 1;//$_POST["materia"];
+    $ano = $_SESSION["ano"];
+    $materia = $_SESSION['materia'];
 
             $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
             $cod = mysqli_query($conn,$sql);

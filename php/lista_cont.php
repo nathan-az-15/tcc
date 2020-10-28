@@ -65,7 +65,7 @@
             //teria que fazer os botões da página de materias e dos anos como um form 
             //no cadastro de conteudos e testes de nivel precisaria da listbox puxando as materias
             
-            $ano = $_POST["ano"];
+            $ano = $_SESSION["ano"];
             $materia = $_SESSION['materia'];
 
             $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
