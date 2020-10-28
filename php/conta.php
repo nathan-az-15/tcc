@@ -51,8 +51,8 @@
       <h4>MENU</h4>
       </center>
       <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="../conteudos.html"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="../testeniveis.html"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
+      <a href="conteudos.php"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
+      <a href="testeniveis.php"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
       <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
       <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
       <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
@@ -120,13 +120,7 @@ $res = mysqli_query($conexao, $consulta);  //Executa o comando SQL, no caso para
 
 ?>
 </div>
-   <!--<script type="text/javascript">
-    $(document).ready(function(){
-      $('.nav_btn').click(function(){
-        $('.mobile_nav_items').toggleClass('active');
-      });
-    });
-    </script>-->
+ 
 
 </body>
 </html>

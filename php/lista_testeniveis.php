@@ -51,10 +51,10 @@
       <h4>MENU</h4>
       </center>
       <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="../conteudos.html"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="#"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
+      <a href="conteudos.php"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
+      <a href="testeniveis.php"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
       <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="../indicacoes.html"><i class="fas fa-film"></i><span>Indicações</span></a>
+      <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
       <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
@@ -67,7 +67,7 @@
             //teria que fazer os botões da página de materias e dos anos como um form 
             //no cadastro de conteudos e testes de nivel precisaria da listbox puxando as materias
             
-            $ano = $_POST["ano"];
+            $ano = $_SESSION["ano"];
             $materia = $_SESSION['materia'];
 
             $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
