@@ -68,13 +68,12 @@
 
             $sql = "SELECT * FROM materias";
             $cod = mysqli_query($conn,$sql);
-
-            
-      ?>
+//IMAGINO QUE INDICAÇÕES NÃO TENHA PAGINAS ANTERIORES DE MATERIA E ANO
+?>
 <form method="POST" class="form" action="includeindicacoes1.php" enctype="multipart/form-data">
 
         Selecione uma imagem para acompanhar o enunciado (se possuir)
-    <input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif">
+    <input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif" required>
     <img class="imagem" id="output_image"/><br><br>
 
     Selecione a plataforma:

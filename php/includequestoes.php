@@ -88,13 +88,6 @@
           <option value="<?php echo $mostrar->ID_cont ?>"><?php echo $mostrar->assunto ?></option>
           <?php } ?>
           </select><br>
-
-			Selecione o ano:
-		  <select name="ano" required>
-          <option value="1">1° ano</option>
-		  <option value="2">2° ano</option>
-		  <option value="3">3° ano</option>
-          </select><br>
           
           Selecione uma imagem para acompanhar o enunciado (se possuir)
           <input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
@@ -127,7 +120,7 @@
           
           Alternativa E:<br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E " required></textarea>
+              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E (se possuir)"></textarea>
           </label><br><br>
 
           Selecione a alternativa que responde essa questão corretamente:<br><br>

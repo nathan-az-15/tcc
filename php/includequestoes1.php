@@ -15,7 +15,7 @@ $altd=$_POST["altd_q"];
 $alte=$_POST["alte_q"];
 $altcorreta=$_POST["altcorreta"];
 $explicacao=$_POST["explicacao_q"];
-$ano=$_POST["ano"];
+$ano=$_SESSION["ano"];
 
 $destino = '../imagens/imgquestao/' . $_FILES['imagem_q']['name'];
  
