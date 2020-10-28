@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title>Reforço Escolar Online | R.E.O</title>
 	<link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" href="../css/include_cont_ind.css">
@@ -86,7 +86,7 @@
       Selecione a matéria que esta indicação está relacionada:
 		  <select name="mat_i" required>
       <?php while($mostrar = mysqli_fetch_object($cod)) { ?>
-      <option value="<?php echo $mostrar->ID_materia ?>"><?php echo $mostrar->nome_mat ?></option>
+      <option value="<?php echo $mostrar->ID_materia ?>"><?php echo utf8_encode($mostrar->nome_mat) ?></option>
       <?php } ?>
       </select><br>
 
