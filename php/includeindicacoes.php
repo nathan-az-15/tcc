@@ -68,7 +68,6 @@
 
             $sql = "SELECT * FROM materias";
             $cod = mysqli_query($conn,$sql);
-//IMAGINO QUE INDICAÇÕES NÃO TENHA PAGINAS ANTERIORES DE MATERIA E ANO
 ?>
 <form method="POST" class="form" action="includeindicacoes1.php" enctype="multipart/form-data">
 
