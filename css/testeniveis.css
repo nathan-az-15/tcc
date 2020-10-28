@@ -173,7 +173,7 @@
   }
 
   #check:checked ~ .nome{
-    margin-left: 2%;
+    margin-left: 12%;
     margin-top: -1%;
   }
 
@@ -189,7 +189,7 @@
   }
 
   #check:checked ~ .conteudo{
-    margin-left: -3%;
+    margin-left: 8%;
   }
 
   #check:checked ~ .menu .profile_info{
