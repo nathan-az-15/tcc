@@ -21,6 +21,10 @@ move_uploaded_file($arquivo_tmp, $destino);
 
 $imagem = $_FILES['imagem_i']['name'];
 
+if($imagem == ""){
+	$imagem = "default.jpg";
+}
+
 $sql = "INSERT INTO indicacoes VALUES";
 $sql .= "(DEFAULT, '$plataforma', '$titulo', '$autor', '$descricao', '$materia', '1', '$imagem')";
 

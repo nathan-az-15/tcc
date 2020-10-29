@@ -63,7 +63,7 @@
 </div>
 <div class="conteudo" style="margin-top:1%">
 <?php
-	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
+	  $conn = mysqli_connect('127.0.0.1', 'root', 'usbw') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
 
             $sql = "SELECT * FROM materias";
@@ -71,19 +71,19 @@
 ?>
 <form method="POST" class="form" action="includeindicacoes1.php" enctype="multipart/form-data">
 
-        Selecione uma imagem para acompanhar o enunciado (se possuir)
-    <input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif" required>
+        Selecione uma imagem para acompanhar o enunciado: 
+    <input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif">
     <img class="imagem" id="output_image"/><br><br>
 
-    Selecione a plataforma:
+    Selecione a plataforma:<font size=5 color=#FF0000> *</font>
 		  <select name="plataforma_i" required>
       <option value="Filme">Filme</option>
 		  <option value="Livro">Livro</option>
-      <option value="Serie">Serie</option>
-      <option value="Documentario">Documentario</option>
-      </select><br>
+      <option value="Serie">Série</option>
+      <option value="Documentario">Documentário</option>
+      </select><br><br>
 
-      Selecione a matéria que esta indicação está relacionada:
+      Selecione a matéria que esta indicação está relacionada:<font size=5 color=#FF0000> *</font>
 		  <select name="mat_i" required>
       <?php while($mostrar = mysqli_fetch_object($cod)) { ?>
       <option value="<?php echo $mostrar->ID_materia ?>"><?php echo utf8_encode($mostrar->nome_mat) ?></option>
@@ -91,17 +91,17 @@
       </select><br>
 
 		<br>
-        Digite o título da indicação:
+        Digite o título da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
         <input type="text" class="assunto" name="titulo_i" maxlength="70"  required>
 		</label>
 		<br>
-        Digite o autor da indicação:
+        Digite o autor da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
         <input type="text" class="assunto" name="autor_i" maxlength="100" required>
 		</label>
 		<br>
-        Digite a descrição da indicação:
+        Digite a descrição da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
         <input type="text" class="assunto" name="descricao_i" required>
 		</label>
