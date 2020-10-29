@@ -67,7 +67,7 @@
 
       <?php
       session_start();
-	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
+	  $conn = mysqli_connect('127.0.0.1', 'root', 'usbw') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
     $ano = $_SESSION["ano"];
     $materia = $_SESSION['materia'];
@@ -82,48 +82,48 @@
 
       <form method="POST" class="form" action="includequestoes1.php" enctype="multipart/form-data">
           
-		  Selecione o conteudo:
+		  Selecione o conteudo:<font size=5 color=#FF0000> *</font>
           <select name="conteudo_q" required>
           <?php while($mostrar = mysqli_fetch_object($cod)) { ?>
           <option value="<?php echo $mostrar->ID_cont ?>"><?php echo $mostrar->assunto ?></option>
           <?php } ?>
-          </select><br>
+          </select><br><br>
           
-          Selecione uma imagem para acompanhar o enunciado (se possuir)
+          Selecione uma imagem para acompanhar o enunciado:
           <input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
           <img class="imagem" id="output_image"/><br><br>
           
-          Questão :<br>
+          Questão:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="enunciado_q" placeholder="Digite o enunciado da questão" required></textarea>
           </label><br><br>
           
-          Alternativa A:<br>
+          Alternativa A:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="alta_q" maxlength="200" placeholder=" Digite a alternativa A " required></textarea>
           </label><br><br>
           
-          Alternativa B:<br>
+          Alternativa B:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="altb_q" maxlength="200" placeholder=" Digite a alternativa B " required></textarea>
           </label><br><br>
           
-          Alternativa C:<br>
+          Alternativa C:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="altc_q" maxlength="200" placeholder=" Digite a alternativa C " required></textarea>
           </label><br><br>
           
-          Alternativa D:<br>
+          Alternativa D:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="altd_q" maxlength="200" placeholder=" Digite a alternativa D " required></textarea>
           </label><br><br>
           
           Alternativa E:<br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E (se possuir)"></textarea>
+              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E "></textarea>
           </label><br><br>
 
-          Selecione a alternativa que responde essa questão corretamente:<br><br>
+          Selecione a alternativa que responde essa questão corretamente:<font size=5 color=#FF0000> *</font><br><br>
           <input type="radio" name="altcorreta" value="A" required>
           Alternativa A<br><br>
           <input type="radio" name="altcorreta" value="B">
@@ -135,7 +135,7 @@
           <input type="radio" name="altcorreta" value="E">
           Alternativa E<br><br><br>         
           
-          Resolução :
+          Resolução:<font size=5 color=#FF0000> *</font>
           <label class="label-input" for="">
               <textarea type="text" class="enunciado" name="explicacao_q" placeholder="Digite a resolução (contas a fazer, lógica a seguir, por exemplo)" required></textarea>
           </label><br><br>
