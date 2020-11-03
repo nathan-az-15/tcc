@@ -1,67 +1,122 @@
-<html>
-	<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<title>Cadastro de Indicações</title>
-	<script src="https://kit.fontawesome.com/faf083a5ac.js" crossorigin="anonymous"></script>
-		<script>
-	function preview_image(event) 
-{
- var reader = new FileReader();
- reader.onload = function()
- {
-  var output = document.getElementById('output_image');
-  output.src = reader.result;
- }
- reader.readAsDataURL(event.target.files[0]);
-}
-	function limpar(){
-	alert("Os dados serão limpados");
-	}
-	</script>
-</head>
-<body>
-<center>
-<input type="button" value="Administrador" onClick="location. href='includeadministrador.php'">
-<input type="button" value="Conteúdos" onClick="location. href='includeconteudos.php'">
-<input type="button" value="Questões" onClick="location. href='includequestoes.php'">
-<input type="button" value="Matérias" onClick="location. href='includematerias.php'">
-<input type="button" value="Indicações" onClick="location. href='includeindicacoes.php'">
-<br><br><br>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Reforço Escolar Online | R.E.O</title>
+	<link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/include_cont_ind.css">
+	
+    <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
+	
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    
+
+      <header>
+	 
+      <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
+      <label for="check">
+        <i class="fas fa-align-justify" id="menu_btn"></i>
+      </label>
+      <div class="direita">
+        <a href="sair.php" class="sair">Sair</a>
+      </div>
+	  
+      </header>
+    <!--header area end-->
+
+
+    <!--mobile navigation bar start
+    <div class="mobile_nav">
+      <div class="nav_bar">
+        
+        <i class="fa fa-bars nav_btn"></i>
+      </div>
+      <div class="mobile_nav_items">
+        <a href="#"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="#"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
+      <a href="#"><i class="fas fa-file-alt"></i><span>Simulados</span></a>
+      <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
+      <a href="#"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+      </div>
+    </div>
+    mobile navigation bar end-->
+
+    <!--sidebar start-->
+    <div class="menu">
+      <center>
+      <h4>MENU</h4>
+      </center>
+      <a href="../inicio_adm.html"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="includeconteudos.php"><i class="fas fa-book-open"></i><span>Cadastro de conteúdos</span></a>
+      <a href="includequestoes.php"><i class="fas fa-file-alt"></i><span>Cadastro de questões</span></a>
+      <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastro de indicações</span></a>
+      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+    </div>
+    <!--sidebar end-->
+<div class="nome">
+        <p> Cadastro Indicações </p>
+        <hr style="width: 102%; height: 7%; margin-left: -5%;">
+</div>
+<div class="conteudo" style="margin-top:1%">
+<?php
+	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
+	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
+
+            $sql = "SELECT * FROM materias";
+            $cod = mysqli_query($conn,$sql);
+?>
 <form method="POST" class="form" action="includeindicacoes1.php" enctype="multipart/form-data">
 
-		<input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif">
-		<img class="imagem" id="output_image"/>
+        Selecione uma imagem para acompanhar o enunciado: 
+    <input type="file" onchange="preview_image(event)" name="imagem_i" accept=".png, .jpg, .jpeg, .gif">
+    <img class="imagem" id="output_image"/><br>
+
+    Selecione a plataforma:<font size=5 color=#FF0000> *</font>
+		  <select name="plataforma_i" required>
+      <option value="Filme">Filme</option>
+		  <option value="Livro">Livro</option>
+      <option value="Serie">Série</option>
+      <option value="Documentario">Documentário</option>
+      </select><br>
+
+      Selecione a matéria que esta indicação está relacionada:<font size=5 color=#FF0000> *</font>
+		  <select name="mat_i" required>
+      <?php while($mostrar = mysqli_fetch_object($cod)) { ?>
+      <option value="<?php echo $mostrar->ID_materia ?>"><?php echo utf8_encode($mostrar->nome_mat) ?></option>
+      <?php } ?>
+      </select>
+
 		<br>
-		Escolha a plataforma da indicação<br><br>
-		<input type="radio" name="plataforma_i" value="Documentario" required>
-		Documentário
-		<input type="radio" name="plataforma_i" value="Filme">
-		Filme
-		<input type="radio" name="plataforma_i" value="Serie">
-		Série
-		<input type="radio" name="plataforma_i" value="Livro">
-		Livro
-
+        Digite o título da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
-		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="titulo_i" maxlength="70" placeholder="Digite o título da indicação" required>
+        <input type="text" class="assunto" name="titulo_i" maxlength="70"  required>
 		</label>
-
+		<br>
+        Digite o autor da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
-		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="autor_i" maxlength="100" placeholder="Digite o autor da indicação" required>
+        <input type="text" class="assunto" name="autor_i" maxlength="100" required>
 		</label>
-
+		<br>
+        Digite a descrição da indicação:<font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
-		<i class="fas fa-user icon-modify"></i>
-        <input type="text" name="descricao_i" placeholder="Digite a descrição da indicação" required>
+        <input type="text" class="assunto" name="descricao_i" required>
 		</label>
-
+		<br>
+        <center>
 		<input type="submit" class="btn btn-second" value="Cadastrar Indicação">
+		</center>
 </form>
 
-
-</center>
+</div>
+   <!--<script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+    </script>-->
 </body>
 </html>

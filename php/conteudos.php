@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Reforço Escolar Online | R.E.O</title>
-    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="../css/conteudo.css">
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
   
   </head>
@@ -14,12 +14,12 @@
     
 
       <header>
-        <a href="inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="imagens/inicial/logo3.png"></a>
+        <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"></a>
       <label for="check">
         <i class="fas fa-align-justify" id="menu_btn"></i>
       </label>
       <div class="direita">
-        <a href="php/sair.php" class="sair">Sair</a>
+        <a href="sair.php" class="sair">Sair</a>
       </div>
     </header>
     <!--header area end-->
@@ -46,12 +46,12 @@
       <center>
         <h4>MENU</h4>
       </center>
-      <a href="inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="conteudos.html"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="testeniveis.html"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
+      <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="conteudos.php"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
+      <a href="testeniveis.php"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
       <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="php/indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
-      <a href="php/conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+      <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
+      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
       
@@ -61,24 +61,37 @@
     </div>
   
     <div class="conteudo">
-  
+  <?php
+    session_start();
+  ?>
       <section class='flexbox'>
-        <div class="container1"
+          <div class="container1"
           style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
           <div class="hoverdiv">
-            <p> Matemática </p>
+          <?php
+            $_SESSION['materia']=2;
+            ?>
+            <p> Matemática </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
-        </div>
+          </div>
+
+ 
         <div class="container2"
           style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
           <div class="hoverdiv">
-            <p> Português </p>
+          <?php
+            $_SESSION['materia']=1;
+            ?>
+            <p> Português </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
         <div class="container3"
           style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
           <div class="hoverdiv">
-            <p> Biologia </p>
+          <?php
+            $_SESSION['materia']=5;
+            ?>
+            <p> Biologia </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
       </section>
@@ -86,17 +99,26 @@
       <section class='flexbox'>
         <div class="container4" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
           <div class="hoverdiv">
-            <p> Física </p>
+          <?php
+            $_SESSION['materia']=7;
+            ?>
+            <p> Física </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
         <div class="container5" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
           <div class="hoverdiv">
-            <p> Química </p>
+          <?php
+            $_SESSION['materia']=6;
+            ?>
+            <p> Química </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
         <div class="container6" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
           <div class="hoverdiv">
-            <p> Geografia </p>
+          <?php
+            $_SESSION['materia']=4;
+            ?>
+            <p> Geografia </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
       </section>
@@ -104,20 +126,16 @@
       <section class='flexbox'>
         <div class="container7" style="width: 310px; height: 220px; margin-left: 2%; margin-right: 1%; margin-top: 5%;">
           <div class="hoverdiv">
-            <p> História </p>
+          <?php
+            $_SESSION['materia']=3;
+            ?>
+            <p> História </p><!-- falta colocar o link pro anos_cont.php -->
           </div>
         </div>
       </section>
 
     </div>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('.nav_btn').click(function(){
-        $('.mobile_nav_items').toggleClass('active');
-      });
-    });
-    </script>
-
+    
   </body>
 </html>

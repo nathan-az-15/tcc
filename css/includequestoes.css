@@ -1,6 +1,6 @@
 @font-face {
     font-family: "title";
-    src: url("league-gothic.otf");
+    src: url("../fontes/league-gothic.otf");
   }
   
   @font-face {
@@ -215,7 +215,7 @@
   margin-top: -1%;
 }
 
-.conteudo .enunciado{
+.enunciado{
     border-radius:6px;
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
@@ -223,7 +223,7 @@
     -moz-box-shadow: 1px 1px 2px #333333;
     -webkit-box-shadow: 1px 1px 2px #333333;
     border:1px solid rgb(44, 44, 44);   
-    width:100%;
+    width:120%;
     height:60px;
     margin-top: 10px;
     margin-bottom:10px;
@@ -257,3 +257,4 @@
     border: 1px solid  #ABBBC4;    
     color:  rgb(44, 44, 44);
 }
+

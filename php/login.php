@@ -68,8 +68,15 @@ $inup = 'sign-in-js';
 		
 		<label class="label-input" for="">
 		<i class="fas fa-graduation-cap icon-modify"></i> 
-        <input type="text" name="escola_usuario" maxlength="50" placeholder="Escolaridade" required>
-		</label>
+        <select name="escola_usuario">
+		<option value="Cursando Ensino Fundamental"> Cursando Ensino Fundamental</option>
+		<option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+		<option value="Cursando Ensino Médio">Cursando Ensino Médio</option>
+		<option value="Ensino Médio Completo">Ensino Médio Completo</option>
+		<option value="Cursando Ensino Superior">Cursando Ensino Superior</option>
+        <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+        </select>
+		</label>	
 		
 		<label class="label-input" for="">
 		<i class="fas fa-layer-group icon-modify"></i> 

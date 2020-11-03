@@ -5,13 +5,14 @@
 	</head>
 <body>
 <?php
-include 'php/conecta.php';
-
+include 'conecta.php';
+session_start();//falta ser aberta na pagina dos conteudo e de anos do adm
 $texto=$_POST["texto_c"];
 $assunto=$_POST["assunto_c"];
-$ano=$_POST["ano_c"];
+$ano = $_SESSION["ano"];
+$materia = $_SESSION['materia'];
 
-$destino = 'imgconteudo/' . $_FILES['imagem_c']['name'];
+$destino = '../imagens/imgconteudo/' . $_FILES['imagem_c']['name'];
  
 $arquivo_tmp = $_FILES['imagem_c']['tmp_name'];
 
@@ -20,7 +21,7 @@ move_uploaded_file($arquivo_tmp, $destino);
 $imagem = $_FILES['imagem_c']['name'];
 
 $sql = "INSERT INTO conteudos VALUES";
-$sql .= "(DEFAULT, '$texto', '$imagem', '1', '1', '$ano', '$assunto')";
+$sql .= "(DEFAULT, '$texto', '$imagem', '$materia', 1, '$ano', '$assunto')";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
