@@ -12,8 +12,7 @@
 <body>
   
   <input type="checkbox" id="check">
-  <!--header area start-->
-  
+  <!--header area start--> 
 
     <header>
       <a href="../inicio.html"><img style="float:left; margin-left: 68px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"></a>
@@ -58,14 +57,16 @@
   <!--sidebar end-->
 
   <div class="conteudo">
-
     <div class="nome">
       <p> Testes de Nível </p>
-      <hr style="width: 113%; height: 7%; margin-left: -5%;">
+      <hr style="width: 116%; height: 7%; margin-left: -5%;">
     </div>
+<<<<<<< HEAD:testeniveis.html
+=======
     <?php
             session_start();
             ?>
+>>>>>>> d3682e79a9359a735931749560b307d781291bc1:php/testeniveis.php
     <div class="container">
       <div class="card">
         <div class="face face1">
