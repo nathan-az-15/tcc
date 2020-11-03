@@ -5,7 +5,7 @@
 <body>
 <?php
 include 'conecta.php';
-
+session_start();
 $conteudo=$_POST["conteudo_q"];
 $enunciado=$_POST["enunciado_q"];
 $alta=$_POST["alta_q"];
