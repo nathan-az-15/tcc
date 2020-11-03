@@ -21,7 +21,7 @@ if ($cont<=0){
     .href='login.php';</script>";
     die();
 }else{
-	echo "<meta http-equiv='refresh' content='0;url=http://127.0.0.1/edsa-tcc-github/#' />";//link da pagina do adm
+	echo "<meta http-equiv='refresh' content='0;url=http://127.0.0.1/edsa-TCC_github/inicio_adm.html' />";//link da pagina do adm
 }
 }
 else{

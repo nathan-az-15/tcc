@@ -49,11 +49,10 @@
       <center>
       <h4>MENU</h4>
       </center>
-      <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="../conteudos.html"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="../testeniveis.html"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
-      <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
+      <a href="../inicio_adm.html"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="includeconteudos.php"><i class="fas fa-book-open"></i><span>Cadastro de conteúdos</span></a>
+      <a href="includequestoes.php"><i class="fas fa-file-alt"></i><span>Cadastro de questões</span></a>
+      <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastro de indicações</span></a>
       <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
@@ -67,7 +66,7 @@
 
       <?php
       session_start();
-	  $conn = mysqli_connect('127.0.0.1', 'root', 'usbw') or die("Não foi possível a conexão com o Banco");
+	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
     $ano = $_SESSION["ano"];
     $materia = $_SESSION['materia'];

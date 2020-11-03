@@ -70,7 +70,7 @@
             $ano = $_SESSION["ano"];
             $materia = $_SESSION['materia'];
 
-            $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
+            $sql = "SELECT * FROM questoes where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
             $cod = mysqli_query($conn,$sql);
 
             $numRegistros = mysqli_num_rows($cod);

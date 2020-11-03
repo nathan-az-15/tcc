@@ -3,7 +3,7 @@
     src: url("Poppins-Regular.ttf");
 }
 body{
-overflow: hidden;
+overflow: auto;
 }
 textarea{
 resize: none;
