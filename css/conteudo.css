@@ -216,6 +216,18 @@ label #menu_btn:hover{
   opacity: 0.8;
 }
 
+.conteudo .card a{
+  background: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 5px;
+  
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 .container1{
   position: relative;
   display: block;
@@ -378,6 +390,8 @@ label #menu_btn:hover{
 .container7:hover{
   transform: scale(1.03);
 }
+
+
 
 /*.mobile_nav{
   display: none;
