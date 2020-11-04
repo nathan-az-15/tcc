@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  
-  <input type="checkbox" id="check">
-  <!--header area start--> 
 
-    <header>
-      <a href="../inicio.html"><img style="float:left; margin-left: 68px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"></a>
+  <input type="checkbox" id="check">
+  <!--header area start-->
+
+  <header>
+    <a href="../inicio.html"><img style="float:left; margin-left: 68px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"></a>
     <label for="check">
       <i class="fas fa-align-justify" id="menu_btn"></i>
     </label>
@@ -61,24 +61,23 @@
       <p> Testes de Nível </p>
       <hr style="width: 116%; height: 7%; margin-left: -5%;">
     </div>
-<<<<<<< HEAD:testeniveis.html
-=======
     <?php
-            session_start();
-            ?>
->>>>>>> d3682e79a9359a735931749560b307d781291bc1:php/testeniveis.php
+    session_start();
+    ?>
     <div class="container">
       <div class="card">
         <div class="face face1">
           <div class="content">
             <center><img src="../imagens/testesniveis/matematica.png" style="margin-top: 18%;"></center>
-            <center><h3 style="opacity: 0.8;">Matemática</h3></center>
+            <center>
+              <h3 style="opacity: 0.8;">Matemática</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=2;
+            <?php
+            $_SESSION['materia'] = 2;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de matemática.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -89,13 +88,15 @@
         <div class="face face1">
           <div class="content">
             <center><img src="../imagens/testesniveis/portugues.png" style="margin-top: 18%;"></center>
-            <center><h3 style="opacity: 0.8;">Português</h3></center>
+            <center>
+              <h3 style="opacity: 0.8;">Português</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=1;
+            <?php
+            $_SESSION['materia'] = 1;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de português.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -106,13 +107,15 @@
         <div class="face face1">
           <div class="content" style="opacity: 0.5;">
             <center><img src="../imagens/testesniveis/biologia.png" style="margin-top: 23%;"></center>
-            <center><h3 style="opacity: 1;">Biologia</h3></center>
+            <center>
+              <h3 style="opacity: 1;">Biologia</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=5;
+            <?php
+            $_SESSION['materia'] = 5;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de biologia.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -126,13 +129,15 @@
         <div class="face face1">
           <div class="content" style="opacity: 0.5;">
             <center><img src="../imagens/testesniveis/fisica.png" style="margin-top: 18%;"></center>
-            <center><h3 style="opacity: 1;">Física</h3></center>
+            <center>
+              <h3 style="opacity: 1;">Física</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=8;
+            <?php
+            $_SESSION['materia'] = 8;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de física.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -143,13 +148,15 @@
         <div class="face face1">
           <div class="content" style="opacity: 0.5;">
             <center><img src="../imagens/testesniveis/quimica.png" style="margin-top: 20%;"></center>
-            <center><h3 style="opacity: 1;">Química</h3></center>
+            <center>
+              <h3 style="opacity: 1;">Química</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=7;
+            <?php
+            $_SESSION['materia'] = 7;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de química.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -160,13 +167,15 @@
         <div class="face face1">
           <div class="content" style="opacity: 0.9;">
             <center><img src="../imagens/testesniveis/geografia.png" style="margin-top: 20%;"></center>
-            <center><h3 style="opacity: 0.6;">Geografia</h3></center>
+            <center>
+              <h3 style="opacity: 0.6;">Geografia</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=4;
+            <?php
+            $_SESSION['materia'] = 4;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de geografia.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
@@ -180,13 +189,15 @@
         <div class="face face1">
           <div class="content" style="opacity: 0.9;">
             <center><img src="../imagens/testesniveis/historia.png" style="margin-top: 20%;"></center>
-            <center><h3 style="opacity: 0.7;">História</h3></center>
+            <center>
+              <h3 style="opacity: 0.7;">História</h3>
+            </center>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-          <?php
-            $_SESSION['materia']=3;
+            <?php
+            $_SESSION['materia'] = 3;
             ?>
             <p>Selecione este card se desejar realizar os testes de nível de história.</p>
             <a href="anos_testeniveis.php">Fazer testes</a>
