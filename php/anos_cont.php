@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <title>Reforço Escolar Online | R.E.O</title>
   <link rel="stylesheet" href="../css/anos.css">
   <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
