@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden">
 
   <input type="checkbox" id="check">
   <!--header area start-->
