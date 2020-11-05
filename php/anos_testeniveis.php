@@ -69,7 +69,7 @@
     <section class='flexbox'>
 
       <div class="container1" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_testeniveis.php" style="text-decoration: none">
+        <a href="lista_testeniveis.php" style="text-decoration: none">
           <div class="hoverdiv">
             <?php
             $_SESSION['ano'] = 1;
@@ -80,7 +80,7 @@
       </div>
 
       <div class="container2" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_testeniveis.php" style="text-decoration: none">
+        <a href="lista_testeniveis.php" style="text-decoration: none">
           <div class="hoverdiv">
             <?php
             $_SESSION['ano'] = 2;
@@ -91,7 +91,7 @@
       </div>
 
       <div class="container3" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_testeniveis.php" style="text-decoration: none">
+        <a href="lista_testeniveis.php" style="text-decoration: none">
           <div class="hoverdiv">
             <?php
             $_SESSION['ano'] = 3;
