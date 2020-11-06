@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Out-2020 às 17:50
+-- Generation Time: 06-Nov-2020 às 20:35
 -- Versão do servidor: 5.7.17
 -- PHP Version: 7.1.3
 
@@ -23,6 +23,7 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS bd_reo_tcc DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE bd_reo_tcc;
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +66,10 @@ CREATE TABLE `conteudos` (
 
 INSERT INTO `conteudos` (`ID_cont`, `texto`, `end_imagens_cont`, `cod_mat`, `cod_adm`, `ano`, `assunto`) VALUES
 (1, 'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss', 'askfjshdjfdddddddd', 1, 1, 1, 'Verbo'),
-(2, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'sdfsdgfuilolo', 1, 1, 2, 'Substantivo');
+(2, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'sdfsdgfuilolo', 1, 1, 2, 'Substantivo'),
+(3, 'khhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhkkkkkkkkkkkkk', 'Screenshot_20201007-154156.jpg', 3, 1, 2, 'Querra'),
+(4, 'Texto explicativo sobre dom pedro I dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd', 'download.jpg', 3, 1, 2, 'Dom Pedro I'),
+(5, 'SLAKFHSKFJHOEIWHFWOJCJEWHFUEFHIWUEF', 'download1.jpg', 3, 1, 2, 'Era vargas');
 
 -- --------------------------------------------------------
 
@@ -83,6 +87,16 @@ CREATE TABLE `indicacoes` (
   `cod_adm` int(1) NOT NULL,
   `end_imagem_ind` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `indicacoes`
+--
+
+INSERT INTO `indicacoes` (`ID_ind`, `plataforma`, `titulo`, `autor`, `descricao`, `cod_mat`, `cod_adm`, `end_imagem_ind`) VALUES
+(1, 'Filme', 'Moana', 'Maria', 'ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss', 2, 1, 'his2.2.1.png'),
+(4, 'Livro', 'ssssssssss', 'dsfsdddddd', 'sddfsdfsdfsdfsdfsdf', 1, 1, 'Screenshot_20201007-154156.jpg'),
+(5, 'Documentario', 'testeasasdds', 'eu mesmo', 'teste para apresentação', 3, 1, 'download.jpg'),
+(6, 'Serie', 'sljdladhflsdjfhsd', 'asdsdfrgg', 'sdfghjkkuytryhbfhg', 5, 1, 'download1.jpg');
 
 -- --------------------------------------------------------
 
@@ -126,8 +140,18 @@ CREATE TABLE `questoes` (
   `alt_correta` varchar(1) NOT NULL,
   `explicacao` text NOT NULL,
   `cod_cont` int(2) NOT NULL,
-  `cod_adm` int(2) NOT NULL
+  `cod_adm` int(2) NOT NULL,
+  `ano` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `questoes`
+--
+
+INSERT INTO `questoes` (`ID_questoes`, `end_imagens_quest`, `enunciado`, `alt_a`, `alt_b`, `alt_c`, `alt_d`, `alt_e`, `alt_correta`, `explicacao`, `cod_cont`, `cod_adm`, `ano`) VALUES
+(1, '', 'sretrjyykjhfgdf', 'aaaaaaaa', 'bbbbbbbbbbb', 'ccccccccccccccc', 'ddddddddddddddd', '', 'A', 'sdgehtryjtkumnbdvsdfewg', 4, 1, 2),
+(2, 'download1.jpg', 'sjfhsodjfhsdjfhskjfh', 'asasasasas', 'babaabababba', 'dsdfsdfsd', 'tgsercsergvcdf', '', 'B', 'klhefljhweofjcbdvmbsv', 4, 1, 2),
+(3, '', 'SADFGHJKUYTGRFDC', 'ASDFERHREBWAGVAV', 'dverhrtjrnbeb', 'sdverthukrbv', 'dvfbndfbsdsd', '', 'E', 'asjhfaiosfheroihvnfdoireuog', 5, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -162,7 +186,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID_usuario`, `nome_usuario`, `data_nasc`, `escolaridade`, `email_usuario`, `senha_usuario`, `serie_ano`) VALUES
-(1, 'Nathan de Azevedo Capelo', '2002-03-15', 'Cursando Ensino médio', 'nata.mili@hotmail.com', 'nathan15', '3° ano'),
+(1, 'Nathan Azevedo Capelo', '2002-03-15', 'Cursando Ensino mÃ©dio', 'nata.mili@hotmail.com', 'nathan15', '3Â° ano'),
 (2, 'Maria Emilia', '1965-05-22', 'Ensino Superior', 'emilia@etec.com', '1234567', '1');
 
 --
@@ -232,12 +256,12 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT for table `conteudos`
 --
 ALTER TABLE `conteudos`
-  MODIFY `ID_cont` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_cont` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `indicacoes`
 --
 ALTER TABLE `indicacoes`
-  MODIFY `ID_ind` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_ind` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `materias`
 --
@@ -247,7 +271,7 @@ ALTER TABLE `materias`
 -- AUTO_INCREMENT for table `questoes`
 --
 ALTER TABLE `questoes`
-  MODIFY `ID_questoes` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_questoes` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
