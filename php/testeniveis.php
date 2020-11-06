@@ -61,12 +61,9 @@
       <p> Testes de Nível </p>
       <hr style="width: 116%; height: 7%; margin-left: -5%;">
     </div>
-<<<<<<< HEAD:testeniveis.html
-=======
     <?php
             session_start();
             ?>
->>>>>>> d3682e79a9359a735931749560b307d781291bc1:php/testeniveis.php
     <div class="container">
       <div class="card">
         <div class="face face1">
