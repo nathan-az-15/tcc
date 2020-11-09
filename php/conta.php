@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
+<meta charset='utf-8'>
     <title>Reforço Escolar Online | R.E.O</title>
     <link rel="stylesheet" href="../css/inicio.css">
 	<link rel="stylesheet" href="../css/conta.css">
@@ -48,9 +48,8 @@
 <?php
 include 'conecta.php';
 session_start();
-echo "<meta charset='utf-8'>";
+echo "";
 $email=$_SESSION['email_usuario'];
-$conexao = mysqli_connect('127.0.0.1','root','','bd_reo_tcc') or die("erro de conexão");
 
 if($email=="ADM_reforc@gmail.com"){
   $consulta="SELECT * FROM administrador WHERE email_adm = '$email'";
@@ -81,10 +80,10 @@ if($email=="ADM_reforc@gmail.com"){
 						
 					   
 					    <label for="exampleInputEmail1">Nome</label>
-						<input type="TEXT" class="form-control1" id="exampleInputEmail1" aria-describedby="emailHelp" name="Nome" placeholder="Nome"  style="text-align: left " value="<?php echo utf8_encode($mostrar['nome_adm']);?>" required>
+						<input type="TEXT" class="form-control1" id="exampleInputEmail1" aria-describedby="emailHelp" name="Nome" placeholder="Nome"  style="text-align: left " value="<?php echo $mostrar['nome_adm'];?>" required>
 					    				    
 					    <label for="exampleInputEmail1">Email</label>
-						<input type="email" class="form-control4" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" placeholder="Email" style="text-align: left" value="<?php echo utf8_encode($mostrar['email_adm']);?>" disabled>
+						<input type="email" class="form-control4" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" placeholder="Email" style="text-align: left" value="<?php echo $mostrar['email_adm'];?>" disabled>
 					    					   
 					    <button type="submit" class="btn2 btn-color2" style= "text-align:left">Salvar</button>
 						
@@ -131,26 +130,26 @@ $res = mysqli_query($conexao, $consulta);  //Executa o comando SQL, no caso para
 						
 					   
 					    <label for="exampleInputEmail1">Nome</label>
-						<input type="TEXT" class="form-control1" id="exampleInputEmail1" aria-describedby="emailHelp" name="Nome" placeholder="Nome Completo"  style="text-align: left " value="<?php echo utf8_encode($mostrar['nome_usuario']);?>" required>
+						<input type="TEXT" class="form-control1" id="exampleInputEmail1" aria-describedby="emailHelp" name="Nome" placeholder="Nome Completo"  style="text-align: left " value="<?php echo $mostrar['nome_usuario'];?>" required>
 					    
 					    <label for="exampleInputEmail1">Data de Nascimento</label>
-						<input type="date" class="form-control2" id="exampleInputEmail1" aria-describedby="emailHelp" name="data_nasc" placeholder="Data de Nascimento" style="text-align: left" value="<?php echo utf8_encode($mostrar['data_nasc']);?>" required>
+						<input type="date" class="form-control2" id="exampleInputEmail1" aria-describedby="emailHelp" name="data_nasc" placeholder="Data de Nascimento" style="text-align: left" value="<?php echo $mostrar['data_nasc'];?>" required>
 					  
 						
 					    <label for="exampleInputEmail1">Escolaridade</label>
-						<input type="text" class="form-control3" id="exampleInputEmail1" aria-describedby="emailHelp" name="escolaridade"  placeholder="Escolaridade" style="text-align: left" value="<?php echo utf8_encode($mostrar['escolaridade']);?>" required>
+						<input type="text" class="form-control3" id="exampleInputEmail1" aria-describedby="emailHelp" name="escolaridade"  placeholder="Escolaridade" style="text-align: left" value="<?php echo $mostrar['escolaridade'];?>" required>
 					    
 					  
 					    
 					    <label for="exampleInputEmail1">Email</label>
-						<input type="email" class="form-control4" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" placeholder="Email" style="text-align: left" value="<?php echo utf8_encode($mostrar['email_usuario']);?>" required>
+						<input type="email" class="form-control4" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" placeholder="Email" style="text-align: left" value="<?php echo $mostrar['email_usuario'];?>" required>
 					    
 					  
 					    
 					    <label for="exampleInputEmail1">Série/Ano</label>
-						<input type="text" class="form-control5" id="exampleInputEmail1" aria-describedby="emailHelp" name="Serie_ano"  placeholder="Serie/ano" style="text-align: left" value="<?php echo utf8_encode($mostrar['serie_ano']);?>" required>
+						<input type="text" class="form-control5" id="exampleInputEmail1" aria-describedby="emailHelp" name="Serie_ano"  placeholder="Serie/ano" style="text-align: left" value="<?php echo $mostrar['serie_ano'];?>" required>
 					   
-					    <button type="submit" class="btn2 btn-color2" style= "text-align:left">Salvar</button>
+					    <button type="submit" class="btn2 btn-color1" style= "text-align:left">Salvar</button>
 						
 					   <br><br><br>
 						<p> Atualizar senha </p>
@@ -159,16 +158,13 @@ $res = mysqli_query($conexao, $consulta);  //Executa o comando SQL, no caso para
                        
 					
 			
-			        <button type="submit" class="btn2 btn-color2" style= "text-align:left">Salvar</button>
-						
-					</form>
-<br>
-<br>
-<br>
-		<?php
-       echo "<a href='excluir.php?email=".$mostrar['email_usuario']."'><button class='btn1 btn-color1'>Excluir conta</button></a>";
+			        <button type="submit" class="btn2 btn-color1" style= "text-align:left">Salvar</button>
+              <?php
+           echo "<a href='excluir.php?email=".$mostrar['email_usuario']."'><button style='padding-right: 60px;' class='btn2 btn-color1'>Excluir conta</button></a>";
 }
 ?>
+					</form>
+		
 </div>
  
 

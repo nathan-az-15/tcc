@@ -1,51 +1,21 @@
-.conteudo{
-
-}
-
 .btn2{    
-border-radius: 11px;    
-text-transform: uppercase;    
-color: #fff;    
-font-size: 10px;    
-padding: 12px 10px 26px 45px;   
-cursor: pointer;    
-font-weight: bold;    
-width: 130px;        
-border-width: 0;    
-margin-left:5px;
-height: 5px;
-margin-top:20px;
-display:inline;
-}
-
-.btn-color2{    
-background-color: #2b314e;    
-border: 1px solid #2b314e;    
-transition: background-color .5s;
-}
-
-.btn-color2:hover{    
-background-color: #fff;    
-border: 1px solid black;    
-color: #2b314e;
-}
-
-.btn1{    
-border-radius: 11px;    
-text-transform: uppercase;    
-color: #fff;    
-font-size: 10px;    
-padding: 12px 10px 26px 5px;   
-cursor: pointer;    
-font-weight: bold;    
-width: 130px;        
-border-width: 0;    
-margin-left:180px;
-height: 5px;
-margin-bottom:5px;
-display:inline;
-}
-
+    border-radius: 11px;    
+    text-transform: uppercase;    
+    color: #fff;    
+    font-size: 10px;    
+    padding: 12px 10px 26px 45px;   
+    cursor: pointer;    
+    font-weight: bold;    
+    width: 140px;        
+    border-width: 0;    
+    margin-left:5px;
+    height: 5px;
+    margin-top:20px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    }
+    
 .btn-color1{    
 background-color: #2b314e;    
 border: 1px solid #2b314e;    
