@@ -64,38 +64,32 @@
 
   <div class="conteudo">
     <?php
-    session_start();
+    $materia = $_GET['materia'];
     ?>
     <section class='flexbox'>
 
       <div class="container1" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="lista_cont.php" style="text-decoration: none">
+        <a href="lista_cont.php?materia=<?= $materia?>&ano=1" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 1;
-            ?>
+            
             <p> Selecione este card para acessar conteúdos referentes ao 1º ano </p>
           </div>
         </a>
       </div>
 
       <div class="container2" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="lista_cont.php" style="text-decoration: none">
+        <a href="lista_cont.php?materia=<?= $materia?>&ano=2" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 2;
-            ?>
+            
             <p> Selecione este card para acessar conteúdos referentes ao 2º ano </p>
           </div>
         </a>
       </div>
 
       <div class="container3" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="lista_cont.php" style="text-decoration: none">
+        <a href="lista_cont.php?materia=<?= $materia?>&ano=3" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 3;
-            ?>
+            
             <p>Selecione este card para acessar conteúdos referentes ao 3º ano </p>
           </div>
         </a>
