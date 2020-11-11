@@ -1,0 +1,43 @@
+/* body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+} */
+.indicacao{
+    width: 960px;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 300px 150px;
+    grid-template-rows: 20px auto;
+    grid-gap: 50px 20px;
+}
+
+.imagem{
+    display:flex;
+    align-items:center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.texto{
+    text-align:left;
+    display:flex;
+    align-items:center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.titulo {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    list-style: none;
+    height: 30px;
+}
+
+.lista{
+    list-style: none;
+}
+
+.titulo h1 {
+    width: 100%;
+    text-align: center;
+}
