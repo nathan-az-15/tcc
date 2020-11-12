@@ -8,7 +8,7 @@
 
 .conteudo{
     display: grid;
-    grid-template-columns: 300px 150px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 20px auto;
     grid-gap: 50px 20px;
 }
