@@ -71,9 +71,7 @@
       <div class="container1" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
         <a href="lista_testeniveis.php?materia=<?= $materia?>&ano=1" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 1;
-            ?>
+            
             <p> Selecione este card para realizar testes referentes ao 1º ano </p>
           </div>
         </a>
@@ -82,9 +80,7 @@
       <div class="container2" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
         <a href="lista_testeniveis.php?materia=<?= $materia?>&ano=2" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 2;
-            ?>
+            
             <p> Selecione este card para realizar testes referentes ao 2º ano </p>
           </div>
         </a>
@@ -93,9 +89,7 @@
       <div class="container3" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
         <a href="lista_testeniveis.php?materia=<?= $materia?>&ano=3" style="text-decoration: none">
           <div class="hoverdiv">
-            <?php
-            $_SESSION['ano'] = 3;
-            ?>
+            
             <p>Selecione este card para realizar testes referentes ao 3º ano </p>
           </div>
         </a>
