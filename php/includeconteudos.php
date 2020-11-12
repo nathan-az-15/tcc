@@ -50,10 +50,10 @@
       <h4>MENU</h4>
       </center>
       <a href="../inicio_adm.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="includeconteudos.php"><i class="fas fa-book-open"></i><span>Cadastro de conteúdos</span></a>
-      <a href="includequestoes.php"><i class="fas fa-file-alt"></i><span>Cadastro de questões</span></a>
-      <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastro de indicações</span></a>
-      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+    <a href="conteudos_adm.php"><i class="fas fa-book-open"></i><span>Cadastrar Conteúdo</span></a>
+    <a href="testeniveis_adm.php"><i class="fas fa-file-alt"></i><span>Cadastrar Questão</span></a>
+    <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastrar Indicação</span></a>
+    <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
 <div class="nome">
@@ -71,14 +71,16 @@
 		</label>
 		<br>
 		<br>
-		Digite o texto do conteúdo:
+    Digite o texto do conteúdo:
+    <font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
         <textarea type="text" class="texto" name="texto_c" style="text-align:lef" required></textarea>
 		</label>
         <br>
     <br>
     
-		Digite o assunto do conteúdo:
+    Digite o assunto do conteúdo:
+    <font size=5 color=#FF0000> *</font>
 		<label class="label-input" for="">
         <input type="text" class="assunto" name="assunto_c" maxlength="70" style="text-align: left" required>
 		</label>

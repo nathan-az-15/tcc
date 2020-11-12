@@ -2,14 +2,14 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <title>Reforço Escolar Online | R.E.O</title>
-  <link rel="stylesheet" href="../css/conteudo.css">
+  <link rel="stylesheet" href="../css/anos.css">
   <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
+<body style="overflow: hidden">
 
   <input type="checkbox" id="check">
   <!--header area start-->
@@ -57,85 +57,44 @@
   <!--sidebar end-->
 
   <div class="nome">
-    <p> Conteúdos </p>
+    <p> Selecione a série </p>
     <hr style="width: 102%; height: 7%; margin-left: -5%;">
   </div>
 
   <div class="conteudo">
-  
+    <?php
+    $materia = $_GET['materia'];
+    ?>
     <section class='flexbox'>
 
       <div class="container1" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_cont_adm.php?materia=2" style="text-decoration: none">
+        <a href="includeconteudos.php?materia=<?= $materia?>&ano=1" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p> Matemática </p>
+            <p> Selecione este card para acessar conteúdos referentes ao 1º ano </p>
           </div>
         </a>
       </div>
 
       <div class="container2" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_cont_adm.php?materia=1" style="text-decoration: none">
+        <a href="includeconteudos.php?materia=<?= $materia?>&ano=2" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p> Português </p>
+            <p> Selecione este card para acessar conteúdos referentes ao 2º ano </p>
           </div>
         </a>
       </div>
 
       <div class="container3" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 8%; margin-bottom: 5%;">
-        <a href="anos_cont_adm.php?materia=5" style="text-decoration: none">
+        <a href="includeconteudos.php?materia=<?= $materia?>&ano=3" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p> Biologia </p>
+            <p>Selecione este card para acessar conteúdos referentes ao 3º ano </p>
           </div>
         </a>
       </div>
 
     </section>
-
-    <section class='flexbox'>
-      <div class="container4" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
-        <a href="anos_cont_adm.php?materia=7" style="text-decoration: none">
-          <div class="hoverdiv">
-            
-            <p> Física </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="container5" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
-        <a href="anos_cont_adm.php?materia=6" style="text-decoration: none">
-          <div class="hoverdiv">
-            
-            <p> Química </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="container6" style="width: 350px; height: 220px; margin-left: 2%; margin-right: 2%; margin-top: 5%; margin-bottom: 6%;">
-        <a href="anos_cont_adm.php?materia=4" style="text-decoration: none">
-          <div class="hoverdiv">
-            
-            <p> Geografia </p>
-          </div>
-        </a>
-      </div>
-
-    </section>
-
-    <section class='flexbox'>
-      <div class="container7" style="width: 310px; height: 220px; margin-left: 2%; margin-right: 1%; margin-top: 5%;">
-        <a href="anos_cont_adm.php?materia=3" style="text-decoration: none">
-          <div class="hoverdiv">
-           
-            <p > História </p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-  </div>
 
 </body>
 

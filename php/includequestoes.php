@@ -16,7 +16,7 @@
 
       <header>
 	 
-      <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
+      <a href="../inicio_adm.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
       <label for="check">
         <i class="fas fa-align-justify" id="menu_btn"></i>
       </label>
@@ -50,10 +50,10 @@
       <h4>MENU</h4>
       </center>
       <a href="../inicio_adm.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="includeconteudos.php"><i class="fas fa-book-open"></i><span>Cadastro de conteúdos</span></a>
-      <a href="includequestoes.php"><i class="fas fa-file-alt"></i><span>Cadastro de questões</span></a>
-      <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastro de indicações</span></a>
-      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
+    <a href="conteudos_adm.php"><i class="fas fa-book-open"></i><span>Cadastrar Conteúdo</span></a>
+    <a href="testeniveis_adm.php"><i class="fas fa-file-alt"></i><span>Cadastrar Questão</span></a>
+    <a href="includeindicacoes.php"><i class="fas fa-film"></i><span>Cadastrar Indicação</span></a>
+    <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
 
@@ -68,8 +68,8 @@
       session_start();
 	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
-    $ano = $_SESSION["ano"];
-    $materia = $_SESSION['materia'];
+    $ano = $_GET["ano"];
+    $materia = $_GET['materia'];
 
             $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
             $cod = mysqli_query($conn,$sql);
