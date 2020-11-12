@@ -71,7 +71,7 @@
         <a href="includeconteudos.php?materia=<?= $materia?>&ano=1" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p> Selecione este card para acessar conteúdos referentes ao 1º ano </p>
+            <p> Selecione este card para cadastrar conteúdos referentes ao 1º ano </p>
           </div>
         </a>
       </div>
@@ -80,7 +80,7 @@
         <a href="includeconteudos.php?materia=<?= $materia?>&ano=2" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p> Selecione este card para acessar conteúdos referentes ao 2º ano </p>
+            <p> Selecione este card para cadastrar conteúdos referentes ao 2º ano </p>
           </div>
         </a>
       </div>
@@ -89,7 +89,7 @@
         <a href="includeconteudos.php?materia=<?= $materia?>&ano=3" style="text-decoration: none">
           <div class="hoverdiv">
             
-            <p>Selecione este card para acessar conteúdos referentes ao 3º ano </p>
+            <p>Selecione este card para cadastrar conteúdos referentes ao 3º ano </p>
           </div>
         </a>
       </div>

@@ -32,10 +32,10 @@ for ($x=0;$x<strlen($SenhaUsu);$x++) {
 		if ($SenhaUsu[$x]>=chr(97) && $SenhaUsu[$x]<=chr(122)){
 	    $minusculas=true;}
 }			 
-        if (strlen($SenhaUsu)<=6 || strlen($SenhaUsu)>=10){
+        if (strlen($SenhaUsu)<=6 || strlen($SenhaUsu)>=15){
 			$erro=1;
 		echo"<script language='javascript' type='text/javascript'>
-alert('Digite a senha corretamente: A senha deve conter no mínimo 6 caracteres');window.location.href='login.php';</script>";
+alert('Digite a senha corretamente: A senha deve conter no mínimo 6 caracteres e no máximo 15');window.location.href='login.php';</script>";
 		}else{
 		$erro=0;
 	}

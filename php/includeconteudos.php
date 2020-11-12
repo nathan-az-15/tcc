@@ -62,7 +62,12 @@
         </div>
 <div class="conteudo">
 
-<form method="POST" class="form" action="includeconteudos1.php" enctype="multipart/form-data">
+<?php
+    $ano = $_GET["ano"];
+    $materia = $_GET['materia'];    
+      ?>
+
+<form method="POST" class="form" action="includeconteudos1.php?materia=<?= $materia?>&ano=<?= $ano?>" enctype="multipart/form-data">
 		
 		
 		<label for="exampleInputEmail1">Selecione uma imagem para acompanhar o conteúdo (se possuir)

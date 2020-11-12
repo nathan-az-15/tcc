@@ -9,8 +9,8 @@ include 'conecta.php';
 session_start();//falta ser aberta na pagina dos conteudo e de anos do adm
 $texto=$_POST["texto_c"];
 $assunto=$_POST["assunto_c"];
-$ano = $_SESSION["ano"];
-$materia = $_SESSION['materia'];
+$ano = $_GET["ano"];
+$materia = $_GET['materia'];
 
 $destino = '../imagens/imgconteudo/' . $_FILES['imagem_c']['name'];
  
@@ -31,6 +31,6 @@ if($conexao->query($sql) == TRUE){
 
 $conexao->close();
 ?>
-<input type="button" value="Voltar para a página de cadastro de conteúdos" onClick="location. href='includeconteudos.php'">
+<input type="button" value="Voltar para a página de cadastro de conteúdos" onClick="location. href='conteudos_adm.php'">
 </body>
 </html>

@@ -65,29 +65,36 @@
   <div class="conteudo">
 
       <?php
-      session_start();
 	  $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
 	  $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
     $ano = $_GET["ano"];
     $materia = $_GET['materia'];
 
-            $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
-            $cod = mysqli_query($conn,$sql);
-
+    $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
+    $cod = mysqli_query($conn,$sql);
+ 
+    
             
       ?>
 
       <br><br><br>
 
-      <form method="POST" class="form" action="includequestoes1.php" enctype="multipart/form-data">
+      <form method="POST" class="form" action="includequestoes1.php?ano=<?= $ano?>" enctype="multipart/form-data">
           
 		  Selecione o conteudo:<font size=5 color=#FF0000> *</font>
           <select name="conteudo_q" required>
           <?php while($mostrar = mysqli_fetch_object($cod)) { ?>
-          <option value="<?php echo $mostrar->ID_cont ?>"><?php echo $mostrar->assunto ?></option>
+          <option value="<?php echo $mostrar->ID_cont ?>"><?php echo utf8_encode($mostrar->assunto) ?></option>
           <?php } ?>
           </select><br><br>
           
+          Selecione a dificuldade da questão: <font size=5 color=#FF0000> *</font>
+          <select name="dificuldade_q" required>
+          <option value="1">Fácil</option>
+          <option value="2">Média</option>
+          <option value="3">Difícil</option>
+          </select><br><br>
+
           Selecione uma imagem para acompanhar o enunciado:
           <input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
           <img class="imagem" id="output_image"/><br><br>

@@ -7,6 +7,7 @@
 include 'conecta.php';
 session_start();
 $conteudo=$_POST["conteudo_q"];
+$dificuldade=$_POST["dificuldade_q"];
 $enunciado=$_POST["enunciado_q"];
 $alta=$_POST["alta_q"];
 $altb=$_POST["altb_q"];
@@ -15,7 +16,7 @@ $altd=$_POST["altd_q"];
 $alte=$_POST["alte_q"];
 $altcorreta=$_POST["altcorreta"];
 $explicacao=$_POST["explicacao_q"];
-$ano=$_SESSION["ano"];
+$ano=$_GET["ano"];
 
 $destino = '../imagens/imgquestao/' . $_FILES['imagem_q']['name'];
  
@@ -26,7 +27,7 @@ move_uploaded_file($arquivo_tmp, $destino);
 $imagem = $_FILES['imagem_q']['name'];
 
 $sql = "INSERT INTO questoes VALUES";
-$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', '$conteudo', 1, '$ano')";
+$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', '$conteudo', 1, '$ano', '$dificuldade')";
 
 if($conexao->query($sql) == TRUE){
 	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
@@ -36,6 +37,6 @@ if($conexao->query($sql) == TRUE){
 
 $conexao->close();
 ?>
-<input type="button" value="Voltar para a página de cadastro de questões" onClick="location. href='includequestoes.php'">
+<input type="button" value="Voltar para a página de cadastro de questões" onClick="location. href='testeniveis_adm.php'">
 </body>
 </html>
