@@ -11,6 +11,7 @@ $plataforma=$_POST["plataforma_i"];
 $titulo=$_POST["titulo_i"];
 $autor=$_POST["autor_i"];
 $descricao=$_POST["descricao_i"];
+$descricao=mysqli_real_escape_string($conexao, $descricao);
 $materia=$_POST["mat_i"];
 
 $destino = '../imagens/indicacoes/' . $_FILES['imagem_i']['name'];

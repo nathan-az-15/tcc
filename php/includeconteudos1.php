@@ -8,6 +8,7 @@
 include 'conecta.php';
 session_start();//falta ser aberta na pagina dos conteudo e de anos do adm
 $texto=$_POST["texto_c"];
+$texto=mysqli_real_escape_string($conexao, $texto);
 $assunto=$_POST["assunto_c"];
 $ano = $_GET["ano"];
 $materia = $_GET['materia'];
