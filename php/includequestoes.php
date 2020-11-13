@@ -7,7 +7,20 @@
 	
 	
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
-	
+    
+    <script>
+    function alternativa_e(){
+      var alte = document.getElementById("alt_e");
+      var x = document.myform.altcorreta;
+      //var conf = true;
+        if((x[4].checked) && (alte.value=="")){
+          alert('A alternativa -E- foi marcada como correta mas ela não esta preenchida');
+          document.alte.focus();
+          <?= $conf=false;?>
+        }
+        <?= $conf=true;?>
+      }
+    </script>
   </head>
   <body>
     <input type="checkbox" id="check">
@@ -74,12 +87,13 @@
     $cod = mysqli_query($conn,$sql);
  
     
+
             
       ?>
 
       <br><br><br>
 
-      <form method="POST" class="form" action="includequestoes1.php?ano=<?= $ano?>" enctype="multipart/form-data">
+      <form method="POST" class="form" name="myform" action="includequestoes1.php?ano=<?= $ano?>?conf=<?= $ano?>" enctype="multipart/form-data" onsubmit="alternativa_e();">
           
 		  Selecione o conteudo:<font size=5 color=#FF0000> *</font>
           <select name="conteudo_q" required>
@@ -116,7 +130,7 @@
           
           Alternativa C:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="altc_q" maxlength="200" placeholder=" Digite a alternativa C " required></textarea>
+              <textarea type="text" class="enunciado" name="altc_q" placeholder=" Digite a alternativa C " required></textarea>
           </label><br><br>
           
           Alternativa D:<font size=5 color=#FF0000> *</font><br>
@@ -126,7 +140,7 @@
           
           Alternativa E:<br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E "></textarea>
+              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E " id="alt_e"></textarea>
           </label><br><br>
 
           Selecione a alternativa que responde essa questão corretamente:<font size=5 color=#FF0000> *</font><br><br>
