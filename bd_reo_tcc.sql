@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `bd_reo_tcc`
 --
-
+CREATE DATABASE IF NOT EXISTS bd_reo_tcc DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE bd_reo_tcc;
 -- --------------------------------------------------------
 
 --

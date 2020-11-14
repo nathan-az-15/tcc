@@ -12,13 +12,13 @@
     function alternativa_e(){
       var alte = document.getElementById("alt_e");
       var x = document.myform.altcorreta;
-      //var conf = true;
+      var confjs=1;
         if((x[4].checked) && (alte.value=="")){
           alert('A alternativa -E- foi marcada como correta mas ela não esta preenchida');
           document.alte.focus();
-          <?= $conf=false;?>
+          confjs=0;
         }
-        <?= $conf=true;?>
+        confjs=1;
       }
     </script>
   </head>
@@ -86,14 +86,14 @@
     $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
     $cod = mysqli_query($conn,$sql);
  
-    
+    $confphp = "<script>document.write(confjs)</script>";
 
             
       ?>
 
       <br><br><br>
 
-      <form method="POST" class="form" name="myform" action="includequestoes1.php?ano=<?= $ano?>?conf=<?= $ano?>" enctype="multipart/form-data" onsubmit="alternativa_e();">
+      <form method="POST" class="form" name="myform" action="includequestoes1.php?ano=<?= $ano?>?confphp=<?= $confphp?>" enctype="multipart/form-data" onsubmit="alternativa_e();">
           
 		  Selecione o conteudo:<font size=5 color=#FF0000> *</font>
           <select name="conteudo_q" required>

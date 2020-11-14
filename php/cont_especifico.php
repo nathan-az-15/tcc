@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Reforço Escolar Online | R.E.O</title>
     <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="../css/cont_especifico.css">
 	
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
 	
@@ -69,18 +70,17 @@
             $numRegistros = mysqli_num_rows($cod);
             if ($numRegistros != 0) {
               echo "<section class='flexbox'>";
-                
-                  echo "<a href='#'>
-                      
+              while ($text = mysqli_fetch_object($cod)) {
+                  echo "<center><h1>".$text->assunto."</h1><br><br><br><div class='texto'>".$text->texto.
       
-                          $text->texto;
-      
-                    </a><br>";
+                    "</div><br></center>";
                 }
+                echo "</section>";
+              }
             else{
                 echo "Nenhum registro";
             }
-            echo "</section>";
+            
         ?>
  </div>
    <!--<script type="text/javascript">
