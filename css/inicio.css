@@ -153,6 +153,11 @@ label #menu_btn:hover{
   display: none;
 }
 
+#check:checked ~ .nome{
+  margin-left: 12%;
+  margin-top: -1%;
+}
+
 #check:checked ~ .menu a{
   font-size: 20px;
   margin-left: 165px;
