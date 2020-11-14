@@ -8,19 +8,6 @@
 	
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
     
-    <script>
-    function alternativa_e(){
-      var alte = document.getElementById("alt_e");
-      var x = document.myform.altcorreta;
-      //var conf = true;
-        if((x[4].checked) && (alte.value=="")){
-          alert('A alternativa -E- foi marcada como correta mas ela não esta preenchida');
-          document.alte.focus();
-          <?= $conf=false;?>
-        }
-        <?= $conf=true;?>
-      }
-    </script>
   </head>
   <body>
     <input type="checkbox" id="check">
@@ -93,7 +80,7 @@
 
       <br><br><br>
 
-      <form method="POST" class="form" name="myform" action="includequestoes1.php?ano=<?= $ano?>?conf=<?= $ano?>" enctype="multipart/form-data" onsubmit="alternativa_e();">
+      <form method="POST" class="form" name="myform" action="includequestoes1.php?ano=<?= $ano?>"enctype="multipart/form-data">
           
 		  Selecione o conteudo:<font size=5 color=#FF0000> *</font>
           <select name="conteudo_q" required>

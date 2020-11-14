@@ -22,8 +22,7 @@ $alte=$_POST["alte_q"];
 $alte=mysqli_real_escape_string($conexao, $alte);
 $altcorreta=$_POST["altcorreta"];
 $explicacao=$_POST["explicacao_q"];
-$_GET["conf"];
-
+$ano=$_GET["ano"];
 $destino = '../imagens/imgquestao/' . $_FILES['imagem_q']['name'];
  
 $arquivo_tmp = $_FILES['imagem_q']['tmp_name'];
@@ -32,7 +31,7 @@ move_uploaded_file($arquivo_tmp, $destino);
 
 $imagem = $_FILES['imagem_q']['name'];
 
-if($_GET["conf"]==true){
+
 	$sql = "INSERT INTO questoes VALUES";
 	$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', '$conteudo', 1, '$ano', '$dificuldade')";
 
@@ -43,10 +42,7 @@ if($_GET["conf"]==true){
 	}
 
 	$conexao->close();
-}else if ($_GET["conf"]==false){
-	echo"<script language='javascript' type='text/javascript'>
-    alert('Cadastre novamente');</script>";
-}
+
 ?>
 <input type="button" value="Voltar para a página de cadastro de questões" onClick="location. href='testeniveis_adm.php'">
 </body>
