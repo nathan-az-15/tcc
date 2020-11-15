@@ -65,8 +65,7 @@
             
             $ano = $_GET['ano'];
             $materia = $_GET['materia'];
-            //$assunto=$text->assunto;
-
+            
             $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
             $cod = mysqli_query($conn,$sql);
 
@@ -74,17 +73,21 @@
             if ($numRegistros != 0) {
               echo "<section class='flexbox'>";
                 while ($text = mysqli_fetch_object($cod)) {
-                  echo "<a href='cont_especifico.php?assunto=$text->assunto'>
+                  $assunto=$text->assunto;
+                  $assunto=utf8_encode($assunto);
+                  $cod_assunto=$text->ID_cont;
+
+                    echo "<a href='cont_especifico.php?assunto=".$cod_assunto."'>
                       <div class='blocos'>
       
                           <span> </span>
                           <span> </span>
                           <span> </span>
-                          <span> </span>
+                          <span> </span>".
       
-                          $text->assunto
+                          $assunto
       
-                      </div>
+                      ."</div>
                     </a><br>";
                 }
               echo "</section>";

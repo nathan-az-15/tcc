@@ -62,16 +62,21 @@
             $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
             $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
             
-            $assunto = $_GET['assunto'];
-            
-            $sql = "SELECT * FROM conteudos where assunto like '%".$assunto."%'";
+            $cod_assunto = $_GET['assunto'];
+                        
+            $sql = "SELECT * FROM conteudos where ID_cont like '".$cod_assunto."%'";
             $cod = mysqli_query($conn,$sql);
 
             $numRegistros = mysqli_num_rows($cod);
             if ($numRegistros != 0) {
               echo "<section class='flexbox'>";
               while ($text = mysqli_fetch_object($cod)) {
-                  echo "<center><h1>".$text->assunto."</h1><br><br><br><div class='texto'>".$text->texto.
+                $texto=$text->texto;
+                $texto=utf8_encode($texto);
+                $assunto=$text->assunto;
+                $assunto=utf8_encode($assunto);
+                  echo "<center><h1>".$assunto."</h1>
+                  <br><br><div class='texto'>".nl2br($texto).
       
                     "</div><br></center>";
                 }

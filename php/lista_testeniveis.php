@@ -74,7 +74,10 @@
             if ($numRegistros != 0) {
               echo "<section class='flexbox'>";
                 while ($text = mysqli_fetch_object($cod)) {
-                  echo "<a href='#'>
+                  $assunto=$text->assunto;
+                  $assunto=utf8_encode($assunto);
+                  $cod_assunto=$text->ID_cont;
+                  echo "<a href='teste_especifico.php?assunto=".$cod_assunto."'>
                       <div class='blocos'>
       
                           <span> </span>
@@ -82,7 +85,7 @@
                           <span> </span>
                           <span> </span>
       
-                          $text->assunto
+                          $assunto
       
                       </div>
                     </a><br>";
@@ -90,7 +93,7 @@
               echo "</section>";
             }
             else{
-                echo "Nenhum registro";
+                echo "Teste ainda não cadastrado.";
             }
             
         ?>
