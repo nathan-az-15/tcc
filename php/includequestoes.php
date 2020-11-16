@@ -73,7 +73,7 @@
     $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
     $cod = mysqli_query($conn,$sql);
  
-    
+    $confphp = "<script>document.write(confjs)</script>";
 
             
       ?>

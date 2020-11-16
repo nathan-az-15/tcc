@@ -31,7 +31,6 @@ move_uploaded_file($arquivo_tmp, $destino);
 
 $imagem = $_FILES['imagem_q']['name'];
 
-
 	$sql = "INSERT INTO questoes VALUES";
 	$sql .= "(DEFAULT, '$imagem', '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', '$conteudo', 1, '$ano', '$dificuldade')";
 
