@@ -58,7 +58,10 @@
       <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
-	
+    <div class="nome">
+    <p> Selecione o conteúdo </p>
+    <hr style="width: 102%; height: 7%; margin-left: -5%; margin-bottom: -8%;">
+  </div>
     <div class="conteudo">
         <?php
             $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");

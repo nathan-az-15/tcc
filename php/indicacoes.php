@@ -152,9 +152,6 @@ include 'conecta.php';
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Livro%'";
 $con = mysqli_query($conexao, $consulta);
 
-
-
-
       echo "<div class='page-wrapper'>";
         echo "<div class='post-slider'>";
           echo "<h2 class='slider-title'>Livros</h2>";
