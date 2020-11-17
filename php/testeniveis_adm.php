@@ -123,7 +123,7 @@
           <div class="content">
 
             <p>Selecione este card se desejar cadastrar questões de física.</p>
-            <a href="anos_testeniveis_adm.php?materia=8">Cadastrar Questões</a>
+            <a href="anos_testeniveis_adm.php?materia=7">Cadastrar Questões</a>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
           <div class="content">
   
             <p>Selecione este card se desejar cadastrar questões de química.</p>
-            <a href="anos_testeniveis_adm.php?materia=7">Cadastrar Questões</a>
+            <a href="anos_testeniveis_adm.php?materia=6">Cadastrar Questões</a>
           </div>
         </div>
       </div>

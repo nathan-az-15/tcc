@@ -5,17 +5,17 @@
     <title>Reforço Escolar Online | R.E.O</title>
     <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" type="text/css" href="../css/cont_especifico.css">
-	
+
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
-	
+
   </head>
   <body>
     <input type="checkbox" id="check">
     <!--header area start-->
-    
+
 
       <header>
-	 
+
       <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
       <label for="check">
         <i class="fas fa-align-justify" id="menu_btn"></i>
@@ -23,7 +23,7 @@
       <div class="direita">
         <a href="sair.php" class="sair">Sair</a>
       </div>
-	  
+
       </header>
     <!--header area end-->
 
@@ -31,7 +31,7 @@
     <!--mobile navigation bar start
     <div class="mobile_nav">
       <div class="nav_bar">
-        
+
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
@@ -61,9 +61,9 @@
         <?php
             $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
             $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
-            
+
             $cod_assunto = $_GET['assunto'];
-                        
+
             $sql = "SELECT * FROM conteudos where ID_cont like '".$cod_assunto."%'";
             $cod = mysqli_query($conn,$sql);
 
@@ -75,17 +75,21 @@
                 $texto=utf8_encode($texto);
                 $assunto=$text->assunto;
                 $assunto=utf8_encode($assunto);
-                  echo "<center><h1>".$assunto."</h1>
-                  <br><br><div class='texto'>".nl2br($texto).
-      
-                    "</div><br></center>";
+                   echo "<center><h1>".$assunto."</h1>
+                   <br><br><div class='texto'>".nl2br($texto).
+
+                   "</div><br></center>";
+                  // echo "Relação de inclusão
+                  // Ao comparar dois conjuntos, podemos nos deparar com diversas relações, e uma delas é a relação de inclusão. Para essa relação, precisamos conhecer alguns símbolos:
+                  // ⊃ → contém ⊂ → está contido
+                  // ⊅ → não contém ⊄ → não está contido";
                 }
                 echo "</section>";
               }
             else{
                 echo "Nenhum registro";
             }
-            
+
         ?>
  </div>
    <!--<script type="text/javascript">

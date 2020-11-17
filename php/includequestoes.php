@@ -107,27 +107,27 @@
           
           Alternativa A:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="alta_q" maxlength="200" placeholder=" Digite a alternativa A " required></textarea>
+              <textarea type="text" class="enunciado" name="alta_q" maxlength="400" placeholder=" Digite a alternativa A " required></textarea>
           </label><br><br>
           
           Alternativa B:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="altb_q" maxlength="200" placeholder=" Digite a alternativa B " required></textarea>
+              <textarea type="text" class="enunciado" name="altb_q" maxlength="400" placeholder=" Digite a alternativa B " required></textarea>
           </label><br><br>
           
           Alternativa C:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="altc_q" placeholder=" Digite a alternativa C " required></textarea>
+              <textarea type="text" class="enunciado" name="altc_q" maxlength="400" placeholder=" Digite a alternativa C " required></textarea>
           </label><br><br>
           
           Alternativa D:<font size=5 color=#FF0000> *</font><br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="altd_q" maxlength="200" placeholder=" Digite a alternativa D " required></textarea>
+              <textarea type="text" class="enunciado" name="altd_q" maxlength="400" placeholder=" Digite a alternativa D " required></textarea>
           </label><br><br>
           
           Alternativa E:<br>
           <label class="label-input" for="">
-              <textarea type="text" class="enunciado" name="alte_q" maxlength="200" placeholder=" Digite a alternativa E " id="alt_e"></textarea>
+              <textarea type="text" class="enunciado" name="alte_q" maxlength="400" placeholder=" Digite a alternativa E " id="alt_e"></textarea>
           </label><br><br>
 
           Selecione a alternativa que responde essa questão corretamente:<font size=5 color=#FF0000> *</font><br><br>
