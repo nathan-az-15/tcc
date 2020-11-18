@@ -25,6 +25,22 @@ while($mostrar = mysqli_fetch_array($con)) {
 		$plat = "Filme";
 	}
 
+	echo "
+	<div class='blog-card'>
+        <div class='inner-part'>
+            <label for='tapImg' class='img'>";
+			echo "<img src='../imagens/indicacoes/" . $mostrar['end_imagem_ind'] . "'";
+		echo "
+        </label>
+            <div class='content'>
+                <span>". $plat ." | " . $mostrar['autor'] ." </span>
+                <div class='title'> ". $mostrar['titulo'] . "</div>
+                <div class='text'> ". $mostrar['descricao'] ."</div>
+                <button>Voltar</button>
+            </div>
+        </div>
+	</div>";
+	
 	echo "Plataforma: ". $plat ."<br>";
 	echo "Título: ". $mostrar['titulo'] ."<br>";
 	echo "Autor: ". $mostrar['autor'] ."<br>";
