@@ -78,7 +78,7 @@ body {
     text-align: justify;
 }
 
-.content button {
+.content a {
     display: inline-flex;
     padding: 15px 20px;
     border: none;
@@ -88,12 +88,13 @@ body {
     font-weight: 550;
     letter-spacing: 1px;
     border-radius: 40px;
-    border: 1px solid #fd3535;
+    border: 1px solid #1F363D;
     cursor: pointer;
     outline: none;
-    background: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    background: linear-gradient(147deg, #1F363D 0%, #ABBBC4 74%);
+    text-decoration: none;
 }
 
-.content button:hover {
+.content a:hover {
     background: linear-gradient(147deg, #fe791b 0%, #fd1c1c 74%);
 }

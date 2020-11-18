@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Reforço Escolar Online | R.E.O</title>
 	<link rel="stylesheet" href="../css/inicio.css">
-	<link rel="stylesheet" href="../css/indicacoes.css">
+	<link rel="stylesheet" href="../css/exibirindicacao.css">
 	<script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
 </head>
 
@@ -70,32 +70,16 @@
 
 		while ($mostrar = mysqli_fetch_array($con)) {
 
-			if ($mostrar['plataforma'] == "Serie") {
-				$plat = "Série";
-			}
-
-			if ($mostrar['plataforma'] == "Documentario") {
-				$plat = "Documentário";
-			}
-
-			if ($mostrar['plataforma'] == "Livro") {
-				$plat = "Livro";
-			}
-
-			if ($mostrar['plataforma'] == "Filme") {
-				$plat = "Filme";
-			}
-
 			echo "<div class='blog-card'>
         		<div class='inner-part'>
             	<label for='tapImg' class='img'>
-				<img src='../imagens/indicacoes/" . $mostrar['end_imagem_ind'] . "'
+				<img src='../imagens/indicacoes/".$mostrar['end_imagem_ind']."'></img>
         		</label>
             		<div class='content'>
-                		<span>" . $plat . " | " . $mostrar['autor'] . " </span>
+                		<span>" . $mostrar['plataforma'] . " | " . $mostrar['autor'] . " </span>
                 			<div class='title'> " . $mostrar['titulo'] . "</div>
                 			<div class='text'> " . $mostrar['descricao'] . "</div>
-                			<button href='indicacoes.php'>Voltar</button>
+                			<a href='indicacoes.php'>Voltar</a>
             		</div>
 				</div>
 			</div>";
@@ -104,4 +88,4 @@
 	</div>
 </body>
 
-</html>F
+</html>
