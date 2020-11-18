@@ -169,6 +169,7 @@ $con = mysqli_query($conexao, $consulta);
             echo "</div>";
         echo "</div>";
       echo "</div>";
+      echo "<br><br><br><br><br><br>"
 ?>
 
     </div>
