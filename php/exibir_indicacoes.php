@@ -86,21 +86,19 @@
 				$plat = "Filme";
 			}
 
-			echo "
-	<div class='blog-card'>
-        <div class='inner-part'>
-            <label for='tapImg' class='img'>";
-			echo "<img src='../imagens/indicacoes/" . $mostrar['end_imagem_ind'] . "'";
-			echo "
-        </label>
-            <div class='content'>
-                <span>" . $plat . " | " . $mostrar['autor'] . " </span>
-                <div class='title'> " . $mostrar['titulo'] . "</div>
-                <div class='text'> " . $mostrar['descricao'] . "</div>
-                <button href='indicacoes.php'>Voltar</button>
-            </div>
-        </div>
-	</div>";
+			echo "<div class='blog-card'>
+        		<div class='inner-part'>
+            	<label for='tapImg' class='img'>
+				<img src='../imagens/indicacoes/" . $mostrar['end_imagem_ind'] . "'
+        		</label>
+            		<div class='content'>
+                		<span>" . $plat . " | " . $mostrar['autor'] . " </span>
+                			<div class='title'> " . $mostrar['titulo'] . "</div>
+                			<div class='text'> " . $mostrar['descricao'] . "</div>
+                			<button href='indicacoes.php'>Voltar</button>
+            		</div>
+				</div>
+			</div>";
 		}
 		?>
 	</div>
