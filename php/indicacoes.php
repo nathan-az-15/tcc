@@ -97,16 +97,16 @@ $con = mysqli_query($conexao, $consulta);
 
 
 
-      echo "<div class='page-wrapper'>";
-        echo "<div class='post-slider'>";
-          echo "<h2 class='slider-title'>Séries</h2>";
-          echo "<i class='fas fa-chevron-left prev'></i>";
-          echo "<i class='fas fa-chevron-right next'></i>";
-            echo "<div class='post-wrapper'>";
+      echo "<div class='page-wrapper1'>";
+        echo "<div class='post-slider1'>";
+          echo "<h2 class='slider-title1'>Séries</h2>";
+          echo "<i class='fas fa-chevron-left prev1'></i>";
+          echo "<i class='fas fa-chevron-right next1'></i>";
+            echo "<div class='post-wrapper1'>";
 			while($mostrar = mysqli_fetch_array($con)) {
-              echo "<div class='post'>";
-                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
-                echo "<div class='post-info'>";
+              echo "<div class='post1'>";
+                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image1'>";
+                echo "<div class='post-info1'>";
                 echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
                 echo "</div>";
               echo "</div>";
@@ -126,16 +126,16 @@ $con = mysqli_query($conexao, $consulta);
 
 
 
-      echo "<div class='page-wrapper'>";
-        echo "<div class='post-slider'>";
-          echo "<h2 class='slider-title'>Filmes</h2>";
-          echo "<i class='fas fa-chevron-left prev'></i>";
-          echo "<i class='fas fa-chevron-right next'></i>";
-            echo "<div class='post-wrapper'>";
+      echo "<div class='page-wrapper2'>";
+        echo "<div class='post-slider2'>";
+          echo "<h2 class='slider-title2'>Filmes</h2>";
+          echo "<i class='fas fa-chevron-left prev2'></i>";
+          echo "<i class='fas fa-chevron-right next2'></i>";
+            echo "<div class='post-wrapper2'>";
 			while($mostrar = mysqli_fetch_array($con)) {
-              echo "<div class='post'>";
-                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
-                echo "<div class='post-info'>";
+              echo "<div class='post2'>";
+                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image2'>";
+                echo "<div class='post-info2'>";
                 echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
                 echo "</div>";
               echo "</div>";
@@ -152,16 +152,16 @@ include 'conecta.php';
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Livro%'";
 $con = mysqli_query($conexao, $consulta);
 
-      echo "<div class='page-wrapper'>";
-        echo "<div class='post-slider'>";
-          echo "<h2 class='slider-title'>Livros</h2>";
-          echo "<i class='fas fa-chevron-left prev'></i>";
-          echo "<i class='fas fa-chevron-right next'></i>";
-            echo "<div class='post-wrapper'>";
+      echo "<div class='page-wrapper3'>";
+        echo "<div class='post-slider3'>";
+          echo "<h2 class='slider-title3'>Livros</h2>";
+          echo "<i class='fas fa-chevron-left prev3'></i>";
+          echo "<i class='fas fa-chevron-right next3'></i>";
+            echo "<div class='post-wrapper3'>";
 			while($mostrar = mysqli_fetch_array($con)) {
-              echo "<div class='post'>";
-                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
-                echo "<div class='post-info'>";
+              echo "<div class='post3'>";
+                echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image3'>";
+                echo "<div class='post-info3'>";
                 echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
                 echo "</div>";
               echo "</div>";
@@ -169,9 +169,8 @@ $con = mysqli_query($conexao, $consulta);
             echo "</div>";
         echo "</div>";
       echo "</div>";
-      echo "<br><br><br><br><br><br>"
 ?>
-
+    <br><br><br><br><br><br><br>
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
