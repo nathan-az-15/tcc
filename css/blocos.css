@@ -5,7 +5,7 @@
     display: flex;
 } */
 
-.flexbox{
+.flexbox {
     display: flex;
     flex-wrap: wrap;
     max-width: 3000px;
@@ -15,129 +15,130 @@
     display: inline-block;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(34, 34, 34); 
+#check:checked~.conteudo .flexbox {
+    margin-left: 15%;
 }
 
-.blocos{
+a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+
+.blocos {
     align-items: center;
     margin-top: 20px;
     width: 800px;
     height: 40px;
-    border-color:#fff;
+    border-color: #fff;
     border-width: 10px;
     position: relative;
     padding: 40px;
     padding-top: 50px;
-    font-size:1.5em;
+    font-size: 1.5em;
     font-family: sans-serif;
     overflow: hidden;
-    background: rgba(255,255,255,0);
-    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
     align-items: left;
-    
-
 }
 
-.blocos:before{
-    content:'';
+.blocos:before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    background: rgba(255,255,255,.1)
+    background: rgba(255, 255, 255, .1)
 }
 
-.nome
-  {
+.nome {
     margin-left: 25%;
     transition: 0.5s;
     width: (100% - 250px);
-  }
-  
-  .nome p{
+}
+
+.nome p {
     color: #000;
     margin-top: 12%;
     font-size: 25px;
     font-family: 'poppins', sans-serif;
-  }
+}
 
-  
-
-.blocos:after{
-    content:'';
+.blocos:after {
+    content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
     transition: 5s;
     transition-delay: 8s;
 }
- 
-.blocos:hover:after{
+
+.blocos:hover:after {
     left: 100%;
 }
 
-.blocos span{
+.blocos span {
     position: absolute;
     display: block;
     transition: 0.5s ease;
 }
 
-.blocos span:nth-child(1){
+.blocos span:nth-child(1) {
     top: 0;
     left: 0;
     width: 0;
     height: 1px;
     background: rgb(34, 34, 34);
-    border-width: 10px;  
+    border-width: 10px;
 }
 
-.blocos:hover span:nth-child(1){
+.blocos:hover span:nth-child(1) {
     width: 100%;
     transform: translateX(100%);
 }
 
-.blocos span:nth-child(3){
+.blocos span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 0;
     height: 1px;
-    background: rgb(34, 34, 34); ;  
+    background: rgb(34, 34, 34);
+    ;
 }
 
-.blocos:hover span:nth-child(3){
+.blocos:hover span:nth-child(3) {
     width: 100%;
     transform: translateX(-100%);
 }
 
-.blocos span:nth-child(2){
+.blocos span:nth-child(2) {
     top: 0;
     left: 0;
     width: 1;
     height: 0;
-    background: rgb(34, 34, 34); ;  
+    background: rgb(34, 34, 34);
+    ;
 }
 
-.blocos:hover span:nth-child(2){
+.blocos:hover span:nth-child(2) {
     height: 100%;
     transform: translateY(100%);
 }
 
-.blocos span:nth-child(4){
+.blocos span:nth-child(4) {
     bottom: 0;
     right: 0;
     width: 1;
     height: 0;
-    background: rgb(34, 34, 34); ;  
+    background: rgb(34, 34, 34);
+    ;
 }
 
-.blocos:hover span:nth-child(4){
+.blocos:hover span:nth-child(4) {
     height: 100%;
     transform: translateY(-100%);
 }
- 
