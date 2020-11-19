@@ -1,3 +1,15 @@
+.conteudo1 {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0px 0px;
+    transition: 0.5s;
+}
+
+#check:checked~.conteudo1 {
+    margin-left: -8%;
+}
+
+
 /*Slide*/
 
 .titulo_slide {
