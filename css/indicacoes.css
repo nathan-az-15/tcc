@@ -1,14 +1,39 @@
+@font-face {
+    font-family: "poppins";
+    src: url("../fontes/Poppins-Regular.ttf");
+}
+
+.nome {
+    margin-left: 6%;
+    transition: 0.5s;
+    width: (100% - 250px);
+}
+
+.nome p {
+    color: #000;
+    margin-top: 4%;
+    font-size: 25px;
+    font-family: 'poppins', sans-serif;
+}
+
+#check:checked~.nome {
+    margin-left: 12%;
+    margin-top: -1%;
+}
+
+
 /* DOCUMENTÁRIOS */
 
 .post-slider {
     position: relative;
+    font-family: 'poppins', sans-serif;
 }
 
 .post-slider .next {
     position: absolute;
     top: 50%;
     right: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -17,7 +42,7 @@
     position: absolute;
     top: 50%;
     left: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -31,8 +56,8 @@
 }
 
 .post-slider .post-wrapper .post {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
@@ -47,8 +72,8 @@
 }
 
 .post-slider .post-wrapper .post .post-info {
-    max-height: 10px;
-    padding: 0px 2px;
+    max-height: 400px;
+    padding: 0px 5px;
 }
 
 a {
@@ -60,21 +85,24 @@ a {
     color: lightseagreen;
 }
 
-h4 {margin-top: 0px;
-    margin-bottom: 0px;}
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 
 /* 1 - SERIES */
 
 .post-slider1 {
     position: relative;
+    font-family: 'poppins', sans-serif;
 }
 
 .post-slider1 .next1 {
     position: absolute;
     top: 50%;
     right: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -83,7 +111,7 @@ h4 {margin-top: 0px;
     position: absolute;
     top: 50%;
     left: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -98,7 +126,7 @@ h4 {margin-top: 0px;
 
 .post-slider1 .post-wrapper1 .post1 {
     width: 300px;
-    height: 315px;
+    height: 400px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
@@ -127,13 +155,14 @@ h4 {margin-top: 0px;
 
 .post-slider2 {
     position: relative;
+    font-family: 'poppins', sans-serif;
 }
 
 .post-slider2 .next2 {
     position: absolute;
     top: 50%;
     right: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -142,7 +171,7 @@ h4 {margin-top: 0px;
     position: absolute;
     top: 50%;
     left: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -186,13 +215,14 @@ h4 {margin-top: 0px;
 
 .post-slider3 {
     position: relative;
+    font-family: 'poppins', sans-serif;
 }
 
 .post-slider3 .next3 {
     position: absolute;
     top: 50%;
     right: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
@@ -201,7 +231,7 @@ h4 {margin-top: 0px;
     position: absolute;
     top: 50%;
     left: 110px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: gray;
     cursor: pointer;
 }
