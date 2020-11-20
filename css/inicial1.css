@@ -1,3 +1,15 @@
+.conteudo1 {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0px 0px;
+    transition: 0.5s;
+}
+
+#check:checked~.conteudo1 {
+    margin-left: -8%;
+}
+
+
 /*Slide*/
 
 .titulo_slide {
@@ -14,9 +26,9 @@
 }
 
 #slider {
-    width: 750px;
-    height: 450px;
-    margin: 75px auto auto 500px;
+    width: 800px;
+    height: 500px;
+    margin: 100px auto auto 420px;
 }
 
 #slider input[type=radio] {
@@ -233,11 +245,11 @@
 /*Criando artigo*/
 
 #artigo {
-    width: 700px;
-    text-align: left;
-    margin: 90px 200% auto 23%;
+    width: 800px;
+    text-align: justify;
+    margin: 90px 200% auto 28.5%;
     background-color: rgb(255, 255, 255);
-    padding: 30px 25px;
+    padding: 30px 25px 30px 30px;
     box-shadow: 0px 0px 10px 0px #ccc;
 }
 

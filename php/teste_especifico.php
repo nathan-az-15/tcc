@@ -12,19 +12,37 @@ for($i = 1; $i <=10; $i++){
 
     if($mostrar['enunciado'] != ""){
         echo "<b>QUESTÃO $i </b><br>";
-        
-        echo "<img src='../imagens/questoes/" . $mostrar['end_imagens_quest'] . "'<br>";
-        echo "". $mostrar['enunciado'] ."<br><br>";
-        echo "<input type='radio' name='altcorreta$i' value='A' required> a): ". $mostrar['alt_a'] ."<br><br>";
-        echo "<input type='radio' name='altcorreta$i' value='B'> b): ". $mostrar['alt_b'] ."<br><br>";
-        echo "<input type='radio' name='altcorreta$i' value='C'> c): ". $mostrar['alt_c'] ."<br><br>";
-        echo "<input type='radio' name='altcorreta$i' value='D'> d): ". $mostrar['alt_d'] ."<br><br>";
-        if($mostrar['alt_e'] != ""){
-        echo "<input type='radio' name='altcorreta$i' value='E'> e): ". $mostrar['alt_e'] ."<br><br>";
+        if($mostrar['end_imagens_quest'] != ""){
+            echo $mostrar['enunciado'] ."<br><br>";
+            echo "<img src='../imagens/imgquestao/".$mostrar['end_imagens_quest']."'<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='A' required> a): ". $mostrar['alt_a'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='B'> b): ". $mostrar['alt_b'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='C'> c): ". $mostrar['alt_c'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='D'> d): ". $mostrar['alt_d'] ."<br><br>";
+            if($mostrar['alt_e'] != ""){
+                echo "<input type='radio' name='altcorreta$i' value='E'> e): ". $mostrar['alt_e'] ."<br><br>";
+            }
+            else{
+                echo "<br><br><br>";
+                echo "<input type='hidden' name='ID_q$i' value='" . $mostrar['ID_questoes'] . "'>";  
+                echo "<input type='hidden' name='assunto' value='$Assunto>";
+            }
         }
-        echo "<br><br><br>";
-        echo "<input type='hidden' name='ID_q$i' value='" . $mostrar['ID_questoes'] . "'>";  
-        echo "<input type='hidden' name='assunto' value='$Assunto>"; 
+        else{
+            echo $mostrar['enunciado'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='A' required> a): ". $mostrar['alt_a'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='B'> b): ". $mostrar['alt_b'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='C'> c): ". $mostrar['alt_c'] ."<br><br>";
+            echo "<input type='radio' name='altcorreta$i' value='D'> d): ". $mostrar['alt_d'] ."<br><br>";
+            if($mostrar['alt_e'] != ""){
+                echo "<input type='radio' name='altcorreta$i' value='E'> e): ". $mostrar['alt_e'] ."<br><br>";
+            }
+            else{
+                echo "<br><br><br>";
+                echo "<input type='hidden' name='ID_q$i' value='" . $mostrar['ID_questoes'] . "'>";  
+                echo "<input type='hidden' name='assunto' value='$Assunto>";
+            }
+        }
     }
 }
 
