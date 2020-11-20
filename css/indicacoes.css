@@ -24,7 +24,7 @@
 
 .post-slider .post-wrapper {
     width: 75%;
-    height: 320px;
+    height: 350px;
     margin: 0px auto;
     overflow: hidden;
     padding: 10px 0px 10px 0px;
@@ -32,12 +32,11 @@
 
 .post-slider .post-wrapper .post {
     width: 300px;
-    height: 315px;
+    height: 300px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
     border-radius: 5px;
-    box-shadow: 1rem 1rem 1 rem;
 }
 
 .post-slider .post-wrapper .post .slider-image {
@@ -48,8 +47,8 @@
 }
 
 .post-slider .post-wrapper .post .post-info {
-    height: 75px;
-    padding: 0px 5px;
+    max-height: 10px;
+    padding: 0px 2px;
 }
 
 a {
@@ -60,6 +59,9 @@ a {
 .page-wrapper a:hover {
     color: lightseagreen;
 }
+
+h4 {margin-top: 0px;
+    margin-bottom: 0px;}
 
 
 /* 1 - SERIES */
@@ -112,7 +114,7 @@ a {
 }
 
 .post-slider1 .post-wrapper1 .post1 .post-info1 {
-    height: 75px;
+    max-height: 20px;
     padding: 0px 5px;
 }
 

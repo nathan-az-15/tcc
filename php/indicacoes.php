@@ -65,9 +65,6 @@ include 'conecta.php';
 $consulta = "SELECT * FROM indicacoes WHERE plataforma LIKE '%Documentario%'";
 $con = mysqli_query($conexao, $consulta);
 
-
-
-
       echo "<div class='page-wrapper'>";
         echo "<div class='post-slider'>";
           echo "<h2 class='slider-title'>Documentários</h2>";
@@ -78,12 +75,13 @@ $con = mysqli_query($conexao, $consulta);
               echo "<div class='post'>";
                 echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image'>";
                 echo "<div class='post-info'>";
-                  echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
+                  echo "<h4><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h4>";
 				            echo "</div>";
               echo "</div>";
 			}
             echo "</div>";
         echo "</div>";
+
       echo "</div>";
 ?>
 <br>
@@ -107,7 +105,7 @@ $con = mysqli_query($conexao, $consulta);
               echo "<div class='post1'>";
                 echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image1'>";
                 echo "<div class='post-info1'>";
-                echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
+                echo "<h4><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h4>";
                 echo "</div>";
               echo "</div>";
 			}
@@ -136,7 +134,7 @@ $con = mysqli_query($conexao, $consulta);
               echo "<div class='post2'>";
                 echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image2'>";
                 echo "<div class='post-info2'>";
-                echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
+                echo "<h4><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h4>";
                 echo "</div>";
               echo "</div>";
 			}
@@ -162,7 +160,7 @@ $con = mysqli_query($conexao, $consulta);
               echo "<div class='post3'>";
                 echo "<img src='../imagens/indicacoes/". $mostrar['end_imagem_ind'] ."' alt='' class='slider-image3'>";
                 echo "<div class='post-info3'>";
-                echo "<h3><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h3>";
+                echo "<h4><a href='exibir_indicacoes.php?id=".$mostrar['ID_ind'] ."'>". $mostrar['titulo'] ."</a></h4>";
                 echo "</div>";
               echo "</div>";
 			}
@@ -170,7 +168,6 @@ $con = mysqli_query($conexao, $consulta);
         echo "</div>";
       echo "</div>";
 ?>
-    <br><br><br><br><br><br><br>
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
