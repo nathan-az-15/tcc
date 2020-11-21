@@ -58,7 +58,7 @@
   <!--sidebar end-->
 
   <div class="nome">
-    <p> Conteúdos </p>
+    <p> Desempenhos </p>
     <hr style="width: 102%; height: 7%; margin-left: -5%;">
   </div>
 

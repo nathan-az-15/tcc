@@ -1,3 +1,15 @@
+<?php
+            $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
+            $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
+            $query = "SELECT * FROM responde";
+            $result = mysqli_query($conn, $query);
+            $chart_data = '';
+            while($row = mysqli_fetch_array($result)){
+              $chart_data .="{acertos:'".$row["acertos"]."', faceis:".$row["faceis"]."medias:".$row["medias"].",
+                dificeis:".$row["dificeis"]."}, ";
+            }
+            $chart_data = substr ($chart_data, 0, -2);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +17,11 @@
     <title>Reforço Escolar Online | R.E.O</title>
     <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" type="text/css" href="../css/cont_especifico.css">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/lins/morris.js/0.5.1/morris.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
 
   </head>
@@ -57,41 +73,12 @@
       <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
     <!--sidebar end-->
-    <div class="conteudo">
-        <?php
-            $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
-            $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
-
-            $cod_assunto = $_GET['assunto'];
-
-            $sql = "SELECT * FROM conteudos where ID_cont like '".$cod_assunto."%'";
-            $cod = mysqli_query($conn,$sql);
-
-            $numRegistros = mysqli_num_rows($cod);
-            if ($numRegistros != 0) {
-              echo "<section class='flexbox'>";
-              while ($text = mysqli_fetch_object($cod)) {
-                $texto=$text->texto;
-                $texto=utf8_encode($texto);
-                $assunto=$text->assunto;
-                $assunto=utf8_encode($assunto);
-                   echo "<center><h1>".$assunto."</h1>
-                   <br><br><div class='texto'>".nl2br($texto).
-
-                   "</div><br></center>";
-                  // echo "Relação de inclusão
-                  // Ao comparar dois conjuntos, podemos nos deparar com diversas relações, e uma delas é a relação de inclusão. Para essa relação, precisamos conhecer alguns símbolos:
-                  // ⊃ → contém ⊂ → está contido
-                  // ⊅ → não contém ⊄ → não está contido";
-                }
-                echo "</section>";
-              }
-            else{
-                echo "Nenhum registro";
-            }
-
-        ?>
- </div>
+    <br><br>
+    <div class="container" style="width:900px;">
+            <h2 align="center">Desempenho Geral</h2>
+            <br><br>
+            <div id="chart"></div>
+    </div>
    <!--<script type="text/javascript">
     $(document).ready(function(){
       $('.nav_btn').click(function(){
@@ -102,3 +89,13 @@
 
 </body>
 </html>
+<script>
+  Morris.Bar({
+    element: 'chart',
+    data:[<?php echo $acertos; ?>],
+    xkey:'acertos',
+    ykeys:['faceis', 'medios', 'dificeis'],
+    labels:['faceis', 'medios', 'dificeis'],
+    hideHover:'auto',
+  }) ; 
+</script>  
