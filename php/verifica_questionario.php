@@ -183,16 +183,29 @@ for($i = 1; $i <= 10; $i++){
         $con = mysqli_query($conexao, $sql1);
         $mostrar = mysqli_fetch_array($con);
         $ID_usu = $mostrar['ID_usuario'];
-        
-        $sql = "INSERT INTO responde VALUES";
-        $sql .= "($ID_usu, $Acertos, $Assunto, $easy, $medium, $hard)";
 
-        if($conexao->query($sql) == TRUE){
-            echo "";
-        } else {
-            echo "Erro: ". $sql ."<br>" . $conexao->error;
+        $consulta1 = "SELECT * FROM responde WHERE ID_usuario LIKE '$ID_usu' AND id_cont LIKE '$Assunto'";
+        $con1 = mysqli_query($conexao, $consulta1);
+        $num1 = mysqli_num_rows($con1);
+
+        if($num1==0){
+            $sql = "INSERT INTO responde VALUES";
+            $sql .= "($ID_usu, $Acertos, $Assunto, $easy, $medium, $hard)";
+
+            if($conexao->query($sql) == TRUE){
+                echo "";
+            } else {
+                echo "Erro: ". $sql ."<br>" . $conexao->error;
+            }
+        }else{
+            $sql2 = "UPDATE responde SET acertos='$Acertos', faceis='$easy', medias='$medium', dificeis='$hard' WHERE ID_usuario='$ID_usu' AND id_cont LIKE '$Assunto'";
+            
+            if($conexao->query($sql2) == TRUE){
+                echo "";
+            } else {
+                echo "Erro: ". $sql ."<br>" . $conexao->error;
+            }
         }
-
 
 if($Acertos >= 4){
     echo "Parabéns. Muito Bem!";
