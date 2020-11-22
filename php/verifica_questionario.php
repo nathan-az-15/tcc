@@ -154,6 +154,8 @@ for($i = 1; $i <= 10; $i++){
         $con = mysqli_query($conexao, $consulta);
 
         while($mostrar = mysqli_fetch_array($con)){
+            $acertor = $mostrar['aceros'];
+            $acertos++
             if($mostrar['alt_correta'] == $alt_correta[$a]){
                 echo "Questão $i: <font color='green'>Correta</font><br>";
                 echo "Explicação: " . $mostrar['explicacao'] . "<br><br>";
@@ -178,7 +180,7 @@ for($i = 1; $i <= 10; $i++){
 }
 
         $sql = "INSERT INTO responde VALUES";
-        $sql .= "('1', '11', '$Acertos', '$Assunto', '$easy', '$medium', '$hard')";
+        $sql .= "(3, $Acertos, $Assunto, $easy, $medium, $hard)";
 
         if($conexao->query($sql) == TRUE){
             echo "";
@@ -187,16 +189,16 @@ for($i = 1; $i <= 10; $i++){
         }
 
 
-if($Acertos >= 8){
+if($Acertos >= 4){
     echo "Parabéns. Muito Bem!";
-}else if($Acertos >= 4 && $Acertos < 8){
+}else if($Acertos >= 2 && $Acertos < 4){
     echo "Ok. Continue tentando!";
-}else if($Acertos >= 0 && $Acertos < 4){
+}else if($Acertos >= 0 && $Acertos < 2){
     echo "Opa. Se deu mal!";
 }
 
 echo "<br><br>";
-echo "Acertos: $Acertos/10 <br>";
+echo "Acertos: $Acertos/5 <br>";
 echo "Fáceis: $easy <br>";
 echo "Médias: $medium <br>";
 echo "Difíceis: $hard <br>";

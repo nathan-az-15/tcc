@@ -15,11 +15,12 @@ for($i = 1; $i <=10; $i++){
 
         echo "<b>QUESTÃO $i</b><br>";
 
-        if($mostrar['end_imagens_quest'] != ""){
-            echo "<img src='../imagens/questoes/" . $mostrar['end_imagens_quest'] . "'<br>";
-        }
+        
 
-        echo "". $mostrar['enunciado'] ."<br><br>";
+        echo $mostrar['enunciado'] ."<br><br>";
+        if($mostrar['end_imagens_quest'] != ""){
+            echo "<img src='../imagens/imgquestao/".$mostrar['end_imagens_quest']."'<br><br>";
+        }
         echo "<input type='radio' name='altcorreta$i' value='A' required>   a) ". $mostrar['alt_a'] ."<br><br>";
         echo "<input type='radio' name='altcorreta$i' value='B'>            b) ". $mostrar['alt_b'] ."<br><br>";
         echo "<input type='radio' name='altcorreta$i' value='C'>            c) ". $mostrar['alt_c'] ."<br><br>";
