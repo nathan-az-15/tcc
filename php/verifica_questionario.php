@@ -1,5 +1,8 @@
 <?php
+session_start();
 include 'conecta.php';
+
+$email_sessao = $_SESSION['email_usuario'];
 
 $Assunto=$_POST["assunto"];
 
@@ -176,9 +179,13 @@ for($i = 1; $i <= 10; $i++){
     }
     $a++;
 }
-
+        $sql1 = "SELECT * FROM usuario WHERE email_usuario LIKE '$email_sessao'";
+        $con = mysqli_query($conexao, $sql1);
+        $mostrar = mysqli_fetch_array($con);
+        $ID_usu = $mostrar['ID_usuario'];
+        
         $sql = "INSERT INTO responde VALUES";
-        $sql .= "(3, $Acertos, $Assunto, $easy, $medium, $hard)";
+        $sql .= "($ID_usu, $Acertos, $Assunto, $easy, $medium, $hard)";
 
         if($conexao->query($sql) == TRUE){
             echo "";
