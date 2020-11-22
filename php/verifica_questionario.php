@@ -154,8 +154,6 @@ for($i = 1; $i <= 10; $i++){
         $con = mysqli_query($conexao, $consulta);
 
         while($mostrar = mysqli_fetch_array($con)){
-            $acertor = $mostrar['aceros'];
-            $acertos++
             if($mostrar['alt_correta'] == $alt_correta[$a]){
                 echo "Questão $i: <font color='green'>Correta</font><br>";
                 echo "Explicação: " . $mostrar['explicacao'] . "<br><br>";
