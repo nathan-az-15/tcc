@@ -57,7 +57,7 @@
 
 .post-slider .post-wrapper .post {
     width: 500px;
-    height: 500px;
+    height: 322px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
@@ -126,7 +126,7 @@ h4 {
 
 .post-slider1 .post-wrapper1 .post1 {
     width: 300px;
-    height: 400px;
+    height: 280px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
@@ -186,7 +186,7 @@ h4 {
 
 .post-slider2 .post-wrapper2 .post2 {
     width: 300px;
-    height: 315px;
+    height: 300px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
@@ -238,7 +238,7 @@ h4 {
 
 .post-slider3 .post-wrapper3 {
     width: 75%;
-    height: 320px;
+    height: 450px;
     margin: 0px auto;
     overflow: hidden;
     padding: 10px 0px 10px 0px;
@@ -246,7 +246,7 @@ h4 {
 
 .post-slider3 .post-wrapper3 .post3 {
     width: 300px;
-    height: 315px;
+    height: 350px;
     margin: 0px 10px;
     display: inline-block;
     background: lightgrey;
