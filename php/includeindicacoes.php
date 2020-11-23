@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
-    <title>Reforço Escolar Online | R.E.O</title>
+    <title>Cadastro de indicações | Reforço+</title>
 	<link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" href="../css/include_cont_ind.css">
 	

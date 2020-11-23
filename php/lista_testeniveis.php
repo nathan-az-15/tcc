@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Reforço Escolar Online | R.E.O</title>
+    <title>Testes de níveis | Reforço+</title>
     <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" type="text/css" href="../css/blocos.css">
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Reforço Escolar Online | R.E.O</title>
+  <title>Indicações | Reforço+</title>
   <link rel="stylesheet" href="../css/inicio.css">
   <link rel="stylesheet" href="../css/indicacoes.css">
   <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>

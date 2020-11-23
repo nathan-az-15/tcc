@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Reforço Escolar Online | R.E.O</title>
+  <title>Conteúdos ADM | Reforço+</title>
   <link rel="stylesheet" href="../css/conteudo.css">
   <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
 

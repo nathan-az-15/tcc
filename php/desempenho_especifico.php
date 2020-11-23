@@ -14,7 +14,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Reforço Escolar Online | R.E.O</title>
+    <title>Desempenho | Reforço+</title>
     <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" type="text/css" href="../css/cont_especifico.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/lins/morris.js/0.5.1/morris.css">
