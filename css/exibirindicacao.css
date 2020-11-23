@@ -1,45 +1,58 @@
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.nome {
+    margin-left: 25%;
+    margin-top: 8%;
+    transition: 0.5s;
+    width: (100% - 250px);
 }
 
+.nome p {
+    color: #000;
+    margin-top: 12%;
+    font-size: 25px;
+    font-family: 'poppins', sans-serif;
+}
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.conteudo1 {
+    width: (100% - 250px);
+    margin-top: 2%;
+    padding: 20px;
+    margin-left: 29%;
     height: 100vh;
-    font-family: 'Fire Sans', sans-serif;
-    background: red;
-}*/
+    transition: 0.5s;
+    display: inline-block;
+}
+
+#check:checked~.conteudo1 {
+    margin-left: 20%;
+}
 
 .blog-card {
     position: absolute;
-    height: 370px;
-    width: 95%;
+    height: 450px;
+    width: 60%;
     max-width: 850px;
     margin: auto;
-    background: white;
+    background: #f7f7f7;
     border-radius: 25px;
-    box-shadow: 0 10px 50px rgba(252, 56, 56, .3);
+    box-shadow: 0 10px 50px rgba(171, 187, 196, .3);
 }
 
 .blog-card .inner-part {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 25px;
+    padding: 0 50px;
     height: 360px;
 }
 
 .inner-part .img {
-    height: 260px;
+    height: 350px;
     width: 260px;
+    margin-top: 10%;
     overflow: hidden;
     flex-shrink: 0;
     border-radius: 20px;
-    box-shadow: 2px 3px 15px rgba(252, 56, 56, .3);
+    box-shadow: 2px 3px 15px rgba(171, 187, 196, .3);
 }
 
 .img img {
@@ -50,30 +63,32 @@ body {
 }
 
 .content {
-    padding: 0 20px 0 35px;
+    padding: 0 20px 0 25px;
     width: 530px;
     margin-left: 50px;
+    margin-bottom: 1px;
 }
 
 .content span {
     display: block;
-    color: #7b7992;
-    margin-bottom: 15px;
-    font-size: 22px;
+    color: #8d8c8f;
+    margin-bottom: 20px;
+    margin-top: 25%;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .content .title {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
-    color: #0d0925;
+    color: #141414;
     margin-bottom: 20px;
 }
 
 .content .text {
-    font-size: 19px;
+    font-size: 17px;
     color: #4e4a67;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     line-height: 1.5em;
     text-align: justify;
 }
@@ -88,7 +103,7 @@ body {
     font-weight: 550;
     letter-spacing: 1px;
     border-radius: 40px;
-    border: 1px solid #1F363D;
+    /*border: 1px solid #1F363D;*/
     cursor: pointer;
     outline: none;
     background: linear-gradient(147deg, #1F363D 0%, #ABBBC4 74%);
@@ -96,5 +111,5 @@ body {
 }
 
 .content a:hover {
-    background: linear-gradient(147deg, #fe791b 0%, #fd1c1c 74%);
+    background: linear-gradient(147deg, #17292e 0%, #8a99a1 74%);
 }

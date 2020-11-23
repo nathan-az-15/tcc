@@ -56,8 +56,12 @@
 		<a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
 	</div>
 	<!--sidebar end-->
+	<div class="nome">
+		<p> Indicação </p>
+		<hr style="width: 102%; height: 7%; margin-left: -5%;">
+	</div>
 
-	<div class="conteudo">
+	<div class="conteudo1">
 
 		<?php
 		include 'conecta.php';
@@ -73,7 +77,7 @@
 			echo "<div class='blog-card'>
         		<div class='inner-part'>
             	<label for='tapImg' class='img'>
-				<img src='../imagens/indicacoes/".$mostrar['end_imagem_ind']."'></img>
+				<img src='../imagens/indicacoes/" . $mostrar['end_imagem_ind'] . "'></img>
         		</label>
             		<div class='content'>
                 		<span>" . $mostrar['plataforma'] . " | " . $mostrar['autor'] . " </span>
