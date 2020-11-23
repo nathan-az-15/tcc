@@ -5,11 +5,17 @@ $Assunto=$_GET["assunto"];
 
 $consulta = "SELECT * FROM questoes WHERE cod_cont LIKE '$Assunto'";
 $con = mysqli_query($conexao, $consulta);
+
 echo "<form method='POST' class='form' action='verifica_questionario.php'>";
 
 for($i = 1; $i <=10; $i++){
 
     $mostrar = mysqli_fetch_array($con);
+    $ID_questao = $mostrar['ID_questoes'];
+
+    $consulta_imagem = "SELECT * FROM imagens WHERE ID_questoes LIKE '$ID_questao'";
+    $con_imagem = mysqli_query($conexao, $consulta_imagem);
+    $mostrar_imagem = mysqli_fetch_array($con_imagem);
 
     if($mostrar['enunciado'] != ""){
 
@@ -18,8 +24,8 @@ for($i = 1; $i <=10; $i++){
         
 
         echo $mostrar['enunciado'] ."<br><br>";
-        if($mostrar['end_imagens_quest'] != ""){
-            echo "<img src='../imagens/imgquestao/".$mostrar['end_imagens_quest']."'<br><br>";
+        if($mostrar_imagem['end_imagem'] != ""){
+            echo "<img src='../imagens/imgquestao/".$mostrar_imagem['end_imagem']."'<br><br>";
         }
         echo "<input type='radio' name='altcorreta$i' value='A' required>   a) ". $mostrar['alt_a'] ."<br><br>";
         echo "<input type='radio' name='altcorreta$i' value='B'>            b) ". $mostrar['alt_b'] ."<br><br>";

@@ -72,8 +72,6 @@
 
     $sql = "SELECT * FROM conteudos where cod_mat like '%".$materia."%' and ano like '%".$ano."%'";
     $cod = mysqli_query($conn,$sql);
- 
-    $confphp = "<script>document.write(confjs)</script>";
 
             
       ?>
@@ -96,8 +94,8 @@
           <option value="3">Difícil</option>
           </select><br><br>
 
-          Selecione uma imagem para acompanhar o enunciado:
-          <input type="file" onchange="preview_image(event)" name="imagem_q" accept=".png, .jpg, .jpeg, .gif">
+          Selecione a(s) imagem(s) para acompanhar o enunciado (se houver):
+          <input type="file" multiple onchange="preview_image(event)" name="imagem_q[]" accept=".png, .jpg, .jpeg, .gif">
           <img class="imagem" id="output_image"/><br><br>
           
           Questão:<font size=5 color=#FF0000> *</font><br>

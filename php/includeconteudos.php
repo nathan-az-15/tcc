@@ -70,8 +70,8 @@
 <form method="POST" class="form" action="includeconteudos1.php?materia=<?= $materia?>&ano=<?= $ano?>" enctype="multipart/form-data">
 		
 		
-		<label for="exampleInputEmail1">Selecione uma imagem para acompanhar o conteúdo (se possuir)
-		<input type="file" onchange="preview_image(event)" name="imagem_c" accept=".png, .jpg, .jpeg, .gif">
+		<label for="exampleInputEmail1">Selecione a(s) imagem(s) para acompanhar o conteúdo (se houver):
+          <input type="file" multiple onchange="preview_image(event)" name="imagem_c[]" accept=".png, .jpg, .jpeg, .gif">
 		<img class="imagem" id="output_image"/>
 		</label>
 		<br>

@@ -59,6 +59,7 @@
     <!--sidebar end-->
     <div class="conteudo">
         <?php
+        include 'conecta.php';
             $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
             $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
 
@@ -66,6 +67,10 @@
 
             $sql = "SELECT * FROM conteudos where ID_cont like '".$cod_assunto."%'";
             $cod = mysqli_query($conn,$sql);
+
+            $consulta_imagem = "SELECT * FROM imagens WHERE ID_cont LIKE '$cod_assunto'";
+            $con_imagem = mysqli_query($conexao, $consulta_imagem);
+            $mostrar_imagem = mysqli_fetch_array($con_imagem);
 
             $numRegistros = mysqli_num_rows($cod);
             if ($numRegistros != 0) {
@@ -78,13 +83,12 @@
                    echo "<center><h1>".$assunto."</h1>
                    <br><br><div class='texto'>".nl2br($texto).
 
-                   "</div><br></center>";
-                  // echo "Relação de inclusão
-                  // Ao comparar dois conjuntos, podemos nos deparar com diversas relações, e uma delas é a relação de inclusão. Para essa relação, precisamos conhecer alguns símbolos:
-                  // ⊃ → contém ⊂ → está contido
-                  // ⊅ → não contém ⊄ → não está contido";
+                   "</div><br><br>";
+                  if($mostrar_imagem['end_imagem'] != ""){
+                    echo "<img src='../imagens/imgconteudo/".$mostrar_imagem['end_imagem']."'<br><br>";
+                  }
                 }
-                echo "</section>";
+                echo "</center></section>";
               }
             else{
                 echo "Nenhum registro";

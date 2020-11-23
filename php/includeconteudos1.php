@@ -13,24 +13,37 @@ $assunto=$_POST["assunto_c"];
 $ano = $_GET["ano"];
 $materia = $_GET['materia'];
 
-$destino = '../imagens/imgconteudo/' . $_FILES['imagem_c']['name'];
- 
-$arquivo_tmp = $_FILES['imagem_c']['tmp_name'];
-
-move_uploaded_file($arquivo_tmp, $destino);
-
-$imagem = $_FILES['imagem_c']['name'];
-
 $sql = "INSERT INTO conteudos VALUES";
-$sql .= "(DEFAULT, '$texto', '$imagem', '$materia', 1, '$ano', '$assunto')";
+$sql .= "(DEFAULT, '$texto', '$materia', 1, '$ano', '$assunto')";
 
-if($conexao->query($sql) == TRUE){
-	echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
-} else {
-	echo "Erro: ". $sql ."<br>" . $conexao->error;
-}
+	if($conexao->query($sql) == TRUE){
+		echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
+	} else {
+		echo "Erro: ". $sql ."<br>" . $conexao->error;
+	}
 
-$conexao->close();
+$arquivos = $_FILES['imagem_c'];
+$nomes = $arquivos['name'];
+
+$sql_id = "SELECT * FROM conteudos where texto like '%".$texto."%' and assunto like '%".$assunto."%'";
+$cod = mysqli_query($conexao,$sql_id);
+$mostrar = mysqli_fetch_array($cod);
+$ID = $mostrar['ID_cont'];
+
+for ($i = 0; $i<count($nomes);$i++) {
+ 
+   $mover = move_uploaded_file($_FILES["imagem_c"]["tmp_name"][$i], '../imagens/imgconteudo/'.$nomes[$i]);
+
+	$sql_imagem = "INSERT INTO imagens VALUES ('$nomes[$i]', NULL, $ID)";
+
+	if($conexao->query($sql_imagem) == TRUE){
+		echo "";
+	} else {
+		echo "Erro: ". $sql ."<br>" . $conexao->error;
+	}
+ }
+
+	$conexao->close();
 ?>
 <input type="button" value="Voltar para a página de cadastro de conteúdos" onClick="location. href='conteudos_adm.php'">
 </body>
