@@ -6,11 +6,24 @@ $email_sessao = $_SESSION['email_usuario'];
 
 $Assunto=$_POST["assunto"];
 
+//--------------------------------------------------------------------Título: Assunto e Ano
+
 $consulta = "SELECT * FROM conteudos WHERE ID_cont LIKE '$Assunto'";
-        $con = mysqli_query($conexao, $consulta);
+$con = mysqli_query($conexao, $consulta);
 
         while($mostrar = mysqli_fetch_array($con)){
-            echo "RESULTADOS DO QUESTIONÁRIO DE " . strtoupper($mostrar['assunto']) . "<br><br>";
+            $materia=$mostrar['cod_mat'];
+            echo "<font size='6'><center>RESULTADO DO QUESTIONÁRIO DE " . strtoupper($mostrar['assunto']) . "<br>";
+            echo "" . $mostrar['ano'] . "º ANO<br>";
+        }
+
+//--------------------------------------------------------------------Título: Matéria
+
+$consulta = "SELECT * FROM materias WHERE ID_materia LIKE '$materia'";
+$con = mysqli_query($conexao, $consulta);
+                  
+        while($mostrar = mysqli_fetch_array($con)){
+            echo "" . strtoupper($mostrar['nome_mat']) . "</center></font><br>";
         }
 
 
@@ -140,7 +153,7 @@ $ID_questao10=$_POST["ID_q10"];
     $ID_questao10="vazia";
 }
 
-//--------------------------------------------------------------------Verificação da questão
+//--------------------------------------------------------------------Variáveis e Arrays
 
 $alt_correta = [$alt_correta1, $alt_correta2, $alt_correta3, $alt_correta4, $alt_correta5, $alt_correta6, $alt_correta7, $alt_correta8, $alt_correta9, $alt_correta10];
 $ID_questao = [$ID_questao1, $ID_questao2, $ID_questao3, $ID_questao4, $ID_questao5, $ID_questao6, $ID_questao7, $ID_questao8, $ID_questao9, $ID_questao10];
@@ -150,17 +163,21 @@ $medium = 0;
 $hard = 0;
 $a = 0;
 
+
+//--------------------------------------------------------------------Apresentação das Questões
+
+
 for($i = 1; $i <= 10; $i++){
     if(isset($_POST["ID_q$i"])){
-        
+
         $consulta = "SELECT * FROM questoes WHERE ID_questoes LIKE '$ID_questao[$a]'";
         $con = mysqli_query($conexao, $consulta);
 
         while($mostrar = mysqli_fetch_array($con)){
+
             if($mostrar['alt_correta'] == $alt_correta[$a]){
-                echo "Questão $i: <font color='green'>Correta</font><br>";
-                echo "Explicação: " . $mostrar['explicacao'] . "<br><br>";
                 $Acertos++;
+                $EA = "<font color='green'>CORRETA</font>";
                 if($mostrar['dificuldade'] == 1){
                     $easy++;
                 }
@@ -170,15 +187,30 @@ for($i = 1; $i <= 10; $i++){
                 if($mostrar['dificuldade'] == 3){
                     $hard++;
                 }
+            }else{
+                $EA = "<font color='red'>INCORRETA</font>";
             }
-            else{
-                echo "Questão $i: <font color='red'>Incorreta</font><br>";
-                echo "Explicação: " . $mostrar['explicacao'] . "<br><br>";
+
+            echo "<b>QUESTÃO $i | $EA</b><br>";
+            echo $mostrar['enunciado'] ."<br><br>";
+            if($mostrar['end_imagens_quest'] != ""){
+                echo "<img src='../imagens/imgquestao/".$mostrar['end_imagens_quest']."'<br><br>";
             }
+            echo "a) ". $mostrar['alt_a'] ."<br><br>";
+            echo "b) ". $mostrar['alt_b'] ."<br><br>";
+            echo "c) ". $mostrar['alt_c'] ."<br><br>";
+            echo "d) ". $mostrar['alt_d'] ."<br><br>";
+            if($mostrar['alt_e'] != ""){
+            echo "e) ". $mostrar['alt_e'] ."<br><br>";
+            }
+            echo "Explicação: " . $mostrar['explicacao'] . "<br><br>";
         }
+        $a++;
     }
-    $a++;
 }
+
+//--------------------------------------------------------------------Envio para o BD
+
         $sql1 = "SELECT * FROM usuario WHERE email_usuario LIKE '$email_sessao'";
         $con = mysqli_query($conexao, $sql1);
         $mostrar = mysqli_fetch_array($con);
@@ -207,20 +239,24 @@ for($i = 1; $i <= 10; $i++){
             }
         }
 
-if($Acertos >= 4){
+//--------------------------------------------------------------------Revisão rápida do desempenho
+
+$oitenta = $a * 0.8;
+$cinquenta = $a * 0.5;
+
+if($Acertos == $a){
     echo "Parabéns. Muito Bem!";
-}else if($Acertos >= 2 && $Acertos < 4){
+}else if($Acertos >= $cinquenta && $Acertos < $oitenta){
     echo "Ok. Continue tentando!";
-}else if($Acertos >= 0 && $Acertos < 2){
+}else if($Acertos >= 0 && $Acertos < $cinquenta){
     echo "Opa. Se deu mal!";
 }
 
 echo "<br><br>";
-echo "Acertos: $Acertos/5 <br>";
+echo "Acertos: $Acertos/$a <br>";
 echo "Fáceis: $easy <br>";
 echo "Médias: $medium <br>";
 echo "Difíceis: $hard <br>";
-
 
 $conexao->close();
 ?>
