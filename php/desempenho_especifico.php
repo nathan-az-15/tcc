@@ -1,101 +1,107 @@
 <?php
-            $conn = mysqli_connect('127.0.0.1', 'root', '') or die("Não foi possível a conexão com o Banco");
-            $db = mysqli_select_db($conn,'bd_reo_tcc') or die("Não foi possível selecionar o Banco");
-            $query = "SELECT * FROM responde";
-            $result = mysqli_query($conn, $query);
-            $chart_data = '';
-            while($row = mysqli_fetch_array($result)){
-              $chart_data .="{acertos:'".$row["acertos"]."', faceis:".$row["faceis"]."medias:".$row["medias"].",
-                dificeis:".$row["dificeis"]."}, ";
-            }
-            $chart_data = substr ($chart_data, 0, -2);
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Desempenho | Reforço+</title>
-    <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" type="text/css" href="../css/cont_especifico.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/lins/morris.js/0.5.1/morris.css">
+include 'conecta.php';
+
+$mat = $_GET['materia'];
+
+session_start();
+
+$email_sessao = $_SESSION['email_usuario'];
+
+//--------------------------------------------------------------------SELECT para o total de acertos (ignorar, pois isso só serve para encher variáveis)
+
+$AcertosTotais = 0;
+$FaceisTotais = 0;
+$MediasTotais = 0;
+$DificeisTotais = 0;
+
+$consultaUsu0 = "SELECT * FROM usuario WHERE email_usuario LIKE '$email_sessao'";
+$conUsu0 = mysqli_query($conexao, $consultaUsu0);
+
+  while ($mostrarUsu0 = mysqli_fetch_array($conUsu0)) {
+    $ID_usuario = $mostrarUsu0['ID_usuario'];
+  }
+
+$consultaCont0 = "SELECT * FROM conteudos WHERE cod_mat LIKE '$mat'";
+$conCont0 = mysqli_query($conexao, $consultaCont0);
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    <script src="https://kit.fontawesome.com/a68f3df9e0.js" crossorigin="anonymous"></script>
+  while ($mostrarCont0 = mysqli_fetch_array($conCont0)) {
+    $cont = $mostrarCont0['ID_cont'];
 
-  </head>
-  <body>
-    <input type="checkbox" id="check">
-    <!--header area start-->
+    $consultaResp0 = "SELECT * FROM responde WHERE ID_usuario LIKE '$ID_usuario' AND id_cont LIKE '$cont'";
+    $conResp0 = mysqli_query($conexao, $consultaResp0); 
+  
+      while ($mostrarResp0 = mysqli_fetch_array($conResp0)) {        
+        $AcertosTotais += $mostrarResp0['acertos'];
+        $FaceisTotais += $mostrarResp0['faceis'];
+        $MediasTotais += $mostrarResp0['medias'];
+        $DificeisTotais += $mostrarResp0['dificeis'];
+      }
+    
+  }
+
+//--------------------------------------------------------------------SELECT do Usuário
+
+$consultaUsu = "SELECT * FROM usuario WHERE email_usuario LIKE '$email_sessao'";
+$conUsu = mysqli_query($conexao, $consultaUsu);
+
+  while ($mostrarUsu = mysqli_fetch_array($conUsu)) {
+    echo "GRÁFICOS DE DESEMPENHO DE " . strtoupper($mostrarUsu['nome_usuario']) . "<br><br>";
+    $ID_usuario = $mostrarUsu['ID_usuario'];
+  }
+
+//--------------------------------------------------------------------SELECT da Matéria
+
+$consultaMat = "SELECT * FROM materias WHERE ID_materia LIKE '$mat'";
+$conMat = mysqli_query($conexao, $consultaMat);
+  
+  while ($mostrarMat = mysqli_fetch_array($conMat)) {
+    echo "".$mostrarMat['nome_mat']." - Geral<br>";
+    echo "Acertos Totais: $AcertosTotais<br>";
+    echo "Fáceis: $FaceisTotais<br>";
+    echo "Médias: $MediasTotais<br>";
+    echo "Díficeis: $DificeisTotais<br><br>";
+  }
+
+//--------------------------------------------------------------------SELECT do Conteúdo da matéria
+
+$consultaCont = "SELECT * FROM conteudos WHERE cod_mat LIKE '$mat'";
+$conCont = mysqli_query($conexao, $consultaCont);
+    
+  while ($mostrarCont = mysqli_fetch_array($conCont)) {
+    echo "".$mostrarCont['assunto']."<br>";
+
+    $cont = $mostrarCont['ID_cont'];
+
+    $consultaResp = "SELECT * FROM responde WHERE ID_usuario LIKE '$ID_usuario' AND id_cont LIKE '$cont'";
+    $conResp = mysqli_query($conexao, $consultaResp); 
+  
+      while ($mostrarResp = mysqli_fetch_array($conResp)) {
+        echo "Acertos:".$mostrarResp['acertos']."/5<br>";
+        $ColunaAcertos = $mostrarResp['acertos'] * 10;
+        echo "<input type='none' readonly='true' size='$ColunaAcertos'><br>";
+
+        echo "Fáceis:".$mostrarResp['faceis']."<br>";
+        $ColunaFaceis = $mostrarResp['faceis'] * 10;
+        echo "<input type='none' readonly='true' size='$ColunaFaceis'><br>";
+
+        echo "Médias:".$mostrarResp['medias']."<br>";
+        $ColunaMedias = $mostrarResp['medias'] * 10;
+        echo "<input type='none' readonly='true' size='$ColunaMedias'><br>";
+
+        echo "Difíceis:".$mostrarResp['dificeis']."<br>";
+        $ColunaDificeis = $mostrarResp['dificeis'] * 10;
+        echo "<input type='none' readonly='true' size='$ColunaDificeis'><br><br>";
+      }
+    
+  }
 
 
-      <header>
-
-      <a href="../inicio.html"><img style="float:left; margin-left:52px; margin-top: 0px; margin-bottom: 1px; padding-top: 0px; border: 0;" src="../imagens/inicial/logo3.png"> </a>
-      <label for="check">
-        <i class="fas fa-align-justify" id="menu_btn"></i>
-      </label>
-      <div class="direita">
-        <a href="sair.php" class="sair">Sair</a>
-      </div>
-
-      </header>
-    <!--header area end-->
 
 
-    <!--mobile navigation bar start
-    <div class="mobile_nav">
-      <div class="nav_bar">
 
-        <i class="fa fa-bars nav_btn"></i>
-      </div>
-      <div class="mobile_nav_items">
-        <a href="#"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="#"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="#"><i class="fas fa-file-alt"></i><span>Simulados</span></a>
-      <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="#"><i class="fas fa-user-alt"></i><span>Conta</span></a>
-      </div>
-    </div>
-    mobile navigation bar end-->
 
-    <!--sidebar start-->
-    <div class="menu">
-      <center>
-      <h4>MENU</h4>
-      </center>
-      <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
-      <a href="conteudos.php"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
-      <a href="testeniveis.php"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
-      <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
-      <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
-      <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
-    </div>
-    <!--sidebar end-->
-    <br><br>
-    <div class="container" style="width:900px;">
-            <h2 align="center">Desempenho Geral</h2>
-            <br><br>
-            <div id="chart"></div>
-    </div>
-   <!--<script type="text/javascript">
-    $(document).ready(function(){
-      $('.nav_btn').click(function(){
-        $('.mobile_nav_items').toggleClass('active');
-      });
-    });
-    </script>-->
 
-</body>
-</html>
-<script>
-  Morris.Bar({
-    element: 'chart',
-    data:[<?php echo $acertos; ?>],
-    xkey:'acertos',
-    ykeys:['faceis', 'medios', 'dificeis'],
-    labels:['faceis', 'medios', 'dificeis'],
-    hideHover:'auto',
-  }) ; 
-</script>  
+
+
+
+?>
