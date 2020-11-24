@@ -135,7 +135,7 @@
                 }
             }
 
-            echo "<input type='submit' value='Finalizar questionário'>";
+            echo "<input type='submit' class='btn2 btn-color1' value='Finalizar questionário'><br><br>";
             echo "</form>";
             ?>
         </div>

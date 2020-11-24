@@ -264,3 +264,34 @@ h1 {
     background-color: lightcoral;
     opacity: 0.5px;
 }
+
+.conteudo .btn2 {
+    border-radius: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    padding: 12px 25px 26px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0;
+    margin: -15% 1px 10% 40%;
+    margin-top: -15%;
+    width: 250px;
+    height: 15px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.conteudo .btn-color1 {
+    background-color: #2b314e;
+    border: 1px solid #2b314e;
+    transition: background-color .5s;
+}
+
+.conteudo .btn-color1:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    color: #2b314e;
+}
