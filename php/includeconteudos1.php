@@ -29,20 +29,23 @@ $sql_id = "SELECT * FROM conteudos where texto like '%".$texto."%' and assunto l
 $cod = mysqli_query($conexao,$sql_id);
 $mostrar = mysqli_fetch_array($cod);
 $ID = $mostrar['ID_cont'];
+//VER COM DELLA
 
-for ($i = 0; $i<count($nomes);$i++) {
- 
-   $mover = move_uploaded_file($_FILES["imagem_c"]["tmp_name"][$i], '../imagens/imgconteudo/'.$nomes[$i]);
+if($arquivos != ""){
+	for ($i = 0; $i<count($nomes);$i++) {
+	
+	$mover = move_uploaded_file($_FILES["imagem_c"]["tmp_name"][$i], '../imagens/imgconteudo/'.$nomes[$i]);
 
-	$sql_imagem = "INSERT INTO imagens VALUES ('$nomes[$i]', NULL, $ID)";
+		$sql_imagem = "INSERT INTO imagens VALUES ('$nomes[$i]', NULL, $ID)";
 
-	if($conexao->query($sql_imagem) == TRUE){
-		echo "";
-	} else {
-		echo "Erro: ". $sql ."<br>" . $conexao->error;
+		if($conexao->query($sql_imagem) == TRUE){
+			echo "";
+		} else {
+			echo "Erro: ". $sql ."<br>" . $conexao->error;
+		}
 	}
- }
-
+}
+else{}
 	$conexao->close();
 ?>
 <input type="button" value="Voltar para a página de cadastro de conteúdos" onClick="location. href='conteudos_adm.php'">
