@@ -31,7 +31,7 @@ $mostrar = mysqli_fetch_array($cod);
 $ID = $mostrar['ID_cont'];
 //VER COM DELLA
 
-if($arquivos != ""){
+if(isset($_FILES['imagem_c'])){
 	for ($i = 0; $i<count($nomes);$i++) {
 	
 	$mover = move_uploaded_file($_FILES["imagem_c"]["tmp_name"][$i], '../imagens/imgconteudo/'.$nomes[$i]);

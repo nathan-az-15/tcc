@@ -25,7 +25,7 @@ $explicacao=$_POST["explicacao_q"];
 $ano=$_GET["ano"];
 
 $sql = "INSERT INTO questoes VALUES";
-	$sql .= "(DEFAULT, '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', '$conteudo', 1, '$ano', '$dificuldade')";
+	$sql .= "(DEFAULT, '$enunciado', '$alta', '$altb', '$altc', '$altd', '$alte', '$altcorreta', '$explicacao', $conteudo, 1, $ano, $dificuldade)";
 
 	if($conexao->query($sql) == TRUE){
 		echo "<center><br><br><br><br><br><br><br><br><h1>Sucesso!</h1>";
@@ -41,6 +41,7 @@ $cod = mysqli_query($conexao,$sql_id);
 $mostrar = mysqli_fetch_array($cod);
 $ID = $mostrar['ID_questoes'];
 
+if(isset($_FILES['imagem_q'])){
 for ($i = 0; $i<count($nomes);$i++) {
  
    $mover = move_uploaded_file($_FILES["imagem_q"]["tmp_name"][$i], '../imagens/imgquestao/'.$nomes[$i]);
@@ -53,6 +54,7 @@ for ($i = 0; $i<count($nomes);$i++) {
 		echo "Erro: ". $sql ."<br>" . $conexao->error;
 	}
  }
+}
 
 	$conexao->close();
 
