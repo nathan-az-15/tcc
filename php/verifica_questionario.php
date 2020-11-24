@@ -328,7 +328,7 @@
                             echo "</div>";
                         }
                     }
-                    echo "<br><br><b>Explicação: " . $mostrar['explicacao'] . "</b><br><br>";
+                    echo "<br><br><b>Explicação: " . nl2br($mostrar['explicacao']) . "</b><br><br>";
                     echo"<div class='blocos'>";
                     echo "alternativa marcada: " . $alt_correta[$a] . " ";
                     echo "</div><br><br>";

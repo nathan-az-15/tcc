@@ -104,7 +104,7 @@
                     echo "<div class='questao'>";
                     echo "<p><b>QUESTÃO $i</b></p><br>";
 
-                    echo $mostrar['enunciado'] . "<br><br><br>";
+                    echo nl2br($mostrar['enunciado']) . "<br><br><br>";
                     while ($mostrar_imagem = mysqli_fetch_object($con_imagem)) {
                       
                         echo "<center><img src='../imagens/imgquestao/" . $mostrar_imagem->end_imagem  . "'></center><br><br>";
