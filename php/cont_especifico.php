@@ -68,9 +68,7 @@
             $sql = "SELECT * FROM conteudos where ID_cont like '".$cod_assunto."%'";
             $cod = mysqli_query($conn,$sql);
 
-            $consulta_imagem = "SELECT * FROM imagens WHERE ID_cont LIKE '$cod_assunto'";
-            $con_imagem = mysqli_query($conexao, $consulta_imagem);
-            $mostrar_imagem = mysqli_fetch_array($con_imagem);
+            
 
             $numRegistros = mysqli_num_rows($cod);
             if ($numRegistros != 0) {
@@ -84,9 +82,17 @@
                    <br><br><div class='texto'>".nl2br($texto).
 
                    "</div><br><br>";
-                  if($mostrar_imagem['end_imagem'] != ""){
-                    echo "<img src='../imagens/imgconteudo/".$mostrar_imagem['end_imagem']."'<br><br>";
-                  }
+                   $consulta_imagem = "SELECT * FROM imagens WHERE ID_cont LIKE '$cod_assunto'";
+                      $con_imagem = mysqli_query($conexao, $consulta_imagem);
+                      
+                      
+                   
+                     
+                    while ($mostrar_imagem = mysqli_fetch_object($con_imagem)) {
+                      
+                        echo "<center><img src='../imagens/imgconteudo/" . $mostrar_imagem->end_imagem  . "'></center><br><br>";
+                    
+                }
                 }
                 echo "</center></section>";
               }
