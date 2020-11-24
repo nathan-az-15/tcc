@@ -66,15 +66,18 @@ h1 {
 }
 
 body {
-    background-image: url('../imagens/inicial/design4.png');
-    background-size: 100% 50%;
+    /*background-image: url('../imagens/inicial/design4.png');*/
+    /*background-size: 100% 50%;*/
     background-repeat: no-repeat;
-    /*background-position: relative;
-		/*background-size: cover;*/
-    /* background-attachment: fixed; */
 }
 
-.textpri {
+.parte1 {
+    background-color: #2b314e;
+    margin: 50px auto 2px auto;
+    padding: 11% 20px 6% 20px;
+}
+
+.parte1 .textpri {
     font-family: "title";
     font-size: 520%;
     text-decoration: none;
@@ -82,72 +85,65 @@ body {
     letter-spacing: 1px;
     /*espaçamento letras*/
     /*margem*/
-    margin-top: 15%;
-    margin-left: 8%;
-    margin-right: 10%
+    margin: auto 10% 3% 8%;
 }
 
-.textsegundo {
+.parte1 .textsegundo {
     font: normal 130% arial;
     line-height: 130%;
     /*espaçamento linhas*/
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     /*espaçamento letras*/
     /*margem*/
-    margin-top: 2%;
-    margin-left: 8%;
-    margin-right: 10%
+    margin: auto 10% 3% 8%;
+    font-family: 'poppins', sans-serif;
 }
 
-.btnn a {
-    font: 120% arial;
+.btnn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.efeito {
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Segoe UI';
     letter-spacing: 1px;
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-    padding: 13px 80px;
-    margin: 0px 33px;
-    border: none;
-    border-radius: 18px;
-    /*margem*/
-    margin-top: 6.3%;
-    margin-left: 39.2%;
-    margin-right: 10%;
+    line-height: 24px;
+    border-radius: 32px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms ease;
+    margin: 25px auto auto 40%;
+    padding: 20px 80px 20px 85px;
+    font-weight: bold;
 }
 
-.btnn a:hover {
-    background-color: none;
-    color: #000;
-    background-size: 100% 5px, auto;
-    /*border: 1px solid #F7F3F5;*/
+.efeito-1 {
+    background-color: #8a99a1;
 }
 
-.button {
-    font: 1em Arial, sans-serif;
-    display: inline-block;
-    padding: 1em;
-    margin: 1em;
-    text-decoration: none;
-    color: #ABBBC4;
-    border: none;
-    /* Set up the hover */
-    /* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
-    background-image: linear-gradient(#0b0d13, #0b0d13), linear-gradient(#a3a3a3, #696969);
-    background-size: 0 5px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out;
+.efeito-1:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 32px;
+    transition: all 1s ease;
 }
 
-.button:hover {
-    /* The following line makes the underline only as wide as the text */
-    /* background-size: calc(100% - 2em) 5px, auto; */
-    background-size: 100%, auto;
+.efeito-1:hover:before {
+    width: 100%;
 }
 
 .servicos {
+    padding: 60px 20px 20px 20px;
     text-align: center;
-    margin-top: 6.5%;
 }
 
 .servicos h3 {
@@ -206,12 +202,12 @@ body {
 }
 
 .container .box:nth-child(1) .icon {
-    box-shadow: 0 0 0 0 #2b314e;
-    background: #2b314e;
+    box-shadow: 0 0 0 0 #747ca3;
+    background: #747ca3;
 }
 
 .container .box:nth-child(1):hover .icon {
-    box-shadow: 0 0 0 400px #2b314e;
+    box-shadow: 0 0 0 400px #747ca3;
 }
 
 .container .box:nth-child(2) .icon {
@@ -246,6 +242,7 @@ body {
     font-size: 20px;
     margin: 10px 0;
     padding: 0;
+    color: rgb(48, 48, 48);
 }
 
 .container .box .content p {
@@ -286,7 +283,7 @@ footer {
     margin: 0px;
     position: static;
     bottom: 0;
-    width: 97%;
+    width: 97.6%;
     background-color: #374258;
     list-style: none;
     text-align: center;
