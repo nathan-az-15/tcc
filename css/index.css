@@ -13,293 +13,282 @@
     src: url("../fonte/Poppins-Regular.ttf");
 }
 
-* 	{
-		margin: 0;
-		padding: 0;
-		
-	}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
-		text-decoration: none;
-	}
+    text-decoration: none;
+}
 
-#menu 
-	{
-		position: fixed;
-		right: 0;
-		top: 0;
-		width: 100%;
-		margin-top: 0;
-	}
-	
-#menu ul 
-	{
-		padding:13px;
-		margin:0px;
-		background-color:#2b314e;
-		list-style:none;
-		text-align: right;
-	}
-	
-#menu ul li { display: inline; }
-	
-#menu ul li a 
-	{
-		font: 85% arial;
-		letter-spacing: 0.5px;
-		display: inline-block;
-		color: #fff;
-		text-decoration: none;
-		padding: 10px 50px;
-		margin: 0px 25px;
-		border: 1px solid #fff;
-		border-radius: 13px;
-	}
+#menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+}
 
-#menu ul li a:hover
-	{
-		background-color: #f5f5f5;
-		color:#181a16;
-		box-shadow: 0 1px 2px #f5f5f5;
-		border: 1px solid #f5f5f5;
-	}
+#menu ul {
+    padding: 13px;
+    margin: 0px;
+    background-color: #2b314e;
+    list-style: none;
+    text-align: right;
+}
 
-.btn-1
-	{
-		transition: .5s;
-	}
+#menu ul li {
+    display: inline;
+}
 
-body
-	{
-		background-image: url('../imagens/inicial/design4.png');
-		background-repeat: no-repeat;
-		/*background-position: relative;
+#menu ul li a {
+    font: 85% arial;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 50px;
+    margin: 0px 25px;
+    border: 1px solid #fff;
+    border-radius: 13px;
+}
+
+#menu ul li a:hover {
+    background-color: #f5f5f5;
+    color: #181a16;
+    box-shadow: 0 1px 2px #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+
+.btn-1 {
+    transition: .5s;
+}
+
+body {
+    background-image: url('../imagens/inicial/design4.png');
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    /*background-position: relative;
 		/*background-size: cover;*/
-		/* background-attachment: fixed; */
-	}
-	
-.textpri
-	{
-		font-family: "title";
-		font-size: 520%;
-		text-decoration: none;
+    /* background-attachment: fixed; */
+}
 
-		line-height: 85%; 
-		letter-spacing: 1px; /*espaçamento letras*/	
-		
-		/*margem*/
-		margin-top: 15%;
-		margin-left:8%; 
-		margin-right: 10%
-	}
+.textpri {
+    font-family: "title";
+    font-size: 520%;
+    text-decoration: none;
+    line-height: 85%;
+    letter-spacing: 1px;
+    /*espaçamento letras*/
+    /*margem*/
+    margin-top: 15%;
+    margin-left: 8%;
+    margin-right: 10%
+}
 
-.textsegundo
-	{
-		font: normal 130% arial;
-		line-height: 130%; /*espaçamento linhas*/
-		letter-spacing: 3px; /*espaçamento letras*/
-		
-		/*margem*/
-		margin-top: 2%;
-		margin-left:8%; 
-		margin-right: 10%
-	}
+.textsegundo {
+    font: normal 130% arial;
+    line-height: 130%;
+    /*espaçamento linhas*/
+    letter-spacing: 3px;
+    /*espaçamento letras*/
+    /*margem*/
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-right: 10%
+}
 
-.btnn a
-	{
-		font: 120% arial;
-		letter-spacing: 1px;
-		display: inline-block;
-		color: #000;
-		text-decoration: none;
-		padding: 13px 80px;
-		margin: 0px 33px;
-		border: none;
-		border-radius: 18px;
-		
-		/*margem*/
-		margin-top: 6.3%;
-		margin-left:39.2%; 
-		margin-right: 10%;
-	}
+.btnn a {
+    font: 120% arial;
+    letter-spacing: 1px;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding: 13px 80px;
+    margin: 0px 33px;
+    border: none;
+    border-radius: 18px;
+    /*margem*/
+    margin-top: 6.3%;
+    margin-left: 39.2%;
+    margin-right: 10%;
+}
 
 .btnn a:hover {
-		background-color: none;
-		color:#000;
-		background-size: 100% 5px, auto;
-		/*border: 1px solid #F7F3F5;*/
-	}
-	
-.button {
-		font: 1em Arial, sans-serif;
-		display: inline-block;
-		padding: 1em;margin: 1em;
-		text-decoration: none;
-		color:#ABBBC4;
-		border: none;
-		
-		/* Set up the hover */
-		/* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
-		background-image: linear-gradient(#0b0d13, #0b0d13), linear-gradient(#a3a3a3, #696969);
-		background-size: 0 5px, auto;
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		transition: all .2s ease-out;
-	  }
-	  
-.button:hover {
-		/* The following line makes the underline only as wide as the text */
-		/* background-size: calc(100% - 2em) 5px, auto; */
-		background-size: 100%, auto;
-	  }
+    background-color: none;
+    color: #000;
+    background-size: 100% 5px, auto;
+    /*border: 1px solid #F7F3F5;*/
+}
 
-.servicos 
-	{
-		text-align: center;
-		margin-top: 6.5%;
-	}
+.button {
+    font: 1em Arial, sans-serif;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    text-decoration: none;
+    color: #ABBBC4;
+    border: none;
+    /* Set up the hover */
+    /* If you aren't using autoprefix, remember to prefix the gradient for other browsers */
+    background-image: linear-gradient(#0b0d13, #0b0d13), linear-gradient(#a3a3a3, #696969);
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+}
+
+.button:hover {
+    /* The following line makes the underline only as wide as the text */
+    /* background-size: calc(100% - 2em) 5px, auto; */
+    background-size: 100%, auto;
+}
+
+.servicos {
+    text-align: center;
+    margin-top: 6.5%;
+}
 
 .servicos h3 {
-		font-family: 'Poppins-Regular', sans-serif;
-		color: #2b314e;	
-		font-size: 27px;
-		padding-bottom: 13px;
-	}
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #2b314e;
+    font-size: 27px;
+    padding-bottom: 13px;
+}
 
-.servicos p{
-		font-family: 'Poppins-Regular', sans-serif;
-		color: rgb(80, 78, 78);	
-		font-size: 17px;
-		padding-bottom: 26px;
-		padding-left: 26%;
-		padding-right: 26%;
-	}
+.servicos p {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: rgb(80, 78, 78);
+    font-size: 17px;
+    padding-bottom: 26px;
+    padding-left: 26%;
+    padding-right: 26%;
+}
 
-.container{
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 1%;
-		margin-bottom: 5.5%;
-		background: #f5f5f5;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-bottom: 5.5%;
+    background: #f5f5f5;
 }
 
 .container .box {
-		font-family: 'Poppins-Regular', sans-serif;
-		position: relative ;
-		width: 350px;
-		padding: 40px;
-		background: #fff;
-		box-shadow: 0 5px 15px rgba(0,0,0,.1);
-		border-radius: 4px;
-		color: #000;
-		margin: 20px;
-		box-sizing: border-box;
-		overflow: hidden;
-		text-align: center;
-	}
-
-.container .box .icon{
-		position: relative ;
-		width: 80px;
-		height: 80px;
-		color: #fff;
-		background: #000;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0 auto;
-		border-radius: 50%;
-		font-size: 40px;
-		font-weight:700;
-		transition: 1s;
+    font-family: 'Poppins-Regular', sans-serif;
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    color: #000;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
 }
 
-.container .box:nth-child(1) .icon{
-		box-shadow: 0 0 0 0 #2b314e;
-		background: #2b314e;
+.container .box .icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
 }
 
-.container .box:nth-child(1):hover .icon{
-		box-shadow: 0 0 0 400px #2b314e;
+.container .box:nth-child(1) .icon {
+    box-shadow: 0 0 0 0 #2b314e;
+    background: #2b314e;
 }
 
-.container .box:nth-child(2) .icon{
-		box-shadow: 0 0 0 0 #ABBBC4;
-		background: #ABBBC4;
+.container .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px #2b314e;
 }
 
-.container .box:nth-child(2):hover .icon{
-		box-shadow: 0 0 0 400px #ABBBC4;
+.container .box:nth-child(2) .icon {
+    box-shadow: 0 0 0 0 #ABBBC4;
+    background: #ABBBC4;
 }
 
-.container .box:nth-child(3) .icon{
-		box-shadow: 0 0 0 0  #cccccc;
-		background:  #cccccc;
+.container .box:nth-child(2):hover .icon {
+    box-shadow: 0 0 0 400px #ABBBC4;
 }
 
-.container .box:nth-child(3):hover .icon{
-		box-shadow: 0 0 0 400px #cccccc;
+.container .box:nth-child(3) .icon {
+    box-shadow: 0 0 0 0 #cccccc;
+    background: #cccccc;
 }
 
-.container .box .content{
-		position: relative;
-		z-index: 1;
-		transition: 0.5s;
+.container .box:nth-child(3):hover .icon {
+    box-shadow: 0 0 0 400px #cccccc;
 }
 
-.container .box:hover .content{
-		color: #fff;
+.container .box .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .box:hover .content {
+    color: #fff;
 }
 
 .container .box .content h3 {
-		font-size: 20px;
-		margin: 10px 0;
-		padding: 0;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
 }
 
 .container .box .content p {
-		margin: 0;
-		padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h4 {
-		font: normal 130% arial;
-		color: #000;
-		line-height: 130%; /*espaçamento linhas*/
-		letter-spacing: 1px; /*espaçamento letras*/
-		
-		/*margem*/
-		margin-top: 2%;
-		margin-left:10%; 
-		margin-right: 10%
-
+    font: normal 130% arial;
+    color: #000;
+    line-height: 130%;
+    /*espaçamento linhas*/
+    letter-spacing: 1px;
+    /*espaçamento letras*/
+    /*margem*/
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%
 }
 
-h5 
-	{
-		font: normal 90% arial;
-		color: #000;
-		line-height: 130%; /*espaçamento linhas*/
-		letter-spacing: 1px; /*espaçamento letras*/
-		
-		/*margem*/
-		margin-top: 2%;
-		margin-left:10%; 
-		margin-right: 10%
+h5 {
+    font: normal 90% arial;
+    color: #000;
+    line-height: 130%;
+    /*espaçamento linhas*/
+    letter-spacing: 1px;
+    /*espaçamento letras*/
+    /*margem*/
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%
+}
 
-	}
-
-footer
-	{
-		font-family: 'Poppins-Regular', arial;
-		color: #f5f5f5;
-		padding:16px;
-		margin:0px;
-		position:static;
-		bottom:0;
-		width:97%;
-		background-color: #374258;
-		list-style:none;
-		text-align: center;
-		font-size: 14px;
-	}
+footer {
+    font-family: 'Poppins-Regular', arial;
+    color: #f5f5f5;
+    padding: 16px;
+    margin: 0px;
+    position: static;
+    bottom: 0;
+    width: 97%;
+    background-color: #374258;
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+}
