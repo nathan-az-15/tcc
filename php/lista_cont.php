@@ -82,8 +82,7 @@
                   $cod_assunto=$text->ID_cont;
 
                     echo "<a href='cont_especifico.php?assunto=".$cod_assunto."'>
-                      <div class='blocos' style='width: 110%;
-                      height: 40px;'>
+                      <div class='blocos'>
       
                           <span> </span>
                           <span> </span>
