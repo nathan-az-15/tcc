@@ -253,12 +253,23 @@
                         $EA = "<font color='red'>INCORRETA</font>";
                         
                     }
+                    $consulta_id = "SELECT * FROM questoes WHERE cod_cont LIKE '$Assunto'";
+                    $con_id = mysqli_query($conexao, $consulta_id);
+                    $mostrar_id = mysqli_fetch_array($con_id);
+                    $ID = $mostrar['ID_questoes'];
+
+                    $consulta_imagem = "SELECT * FROM imagens WHERE ID_questoes LIKE '$ID'";
+                    $con_imagem = mysqli_query($conexao, $consulta_imagem);
+                    $mostrar_imagem = mysqli_fetch_array($con_imagem);
+                    $num_imagens = mysqli_num_rows($con_imagem);
 
                     echo "<div class='questao'>";
                     echo "<b><p>QUESTÃO $i | $EA</p></b><br>";
                     echo $mostrar['enunciado'] . "<br><br>";
-                    if ($mostrar['end_imagens_quest'] != "") {
-                        echo "<center><img src='../imagens/imgquestao/" . $mostrar['end_imagens_quest'] . "'></center><br><br>";
+                    if ($mostrar_imagem['end_imagem'] != "") {
+                        for($x = 1;$x<=$num_imagens;$x++){
+                            echo "<center><img src='../imagens/imgquestao/" . $mostrar_imagem['end_imagem']  . "'></center><br><br>";
+                        }
                     }
 
                     if ($mostrar['alt_correta'] == "A" ) {
