@@ -202,12 +202,12 @@ body {
 }
 
 .container .box:nth-child(1) .icon {
-    box-shadow: 0 0 0 0 #2b314e;
-    background: #2b314e;
+    box-shadow: 0 0 0 0 #747ca3;
+    background: #747ca3;
 }
 
 .container .box:nth-child(1):hover .icon {
-    box-shadow: 0 0 0 400px #2b314e;
+    box-shadow: 0 0 0 400px #747ca3;
 }
 
 .container .box:nth-child(2) .icon {
@@ -242,6 +242,7 @@ body {
     font-size: 20px;
     margin: 10px 0;
     padding: 0;
+    color: rgb(48, 48, 48);
 }
 
 .container .box .content p {
