@@ -98,8 +98,6 @@
 
                 $consulta_imagem = "SELECT * FROM imagens WHERE ID_questoes LIKE '$ID'";
                 $con_imagem = mysqli_query($conexao, $consulta_imagem);
-                $mostrar_imagem = mysqli_fetch_array($con_imagem);
-                $num_imagens = mysqli_num_rows($con_imagem);
 
                 if ($mostrar['enunciado'] != "") {
                    
@@ -107,11 +105,11 @@
                     echo "<p><b>QUESTÃO $i</b></p><br>";
 
                     echo $mostrar['enunciado'] . "<br><br><br>";
-                    if ($mostrar_imagem['end_imagem'] != "") {
-                        for($x = 1;$x<=$num_imagens;$x++){
-                            echo "<center><img src='../imagens/imgquestao/" . $mostrar_imagem['end_imagem']  . "'></center><br><br>";
-                        }
-                    }
+                    while ($mostrar_imagem = mysqli_fetch_object($con_imagem)) {
+                      
+                        echo "<center><img src='../imagens/imgquestao/" . $mostrar_imagem->end_imagem  . "'></center><br><br>";
+                    
+                }
                     echo"<div class='blocos'>";
                     echo "<input type='radio' name='altcorreta$i' value='A' required>    a) "  . $mostrar['alt_a'] . " ";
                     echo "</div>";
