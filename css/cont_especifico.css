@@ -1,34 +1,61 @@
-/* body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-} */
-
-.flexbox{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 3000px;
-    margin: 0 auto;
-    margin-left: 5px;
-    margin-top: 4%;
-    display: inline-block;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+@font-face {
+    font-family: "title";
+    src: url("../fontes/league-gothic.otf");
 }
 
-.nome
-  {
+@font-face {
+    font-family: "corpo";
+    src: url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("../fontes/Poppins-Regular.ttf");
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-family: 'poppins', sans-serif;
+    font-size: 1em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 1px;
+    text-align: justify;
+}
+
+.conteudo .global {
+    width: 80%;
+    text-align: justify;
+    margin: 4px auto 70px 6.5%;
+    background-color: rgb(255, 255, 255);
+    padding: 40px 40px 1px 40px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-radius: 32px;
+    max-width: 90%;
+}
+
+.nome {
     margin-left: 25%;
     transition: 0.5s;
     width: (100% - 250px);
-  }
-  
-  .nome p{
+}
+
+.nome p {
     color: #000;
     margin-top: 12%;
     font-size: 25px;
     font-family: 'poppins', sans-serif;
-  }
- 
+}
+
 .texto {
     width: 70%;
     text-align: justify;
