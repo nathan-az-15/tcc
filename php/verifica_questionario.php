@@ -265,7 +265,7 @@
 
                     echo "<div class='questao'>";
                     echo "<b><p>QUESTÃO $i | $EA</p></b><br>";
-                    echo $mostrar['enunciado'] . "<br><br>";
+                    echo nl2br($mostrar['enunciado']) . "<br><br>";
                     if ($mostrar_imagem['end_imagem'] != "") {
                         for($x = 1;$x<=$num_imagens;$x++){
                             echo "<center><img src='../imagens/imgquestao/" . $mostrar_imagem['end_imagem']  . "'></center><br><br>";
@@ -328,7 +328,7 @@
                             echo "</div>";
                         }
                     }
-                    echo "<br><br><b>Explicação: " . $mostrar['explicacao'] . "</b><br><br>";
+                    echo "<br><br><b>Explicação: " . nl2br($mostrar['explicacao']) . "</b><br><br>";
                     echo"<div class='blocos'>";
                     echo "alternativa marcada: " . $alt_correta[$a] . " ";
                     echo "</div><br><br>";
