@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+@font-face {
+    font-family: "title";
+    src: url("../fontes/league-gothic.otf");
+}
+
+@font-face {
+    font-family: "corpo";
+    src: url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("../fontes/Poppins-Regular.ttf");
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.3em;
+    color: rgb(90, 89, 89);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: none;
+}
+
+p {
+    font-family: 'poppins', sans-serif;
+    font-size: 1em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 1px;
+    text-align: justify;
+}
+
+.conteudo .global {
+    width: 80%;
+    text-align: justify;
+    margin: 4px auto 70px 6.5%;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 40px 20px 40px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-radius: 32px;
+    max-width: 90%;
+    font-family: "poppins", sans-serif;
+}
+
+.conteudo .global p {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.8em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 5px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.conteudo .flexbox {
+    display: flex;
+    flex: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: -4%;
+    margin-bottom: 4%;
+}
+
+.container {
+    align-items: justify;
+    font-family: "poppins", sans-serif;
+    margin: 5px 0.5% 0px 1.7%;
+    width: 86%;
+    border: 2px solid rgb(223, 220, 220);
+    position: relative;
+    padding: 13px 45px 25px 45px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.container h1 {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.2em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 1px;
+    text-align: justify;
+}
+
+.flexbox .container1 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    border: 1px solid lightgreen;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: lightgreen;
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.flexbox .container2 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: rgb(250, 250, 170);
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.flexbox .container3 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    border: 1px solid lightcoral;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: lightcoral;
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.conteudo .global h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.1em;
+    color: rgb(82, 82, 82);
+    margin-bottom: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.global .container4 {
+    align-items: justify;
+    font-family: "poppins", sans-serif;
+    margin: 5px auto 0px auto;
+    width: 88%;
+    border: 1px solid rgb(224, 222, 222);
+    position: relative;
+    padding: 20px 40px 20px 50px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: rgb(224, 222, 222);
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
