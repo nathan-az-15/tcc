@@ -41,7 +41,7 @@ if(isset($_FILES['imagem_c'])){
 		if($conexao->query($sql_imagem) == TRUE){
 			echo "";
 		} else {
-			echo "Erro: ". $sql ."<br>" . $conexao->error;
+			echo "Erro: ". $sqlsql_imagem ."<br>" . $conexao->error;
 		}
 	}
 }

@@ -93,7 +93,7 @@ $inup = 'sign-in-js';
 	
 	<div class="content second-content"><!--parte do login-->
 	    <div class="first-column"><!--parte esquerda-->
-		<h2 class="titulo title-primary">Ola </h2>
+		<h2 class="titulo title-primary">Olá </h2>
 		<p class="descricao"> Insira seus dados pessoais </p>
 
 		<form name="formirlogin" method='POST' action='#'>

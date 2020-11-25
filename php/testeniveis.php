@@ -124,7 +124,7 @@
           <div class="content">
 
             <p>Selecione este card se desejar realizar os testes de nível de física.</p>
-            <a href="anos_testeniveis.php?materia=8">Fazer testes</a>
+            <a href="anos_testeniveis.php?materia=7">Fazer testes</a>
           </div>
         </div>
       </div>
@@ -139,7 +139,7 @@
           <div class="content">
   
             <p>Selecione este card se desejar realizar os testes de nível de química.</p>
-            <a href="anos_testeniveis.php?materia=7">Fazer testes</a>
+            <a href="anos_testeniveis.php?materia=6">Fazer testes</a>
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ for ($i = 0; $i<count($nomes);$i++) {
 	if($conexao->query($sql_imagem) == TRUE){
 		echo "";
 	} else {
-		echo "Erro: ". $sql ."<br>" . $conexao->error;
+		echo "Erro: ". $sql_imagem ."<br>" . $conexao->error;
 	}
  }
 }
