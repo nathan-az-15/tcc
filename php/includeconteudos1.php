@@ -31,9 +31,9 @@ $mostrar = mysqli_fetch_array($cod);
 $ID = $mostrar['ID_cont'];
 //VER COM DELLA
 
-if(isset($_FILES['imagem_c'])){
+
 	for ($i = 0; $i<count($nomes);$i++) {
-	
+	if($nomes[$i]!=""){
 	$mover = move_uploaded_file($_FILES["imagem_c"]["tmp_name"][$i], '../imagens/imgconteudo/'.$nomes[$i]);
 
 		$sql_imagem = "INSERT INTO imagens VALUES ('$nomes[$i]', NULL, $ID)";
@@ -41,11 +41,10 @@ if(isset($_FILES['imagem_c'])){
 		if($conexao->query($sql_imagem) == TRUE){
 			echo "";
 		} else {
-			echo "Erro: ". $sqlsql_imagem ."<br>" . $conexao->error;
+			echo "Erro: ". $sql_imagem ."<br>" . $conexao->error;
 		}
 	}
-}
-else{}
+	}
 	$conexao->close();
 ?>
 <input type="button" value="Voltar para a página de cadastro de conteúdos" onClick="location. href='conteudos_adm.php'">

@@ -41,9 +41,8 @@ $cod = mysqli_query($conexao,$sql_id);
 $mostrar = mysqli_fetch_array($cod);
 $ID = $mostrar['ID_questoes'];
 
-if(isset($_FILES['imagem_q'])){
 for ($i = 0; $i<count($nomes);$i++) {
- 
+	if($nomes[$i]!=""){
    $mover = move_uploaded_file($_FILES["imagem_q"]["tmp_name"][$i], '../imagens/imgquestao/'.$nomes[$i]);
 
 	$sql_imagem = "INSERT INTO imagens VALUES ('$nomes[$i]', $ID, NULL)";
