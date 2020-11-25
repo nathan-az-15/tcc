@@ -51,7 +51,7 @@
         <a href="../inicio.html"><i class="fas fa-home"></i><span>Início</span></a>
         <a href="conteudos.php"><i class="fas fa-book-open"></i><span>Conteúdos</span></a>
         <a href="testeniveis.php"><i class="fas fa-file-alt"></i><span>Testes de Nível</span></a>
-        <a href="desempenho.php"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
+        <a href="#"><i class="fas fa-chart-line"></i><span>Desempenho</span></a>
         <a href="indicacoes.php"><i class="fas fa-film"></i><span>Indicações</span></a>
         <a href="conta.php"><i class="fas fa-user-alt"></i><span>Conta</span></a>
     </div>
@@ -328,7 +328,7 @@
                             echo "</div>";
                         }
                     }
-                    echo "<br><br><b>Explicação: " . nl2br($mostrar['explicacao']) . "</b><br><br>";
+                    echo "<br><br><b>Explicação: " . $mostrar['explicacao'] . "</b><br><br>";
                     echo"<div class='blocos'>";
                     echo "alternativa marcada: " . $alt_correta[$a] . " ";
                     echo "</div><br><br>";
@@ -374,21 +374,44 @@
         $oitenta = $a * 0.8;
         $cinquenta = $a * 0.5;
 
+        echo "<div class='questao'>";
+
         if ($Acertos == $a) {
-            echo "Parabéns. Muito Bem!";
+            echo "<h2>Parabéns. Muito Bem!</h2>";
         } else if ($Acertos >= $cinquenta && $Acertos < $oitenta) {
-            echo "Ok. Continue tentando!";
+            echo "<h2>Ok. Continue tentando!</h1>";
         } else if ($Acertos >= 0 && $Acertos < $cinquenta) {
-            echo "Opa. Se deu mal!";
+            echo "<h2>Opa. Se deu mal!</h2>";
         }
 
         echo "<br><br>";
-        echo "Acertos: $Acertos/$a <br>";
-        echo "Fáceis: $easy <br>";
-        echo "Médias: $medium <br>";
-        echo "Difíceis: $hard <br>";
+        echo "<div class='container'> ";
+        echo "<center>Acertos: $Acertos/$a </center>";
+        echo "</div>";
+
+        echo"<section class='flexbox'>";
+            echo "<div class='container1'> ";
+            echo "<center>Fáceis: $easy </center>";
+            echo "</div>";
+
+            echo "<div class='container2'> ";
+            echo "<center>Médias: $medium </center>";
+            echo "</div>";
+
+            echo "<div class='container3'> ";
+            echo "<center>Difíceis: $hard </center>";
+            echo "</div>";
+        echo "</section>";
+        echo "</div>";
 
         $conexao->close();
+
+        echo"
+        <a href='testeniveis.php' style='text-decoration: none;'>
+            <div class='btns'>
+                <button type='button' class='btn2 btn-color1'> VOLTAR </button>
+            </div>
+        </a>";
         ?>
     </div>
 </body>

@@ -60,3 +60,34 @@ p {
     width: 70%;
     text-align: justify;
 }
+
+.btns .btn2 {
+    border-radius: 32px;
+    text-transform: uppercase;
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    padding: 21px 35px 35px 32px;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 0;
+    margin: -70% 1px 5% 38%;
+    width: 250px;
+    height: 15px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.btns .btn-color1 {
+    background-color: #F1F0F0;
+    border: 1px solid rgb(94, 94, 94);
+    transition: .5s;
+}
+
+.btns .btn-color1:hover {
+    background-color: #8a99a1;
+    border: 1px solid #8a99a1;
+    color: rgb(238, 238, 238);
+}

@@ -170,7 +170,7 @@ h1 {
     font-size: 0.8em;
     color: rgb(82, 82, 82);
     text-transform: initial;
-    margin-bottom: 1px;
+    margin-bottom: -55px;
 }
 
 .conteudo {
@@ -206,7 +206,7 @@ h1 {
 .questao {
     width: 90%;
     text-align: justify;
-    margin: 4px auto 70px 1%;
+    margin: 50px auto 20px 1%;
     background-color: rgb(255, 255, 255);
     padding: 40px 40px 1px 40px;
     box-shadow: 0px 0px 10px 0px #ccc;
@@ -217,19 +217,7 @@ h1 {
 .questao .blocos {
     align-items: justify;
     font-family: "poppins", sans-serif;
-    margin: 10px auto 1px auto;
-    width: 90%;
-    border: 1px solid rgb(143, 143, 143);
-    position: relative;
-    padding: 20px 70px 20px 20px;
-    overflow: hidden;
-    border-radius: 3px;
-}
-
-.questao .blocos {
-    align-items: justify;
-    font-family: "poppins", sans-serif;
-    margin: 10px auto 1px auto;
+    margin: 10px auto -5px auto;
     width: 90%;
     border: 1px solid rgb(143, 143, 143);
     position: relative;
@@ -266,32 +254,118 @@ h1 {
 }
 
 .conteudo .btn2 {
-    border-radius: 11px;
+    border-radius: 32px;
     text-transform: uppercase;
-    color: #fff;
-    font-size: 12px;
-    padding: 12px 25px 26px 30px;
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    padding: 21px 35px 35px 32px;
     cursor: pointer;
     font-weight: bold;
     border-width: 0;
-    margin: -15% 1px 10% 40%;
-    margin-top: -15%;
+    margin: -40% 1px 5% 38%;
     width: 250px;
     height: 15px;
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 10px;
+    align-items: center;
+    font-weight: bolder;
 }
 
 .conteudo .btn-color1 {
-    background-color: #2b314e;
-    border: 1px solid #2b314e;
-    transition: background-color .5s;
+    background-color: #F1F0F0;
+    border: 1px solid rgb(94, 94, 94);
+    transition: .5s;
 }
 
 .conteudo .btn-color1:hover {
-    background-color: #fff;
-    border: 1px solid black;
-    color: #2b314e;
+    background-color: #8a99a1;
+    border: 1px solid #8a99a1;
+    color: rgb(238, 238, 238);
+}
+
+.questao h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5em;
+    color: rgb(77, 77, 77);
+    margin: 2px auto -20px 1px;
+    letter-spacing: 1px;
+}
+
+.conteudo .flexbox {
+    display: flex;
+    flex: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: -4%;
+    margin-bottom: 4%;
+}
+
+.container {
+    align-items: justify;
+    font-family: "poppins", sans-serif;
+    margin: 5px auto 0px auto;
+    width: 88%;
+    border: 1px solid rgb(224, 222, 222);
+    position: relative;
+    padding: 20px 40px 20px 50px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: rgb(224, 222, 222);
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.flexbox .container1 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    border: 1px solid lightgreen;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: lightgreen;
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.flexbox .container2 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: rgb(250, 250, 170);
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.flexbox .container3 {
+    font-family: "poppins", sans-serif;
+    margin: 50px 15px 5px auto;
+    width: 50%;
+    border: 1px solid lightcoral;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: lightcoral;
+    opacity: 0.5px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
 }
