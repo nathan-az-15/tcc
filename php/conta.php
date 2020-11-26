@@ -85,7 +85,7 @@ if($email=="ADM_reforc@gmail.com"){
 					    <label for="exampleInputEmail1">Email</label>
 						<input type="email" class="form-control4" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" placeholder="Email" style="text-align: left" value="<?php echo $mostrar['email_adm'];?>" disabled>
 					    					   
-					    <button type="submit" class="btn2 btn-color2" style= "text-align:left">Salvar</button>
+					    <button type="submit" class="btn2 btn-color1" style= "text-align:left">Salvar</button>
 						
 					   <br><br><br>
 						<p> Atualizar senha </p>
@@ -94,7 +94,7 @@ if($email=="ADM_reforc@gmail.com"){
                        
 					
 			
-			        <button type="submit" class="btn2 btn-color2" style= "text-align:left">Salvar</button>
+			        <button type="submit" class="btn2 btn-color1" style= "text-align:left">Salvar</button>
 						
 					</form>
 <br>
